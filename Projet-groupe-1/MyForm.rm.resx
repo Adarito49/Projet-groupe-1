@@ -121,177 +121,44 @@
   <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABCgAAACKAQMAAABSPelJAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF/4ZE
-        ////a82+SQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAHxJREFUeNrtzjEBADAMwKDWv+l9i4UeoIC5YOcC
+        ////a82+SQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAAHxJREFUeNrtzjEBADAMwKDWv+l9i4UeoIC5YOcC
         i1jEIhaxiEUsYhGLWMQiFrGIRSxiEYtYxCIWsYhFLGIRi1jEIhaxiEUsYhGLWMQiFrGIRSxiEYtYxCIW
         sYhFLGIRi1jEIhaxiEUsYhGLWMQiFrGIRSxiEYtYxCIW3+wDnfEAi8fSFdoAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAABkAAAADIAQMAAACK8b9rAAAABGdBTUEAALGPC/xhBQAAAANQTFRFL0Ne
-        w+xcMgAAAAlwSFlzAAAuHwAALh8BeO6BXwAAAD5JREFUeNrtwQENAAAAwqD3T20PBwQAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJypAZ0IAAGeK8oKAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 145</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="pictureBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABCgAAACKAQMAAABSPelJAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF/+HG
-        ////B49rpAAAAAlwSFlzAAAOvAAADrwBlbxySQAAAHxJREFUeNrtzjEBADAMwKDWv+l9i4UeoIC5YOcC
+        ////B49rpAAAAAlwSFlzAAAOwQAADsEBuJFr7QAAAHxJREFUeNrtzjEBADAMwKDWv+l9i4UeoIC5YOcC
         i1jEIhaxiEUsYhGLWMQiFrGIRSxiEYtYxCIWsYhFLGIRi1jEIhaxiEUsYhGLWMQiFrGIRSxiEYtYxCIW
         sYhFLGIRi1jEIhaxiEUsYhGLWMQiFrGIRSxiEYtYxCIW3+wDnfEAi8fSFdoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 140</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 543</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-68, 140</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1378, 5</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAADxQTFRFKJnA
-        TarK////TqjHJ5W6IHqaJpK2JpS5TKrKR5GrJpO4JpK4J5a8J5a7JpK3JpO5J5W8J5W7J5S6J5a9eHaM
-        GgAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAJZJREFUSEvt0DkSAkEMBEEucSywXP//KxgVxKrVMvAwJs0p
-        GRqthmH4a+uNs6UqstqRBVXFnp5RVcSBgeRIzk4RMTGRnD/Bs8tciNWViWQmVjMTyY1Y/Thu794vY796
-        J1b27v0hGcjacbp4UBVZNV+lFk96Rqzs3WmGW4bkvBhZoFj1kARvYuiL94beneeOfJXX1vLuEW95igrJ
-        6/zrsgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>934, 12</value>
-  </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 45</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAAHJQTFRFKJnA
-        ////vN/rut7q7Pb56vX59Pr88vn79fr88/n7ud7q7vf57fb5uNTfIHqa6/X59Pn87PP27vf69Pj6/v7+
-        9fn67fT39Pj57fb67/X37vX39Pn77PT28vf56/P27fT2ttTe8/j58/j66vL1ttPdudXf+LH8CgAAAAlw
-        SFlzAAAOvgAADr4B6kKxwAAAARhJREFUSEvtkltSwzAMRa1SKE9ToBTKqzz3v0Vi6Yg4sjNsoOenur5n
-        Eo3TdOBAQRYMxpEwdBGRJWPheMiMHYZS5ISQ0kozoUFLkVPiGZkYOae+0HRJusoaW64R1sNsa4jc5Dyn
-        u3L79+S7QZ7VfdcNv/cqz+pLNGOL/O8yhQfUAnXkEVVkh2hQR3znDZpDPcVvQ+QJzUGomdu7gDIyPrkw
-        3omB5DyjxfsGLPCPs8svTPYtHTTD/ydl31fmN/MMPGWBsNdmS3rXZCAq1P7yDzKxgGho+UnjyxAUPBjK
-        es+vIAc7yTfnxs9UjnbieAakEc774FRQdEGpoemBMYGqA8IUuhb6AGUDdYQ2QttAHaBsoZ9C1wGhIudf
-        nJEiXBHTqIIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1004, 12</value>
-  </data>
-  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 45</value>
-  </data>
-  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1061, 681</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -644,17 +511,5 @@
         ///wAAAAgAAfgAB8AAHwP///8AAAAMAAH4AAfAAD8D////AAAADgAD+AAH4AB/A////wAAAA8AB/gAB/
         AAfwP///8AAAAPgB/4AAf4Af8D////AAAAD/j//////4///////wAAAA
 </value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>CESItech</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MyForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
