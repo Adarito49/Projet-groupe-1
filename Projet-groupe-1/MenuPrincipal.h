@@ -66,6 +66,9 @@ namespace Projetgroupe1 {
 	private: System::ComponentModel::IContainer^ components;
 
 
+	private: bool dragging;
+
+	private: Point offset;
 
 	protected:
 
@@ -121,6 +124,9 @@ namespace Projetgroupe1 {
 			resources->ApplyResources(this->pictureBox2, L"pictureBox2");
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MenuPrincipal::pictureBox2_MouseDown);
+			this->pictureBox2->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MenuPrincipal::pictureBox2_MouseMove);
+			this->pictureBox2->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MenuPrincipal::pictureBox2_MouseUp);
 			this->pictureBox2->Move += gcnew System::EventHandler(this, &MenuPrincipal::MenuPrincipal_Load);
 			// 
 			// pictureBox1
@@ -274,8 +280,9 @@ namespace Projetgroupe1 {
 #pragma endregion
 
 	private: System::Void MenuPrincipal_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->dragging = false;
 	}
-
+	// ROLE DES BOUTONS MENUPRINCIPAL ////////////////////////////////////////////////////////////////////////////////////////////////////
 	private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) { // Bouton réduire l'application
 		WindowState = FormWindowState::Minimized;
 
@@ -301,9 +308,26 @@ namespace Projetgroupe1 {
 			GuiGestionStocks^ GestionStocks = gcnew GuiGestionStocks();
 			GestionStocks->ShowDialog();
 	}
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {  // BOUTONS STATISTIQUES
 		GuiStatistiques^ GestionStats = gcnew GuiStatistiques();
 		GestionStats->ShowDialog();
 	}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// DEPLACEMENT FORM EN CLIQUANT SUR LA PICTUREBOX 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	private: System::Void pictureBox2_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { // LORSQUE ON CLICK
+		this->dragging = true;
+		this->offset = Point(e->X, e->Y);
+	}
+	private: System::Void pictureBox2_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { // DEPLACEMENT DE LA FORM EN FONCTION DE LA SOURIS
+		if (this->dragging) {
+			Point currentScreenPos = PointToScreen(e->Location);
+			Location = Point(currentScreenPos.X - this->offset.X, currentScreenPos.Y - this->offset.Y);
+			}
+	}
+	private: System::Void pictureBox2_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { //LORSE QU'ON LACHE LE CLICK
+		this->dragging = false;
+	}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 };
 }
