@@ -2,6 +2,8 @@
 #include "GuiGestionPersonnel.h"
 #include "GuiGestionClients.h"
 #include "GuiCommandes.h"
+#include "GuiGestionStocks.h"
+#include "GuiStatistiques.h"
 
 namespace Projetgroupe1 {
 
@@ -45,35 +47,20 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
 
 
-
-
-
-
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
 
+
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
-
-
-
 	private: System::Windows::Forms::PictureBox^ pictureBox9;
 	private: System::Windows::Forms::PictureBox^ pictureBox10;
 	private: System::Windows::Forms::PictureBox^ pictureBox11;
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 	private: System::Windows::Forms::PictureBox^ pictureBox8;
 	private: System::Windows::Forms::PictureBox^ pictureBox12;
-
-
-
-
-
-
-
-
-
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -192,6 +179,7 @@ namespace Projetgroupe1 {
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button4->Name = L"button4";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MenuPrincipal::button4_Click);
 			// 
 			// button5
 			// 
@@ -200,6 +188,7 @@ namespace Projetgroupe1 {
 			this->button5->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button5->Name = L"button5";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MenuPrincipal::button5_Click);
 			// 
 			// pictureBox7
 			// 
@@ -294,30 +283,27 @@ namespace Projetgroupe1 {
 	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) { // Bouton fermer l'application
 		this->Close();
 	}
-	public:bool Personnelbool = false;
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {  // BOUTON GESTION PERSONNEL
 		GuiGestionPersonnel^ GestionPersonelForm = gcnew GuiGestionPersonnel();
-
-		if (Personnelbool == false)
-		{
-			GestionPersonelForm->Show();
-		}
+			GestionPersonelForm->ShowDialog();
 	}
 
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (Personnelbool == false)
-		{
-		GuiGestionClients^ GestionCleintsForm = gcnew GuiGestionClients();
-		GestionCleintsForm->Show();
-		}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTONS GESTION CLIENTS
+		GuiGestionClients^ GestionClientsForm = gcnew GuiGestionClients();
+		GestionClientsForm->ShowDialog();
 	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (Personnelbool == false)
-		{
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTONS GESTIONS COMMANDES
 			GuiCommandes^ GestionCommandesForm = gcnew GuiCommandes();
-			GestionCommandesForm->Show();
-		}
+			GestionCommandesForm->ShowDialog();
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTONS GESTIONS DES STOCKS
+			GuiGestionStocks^ GestionStocks = gcnew GuiGestionStocks();
+			GestionStocks->ShowDialog();
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		GuiStatistiques^ GestionStats = gcnew GuiStatistiques();
+		GestionStats->ShowDialog();
 	}
 };
 }

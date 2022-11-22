@@ -1,0 +1,2 @@
+#include "GuiGestionStocks.h"
+

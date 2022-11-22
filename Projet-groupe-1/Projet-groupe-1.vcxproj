@@ -125,6 +125,8 @@
     <ClCompile Include="GuiGestionPersonnel.cpp" />
     <ClCompile Include="GuiGestionClients.cpp" />
     <ClCompile Include="GuiCommandes.cpp" />
+    <ClCompile Include="GuiGestionStocks.cpp" />
+    <ClCompile Include="GuiStatistiques.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -139,13 +141,28 @@
     <ClInclude Include="GuiCommandes.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="GuiGestionStocks.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="GuiStatistiques.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GuiCommandes.resx">
+      <DependentUpon>GuiCommandes.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionClients.resx">
       <DependentUpon>GuiGestionClients.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionPersonnel.resx">
       <DependentUpon>GuiGestionPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuiGestionStocks.resx">
+      <DependentUpon>GuiGestionStocks.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuiStatistiques.resx">
+      <DependentUpon>GuiStatistiques.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
