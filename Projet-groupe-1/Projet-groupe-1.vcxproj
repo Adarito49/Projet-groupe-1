@@ -124,6 +124,7 @@
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="GuiGestionPersonnel.cpp" />
     <ClCompile Include="GuiGestionClients.cpp" />
+    <ClCompile Include="GuiCommandes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -133,6 +134,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="GuiGestionClients.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="GuiCommandes.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>

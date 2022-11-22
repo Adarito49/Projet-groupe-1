@@ -1,6 +1,7 @@
 #pragma once
 #include "GuiGestionPersonnel.h"
 #include "GuiGestionClients.h"
+#include "GuiCommandes.h"
 
 namespace Projetgroupe1 {
 
@@ -182,6 +183,7 @@ namespace Projetgroupe1 {
 			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button2->Name = L"button2";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MenuPrincipal::button2_Click);
 			// 
 			// button4
 			// 
@@ -308,6 +310,13 @@ namespace Projetgroupe1 {
 		{
 		GuiGestionClients^ GestionCleintsForm = gcnew GuiGestionClients();
 		GestionCleintsForm->Show();
+		}
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (Personnelbool == false)
+		{
+			GuiCommandes^ GestionCommandesForm = gcnew GuiCommandes();
+			GestionCommandesForm->Show();
 		}
 	}
 };
