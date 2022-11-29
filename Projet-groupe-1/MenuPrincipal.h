@@ -286,6 +286,7 @@ namespace Projetgroupe1 {
 	private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) { // Bouton réduire l'application
 		WindowState = FormWindowState::Minimized;
 
+
 	}
 	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) { // Bouton fermer l'application
 		this->Close();

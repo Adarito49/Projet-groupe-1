@@ -43,6 +43,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 	protected:
 
@@ -68,9 +69,11 @@ namespace Projetgroupe1 {
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox12
@@ -91,10 +94,10 @@ namespace Projetgroupe1 {
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button3->Location = System::Drawing::Point(687, 316);
+			this->button3->Location = System::Drawing::Point(890, 221);
 			this->button3->Name = L"button3";
 			this->button3->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button3->Size = System::Drawing::Size(323, 71);
+			this->button3->Size = System::Drawing::Size(152, 55);
 			this->button3->TabIndex = 33;
 			this->button3->Text = L"Supprimer";
 			this->button3->UseVisualStyleBackColor = true;
@@ -107,10 +110,10 @@ namespace Projetgroupe1 {
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button1->Location = System::Drawing::Point(687, 197);
+			this->button1->Location = System::Drawing::Point(899, 133);
 			this->button1->Name = L"button1";
 			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button1->Size = System::Drawing::Size(323, 71);
+			this->button1->Size = System::Drawing::Size(133, 43);
 			this->button1->TabIndex = 32;
 			this->button1->Text = L"Créer";
 			this->button1->UseVisualStyleBackColor = true;
@@ -123,10 +126,10 @@ namespace Projetgroupe1 {
 			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
 			this->button2->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button2->Location = System::Drawing::Point(687, 104);
+			this->button2->Location = System::Drawing::Point(899, 77);
 			this->button2->Name = L"button2";
 			this->button2->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button2->Size = System::Drawing::Size(323, 71);
+			this->button2->Size = System::Drawing::Size(133, 50);
 			this->button2->TabIndex = 31;
 			this->button2->Text = L"Modifier";
 			this->button2->UseVisualStyleBackColor = true;
@@ -139,10 +142,10 @@ namespace Projetgroupe1 {
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button4->Location = System::Drawing::Point(687, 15);
+			this->button4->Location = System::Drawing::Point(899, 22);
 			this->button4->Name = L"button4";
 			this->button4->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button4->Size = System::Drawing::Size(323, 71);
+			this->button4->Size = System::Drawing::Size(133, 49);
 			this->button4->TabIndex = 30;
 			this->button4->Text = L"Afficher";
 			this->button4->UseVisualStyleBackColor = true;
@@ -150,9 +153,9 @@ namespace Projetgroupe1 {
 			// pictureBox1
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->pictureBox1->Location = System::Drawing::Point(658, -30);
+			this->pictureBox1->Location = System::Drawing::Point(855, -30);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(427, 591);
+			this->pictureBox1->Size = System::Drawing::Size(230, 591);
 			this->pictureBox1->TabIndex = 35;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -181,12 +184,21 @@ namespace Projetgroupe1 {
 			this->label1->TabIndex = 37;
 			this->label1->Text = L"Gestion des commandes";
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(1, 85);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(855, 397);
+			this->dataGridView1->TabIndex = 38;
+			// 
 			// GuiCommandes
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->ClientSize = System::Drawing::Size(1044, 481);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox12);
 			this->Controls->Add(this->button3);
@@ -205,10 +217,11 @@ namespace Projetgroupe1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+};
 }

@@ -129,6 +129,7 @@
     <ClCompile Include="GuiStatistiques.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
