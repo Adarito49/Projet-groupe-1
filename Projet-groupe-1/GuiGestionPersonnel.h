@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "StaffService.h"
+#include "LinkDB.h"
 
 namespace Projetgroupe1 {
 
@@ -244,7 +245,6 @@ namespace Projetgroupe1 {
 	}
 	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 		this->dataGridView1->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("Rsl");
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "Rsl";
 	}
