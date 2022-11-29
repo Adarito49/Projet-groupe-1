@@ -13,6 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Mappage">
+      <UniqueIdentifier>{59411449-23b8-42e4-9b6b-0556d2c68252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Services">
+      <UniqueIdentifier>{da62c317-9a22-484a-8777-6d0cd77684b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Mappage">
+      <UniqueIdentifier>{14498148-3ba8-4970-9d11-2f4e4ed8d488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Services">
+      <UniqueIdentifier>{d5d4ea53-fb08-47a5-ad40-2c954f97f3a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\DatabaseConnect">
+      <UniqueIdentifier>{59a56fef-0e65-4576-854c-1829d7d3b5d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\DatabaseConnect">
+      <UniqueIdentifier>{2451680c-6324-4f0b-ad72-768189eae944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Gui">
+      <UniqueIdentifier>{72c26202-02d6-4427-a3df-e9c1fbe144ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h">
@@ -33,31 +54,43 @@
     <ClInclude Include="GuiStatistiques.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="CLStaff.h">
+      <Filter>Fichiers d%27en-tête\Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="StaffService.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
     <ClInclude Include="LinkDB.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\DatabaseConnect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MenuPrincipal.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClCompile Include="CLStaff.cpp">
+      <Filter>Fichiers sources\Mappage</Filter>
     </ClCompile>
-    <ClCompile Include="GuiGestionPersonnel.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiGestionClients.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiCommandes.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiGestionStocks.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiStatistiques.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClCompile Include="StaffService.cpp">
+      <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
     <ClCompile Include="LinkDB.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\DatabaseConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuPrincipal.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiStatistiques.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiGestionStocks.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiGestionPersonnel.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiGestionClients.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiCommandes.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

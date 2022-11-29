@@ -121,6 +121,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CLStaff.cpp" />
+    <ClCompile Include="StaffService.cpp" />
     <ClCompile Include="LinkDB.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="GuiGestionPersonnel.cpp" />
@@ -130,6 +132,8 @@
     <ClCompile Include="GuiStatistiques.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CLStaff.h" />
+    <ClInclude Include="StaffService.h" />
     <ClInclude Include="LinkDB.h" />
     <ClInclude Include="MenuPrincipal.h">
       <FileType>CppForm</FileType>
