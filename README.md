@@ -2,9 +2,9 @@
 
 Projet d'étude.
 
-\nCréation d'une application pour la gestion de données.
-\nGestion du personnel
-\nGestion des clients
-\nGestion des commandes
-\nGestion des stocks
-\nAinsi que des statistiques
+Création d'une application pour la gestion de données.			
+Gestion du personnel
+Gestion des clients
+Gestion des commandes
+Gestion des stocks
+Ainsi que des statistiques
