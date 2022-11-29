@@ -33,6 +33,9 @@
     <ClInclude Include="GuiStatistiques.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="LinkDB.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MenuPrincipal.cpp">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="GuiStatistiques.cpp">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkDB.cpp">
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
