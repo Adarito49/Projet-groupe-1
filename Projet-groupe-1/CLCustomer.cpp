@@ -1,7 +1,7 @@
 #include "CLCustomer.h"
 
 System::String^ NS_Comp_Mappage::CLCustomer::Select(void) {
-	return "";
+	return "SELECT * FROM [Projet_POO].[dbo].[Bill]";
 }
 System::String^ NS_Comp_Mappage::CLCustomer::Insert(void) {
 	return "";

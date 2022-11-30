@@ -22,9 +22,9 @@ namespace Projetgroupe1 {
 		GuiGestionPersonnel(void)
 		{
 			InitializeComponent();
-			this->oSvc = gcnew NS_Comp_Svc::StaffService();
+			this->oSvcc = gcnew NS_Comp_Svc::StaffService();
 			this->GrillePersonnal->Refresh();
-			this->oDs = this->oSvc->selectStaff("rsl");
+			this->oDs = this->oSvcc->selectStaff("rsl");
 			this->GrillePersonnal->DataSource = this->oDs;
 			this->GrillePersonnal->DataMember = "rsl";
 
@@ -33,7 +33,10 @@ namespace Projetgroupe1 {
 			GrillePersonnal->Columns["staff_first_name"]->HeaderText = "Prénom du personnel";
 			GrillePersonnal->Columns["hire_date"]->HeaderText = "Date d'embauche";
 			GrillePersonnal->Columns["line_manager"]->HeaderText = "Numéro du résponsable";
-			GrillePersonnal->Columns["FK_Staff_Adress"]->HeaderText = "Numéro d'adresse";
+			GrillePersonnal->Columns["n_street"]->HeaderText = "Numéro de rue";
+			GrillePersonnal->Columns["street_name"]->HeaderText = "Nom de rue";
+			GrillePersonnal->Columns["zip_code"]->HeaderText = "Code postale";
+			GrillePersonnal->Columns["city_name"]->HeaderText = "Nom de ville";
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -54,7 +57,7 @@ namespace Projetgroupe1 {
 	protected:
 
 
-	private: NS_Comp_Svc::StaffService^ oSvc;
+	private: NS_Comp_Svc::StaffService^ oSvcc;
 	private: System::Data::DataSet^ oDs;
 
 	private: System::Windows::Forms::PictureBox^ pictureBox12;
@@ -73,6 +76,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::TextBox^ nomfiltre;
 	private: System::Windows::Forms::DataGridView^ GrillePersonnal;
+
 
 
 	protected:
@@ -233,6 +237,8 @@ namespace Projetgroupe1 {
 			// 
 			// GrillePersonnal
 			// 
+			this->GrillePersonnal->AllowUserToAddRows = false;
+			this->GrillePersonnal->AllowUserToDeleteRows = false;
 			this->GrillePersonnal->AllowUserToResizeColumns = false;
 			this->GrillePersonnal->AllowUserToResizeRows = false;
 			this->GrillePersonnal->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
@@ -312,7 +318,7 @@ namespace Projetgroupe1 {
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ nomfiltrez = this->nomfiltre->Text;
 		this->GrillePersonnal->Refresh();
-		this->oDs = this->oSvc->selectStaff("test");
+		this->oDs = this->oSvcc->selectStaff("test");
 		this->GrillePersonnal->DataSource = this->oDs;
 		this->GrillePersonnal->DataMember = "test";
 	}
