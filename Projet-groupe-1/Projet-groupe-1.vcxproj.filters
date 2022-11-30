@@ -66,6 +66,9 @@
     <ClInclude Include="CLCustomer.h">
       <Filter>Fichiers d%27en-tête\Mappage</Filter>
     </ClInclude>
+    <ClInclude Include="CustomerService.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLStaff.cpp">
@@ -97,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="CLCustomer.cpp">
       <Filter>Fichiers sources\Mappage</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerService.cpp">
+      <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
