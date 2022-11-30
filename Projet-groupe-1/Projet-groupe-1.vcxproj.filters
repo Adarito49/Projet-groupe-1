@@ -69,11 +69,14 @@
     <ClInclude Include="CustomerService.h">
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
-    <ClInclude Include="CLProduct.h">
+    <ClInclude Include="CLAdress.h">
       <Filter>Fichiers d%27en-tête\Mappage</Filter>
     </ClInclude>
-    <ClInclude Include="ProductService.h">
+    <ClInclude Include="AdressService.h">
       <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="CLProduct.h">
+      <Filter>Fichiers d%27en-tête\Mappage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -110,11 +113,14 @@
     <ClCompile Include="CustomerService.cpp">
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
-    <ClCompile Include="CLProduct.cpp">
+    <ClCompile Include="CLAdress.cpp">
       <Filter>Fichiers sources\Mappage</Filter>
     </ClCompile>
-    <ClCompile Include="ProductService.cpp">
+    <ClCompile Include="AdressService.cpp">
       <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CLProduct.cpp">
+      <Filter>Fichiers sources\Mappage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

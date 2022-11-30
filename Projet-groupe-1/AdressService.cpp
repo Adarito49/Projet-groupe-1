@@ -1,8 +1,8 @@
-#include "ProductService.h"
+#include "AdressService.h"
 
 NS_Comp_Svc::ProductService::ProductService(void) {
 	this->oCad = gcnew NS_Comp_Data::LinkDB();
-	this->oMappTB = gcnew NS_Comp_Mappage::CLProduct();
+	this->oMappTB = gcnew NS_Comp_Mappage::CLAdress();
 }
 
 void createProduct(System::String^, System::String^, System::String^, System::String^, int, int) {

@@ -121,11 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CLAdress.cpp" />
     <ClCompile Include="CLProduct.cpp" />
     <ClCompile Include="CLStaff.cpp" />
     <ClCompile Include="CLCustomer.cpp" />
     <ClCompile Include="CustomerService.cpp" />
-    <ClCompile Include="ProductService.cpp" />
+    <ClCompile Include="AdressService.cpp" />
     <ClCompile Include="StaffService.cpp" />
     <ClCompile Include="LinkDB.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
@@ -136,11 +137,12 @@
     <ClCompile Include="GuiStatistiques.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CLProduct.h" />
+    <ClInclude Include="CLAdress.h" />
     <ClInclude Include="CLStaff.h" />
     <ClInclude Include="CLCustomer.h" />
     <ClInclude Include="CustomerService.h" />
-    <ClInclude Include="ProductService.h" />
+    <ClInclude Include="CLProduct.h" />
+    <ClInclude Include="AdressService.h" />
     <ClInclude Include="StaffService.h" />
     <ClInclude Include="LinkDB.h" />
     <ClInclude Include="MenuPrincipal.h">

@@ -6,12 +6,13 @@ namespace NS_Comp_Mappage
 	private:
 		System::String^ sSql;
 		int Id;
-		System::String^ n_street;
-		System::String^ street_name;
-		System::String^ zip_code;
-		System::String^ city_name;
-		int FK_adress_customer;
-		int FK_adress_customer_invoice;
+		System::String^ product_name;
+		System::String^ product_type;
+		double price;
+		int product_quantity;
+		int resupply_threshold;
+		double vat_cover;
+		double buying_price;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
@@ -19,19 +20,21 @@ namespace NS_Comp_Mappage
 		System::String^ Update(void);
 
 		void setId(int);
-		void setn_street(System::String^);
-		void setstreet_name(System::String^);
-		void setzip_code(System::String^);
-		void setcity_name(System::String^);
-		void setfk_customer(int);
-		void setfk_customer_invoice(int);
+		void setproduct_name(System::String^);
+		void setproduct_type(System::String^);
+		void setprice(double);
+		void setproduct_quantity(int);
+		void setresupply_threshold(int);
+		void setvat_cover(double);
+		void setbuying_price(double);
 
 		int getId(void);
-		System::String^ getn_street(void);
-		System::String^ getstreet_name(void);
-		System::String^ getzip_code(void);
-		System::String^ getcity_name(void);
-		int getfk_customer(void);
-		int getfk_customer_invoice(void);
+		System::String^ getproduct_name(void);
+		System::String^ getproduct_type(void);
+		double getprice(void);
+		int getproduct_quantity(void);
+		int getresupply_threshold(void);
+		double getvat_cover(void);
+		double getbuying_price(void);
 	};
 }
