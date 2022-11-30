@@ -78,6 +78,15 @@
     <ClInclude Include="CLProduct.h">
       <Filter>Fichiers d%27en-tête\Mappage</Filter>
     </ClInclude>
+    <ClInclude Include="ProductService.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="CLOrders.h">
+      <Filter>Fichiers d%27en-tête\Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderService.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLStaff.cpp">
@@ -121,6 +130,15 @@
     </ClCompile>
     <ClCompile Include="CLProduct.cpp">
       <Filter>Fichiers sources\Mappage</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductService.cpp">
+      <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CLOrders.cpp">
+      <Filter>Fichiers sources\Mappage</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderService.cpp">
+      <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
