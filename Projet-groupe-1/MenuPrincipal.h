@@ -4,6 +4,7 @@
 #include "GuiCommandes.h"
 #include "GuiGestionStocks.h"
 #include "GuiStatistiques.h"
+#include "StaffService.h"
 
 namespace Projetgroupe1 {
 
@@ -61,6 +62,8 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 	private: System::Windows::Forms::PictureBox^ pictureBox8;
 	private: System::Windows::Forms::PictureBox^ pictureBox12;
+	private: NS_Comp_Svc::StaffService^ oSvc;
+	private: System::Data::DataSet^ oDs;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -280,6 +283,7 @@ namespace Projetgroupe1 {
 #pragma endregion
 
 	private: System::Void MenuPrincipal_Load(System::Object^ sender, System::EventArgs^ e) {
+
 		this->dragging = false;
 	}
 	// ROLE DES BOUTONS MENUPRINCIPAL ////////////////////////////////////////////////////////////////////////////////////////////////////

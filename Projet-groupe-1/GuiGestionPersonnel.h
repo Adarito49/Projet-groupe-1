@@ -22,6 +22,11 @@ namespace Projetgroupe1 {
 		GuiGestionPersonnel(void)
 		{
 			InitializeComponent();
+			this->oSvc = gcnew NS_Comp_Svc::StaffService();
+			this->dataGridView1->Refresh();
+			this->oDs = this->oSvc->selectStaff("rsl");
+			this->dataGridView1->DataSource = this->oDs;
+			this->dataGridView1->DataMember = "rsl";
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -54,8 +59,10 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 
 
 
@@ -89,11 +96,12 @@ namespace Projetgroupe1 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -153,8 +161,8 @@ namespace Projetgroupe1 {
 			// 
 			// tabPage1
 			// 
-			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Location = System::Drawing::Point(4, 29);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
@@ -162,6 +170,24 @@ namespace Projetgroupe1 {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Afficher";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToResizeColumns = false;
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Column1 });
+			this->dataGridView1->Enabled = false;
+			this->dataGridView1->ImeMode = System::Windows::Forms::ImeMode::Disable;
+			this->dataGridView1->Location = System::Drawing::Point(0, 39);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
+			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			this->dataGridView1->RowHeadersVisible = false;
+			this->dataGridView1->Size = System::Drawing::Size(1028, 462);
+			this->dataGridView1->TabIndex = 2;
 			// 
 			// button1
 			// 
@@ -172,14 +198,6 @@ namespace Projetgroupe1 {
 			this->button1->Text = L"Load";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button1_Click_1);
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(0, 34);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(1028, 467);
-			this->dataGridView1->TabIndex = 0;
 			// 
 			// tabPage2
 			// 
@@ -208,6 +226,12 @@ namespace Projetgroupe1 {
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Supprimer";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Column1";
+			this->Column1->Name = L"Column1";
+			this->Column1->ReadOnly = true;
 			// 
 			// GuiGestionPersonnel
 			// 
@@ -238,15 +262,17 @@ namespace Projetgroupe1 {
 		}
 #pragma endregion
 	private: System::Void GuiGestionPersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		this->dataGridView1->Refresh();
-		this->dataGridView1->DataSource = this->oDs;
-		this->dataGridView1->DataMember = "Rsl";
+
 	}
 };
 }
