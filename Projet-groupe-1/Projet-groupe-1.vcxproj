@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLStaff.cpp" />
+    <ClCompile Include="CLCustomer.cpp" />
     <ClCompile Include="StaffService.cpp" />
     <ClCompile Include="LinkDB.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
@@ -133,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLStaff.h" />
+    <ClInclude Include="CLCustomer.h" />
     <ClInclude Include="StaffService.h" />
     <ClInclude Include="LinkDB.h" />
     <ClInclude Include="MenuPrincipal.h">
