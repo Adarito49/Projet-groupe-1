@@ -2,7 +2,7 @@
 
 System::String^ NS_Comp_Mappage::CLStaff::Select(void)
 {
-	return "SELECT * FROM [Projet_POO].[dbo].[Staff]";
+	return "SELECT * FROM [Projet_POO].[dbo].[Staff]"; //SELECT * FROM [Projet_POO].[dbo].[Staff] WHERE staff_name = @name
 }
 System::String^ NS_Comp_Mappage::CLStaff::Insert(void)
 {
