@@ -1,5 +1,5 @@
 #pragma once
-#include "CLCustomer.h"
+#include "CLProduct.h"
 #include "LinkDB.h"
 
 namespace NS_Comp_Svc
@@ -8,7 +8,7 @@ namespace NS_Comp_Svc
 	{
 	private:
 		NS_Comp_Data::LinkDB^ oCad;
-		NS_Comp_Mappage::CLCustomer^ oMappTB;
+		NS_Comp_Mappage::CLProduct^ oMappTB;
 	public:
 		ProductService(void);
 		void createProduct(System::String^, System::String^, System::String^, System::String^, int, int);
