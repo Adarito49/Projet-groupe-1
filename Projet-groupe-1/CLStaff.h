@@ -8,8 +8,9 @@ namespace NS_Comp_Mappage
 		int Id;
 		System::String^ staff_name;
 		System::String^ staff_first_name;
-		System::Int16^ line_manager;
+		int line_manager;
 		System::DateTime^ hire_date;
+		int id_adress;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
@@ -19,13 +20,15 @@ namespace NS_Comp_Mappage
 		void setId(int);
 		void setstaff_name(System::String^);
 		void setstaff_first_name(System::String^);
-		void setline_manager(System::Int16^);
+		void setline_manager(int);
 		void sethire_date(System::DateTime^);
+		void setid_adress(int);
 
 		int getId(void);
 		System::String^ getstaff_name(void);
 		System::String^ getstaff_first_name(void);
-		System::Int16^ getline_manager(void);
+		int getline_manager(void);
 		System::DateTime^ gethire_date(void);
+		int getid_adress();
 	};
 }
