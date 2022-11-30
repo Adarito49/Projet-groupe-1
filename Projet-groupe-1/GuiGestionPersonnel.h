@@ -60,22 +60,11 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
 
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::DataGridView^ GrillePersonnal;
-
-
-
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::TextBox^ nomfiltre;
 	protected:
-
 	protected:
 
 	private:
@@ -97,11 +86,12 @@ namespace Projetgroupe1 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->nomfiltre = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -143,7 +133,6 @@ namespace Projetgroupe1 {
 			this->label1->Size = System::Drawing::Size(241, 49);
 			this->label1->TabIndex = 33;
 			this->label1->Text = L"Gestion du personnel";
-			this->label1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::label1_Click);
 			// 
 			// tabControl1
 			// 
@@ -161,7 +150,8 @@ namespace Projetgroupe1 {
 			// 
 			// tabPage1
 			// 
-			this->tabPage1->Controls->Add(this->button1);
+			this->tabPage1->Controls->Add(this->nomfiltre);
+			this->tabPage1->Controls->Add(this->button6);
 			this->tabPage1->Location = System::Drawing::Point(4, 29);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
@@ -169,6 +159,63 @@ namespace Projetgroupe1 {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Afficher";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// nomfiltre
+			// 
+			this->nomfiltre->ForeColor = System::Drawing::SystemColors::InactiveCaption;
+			this->nomfiltre->Location = System::Drawing::Point(6, 4);
+			this->nomfiltre->Name = L"nomfiltre";
+			this->nomfiltre->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->nomfiltre->Size = System::Drawing::Size(257, 26);
+			this->nomfiltre->TabIndex = 36;
+			this->nomfiltre->Text = L"Entrer le nom";
+			this->nomfiltre->TextChanged += gcnew System::EventHandler(this, &GuiGestionPersonnel::textBox1_TextChanged);
+			// 
+			// button6
+			// 
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
+			this->button6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->button6->Location = System::Drawing::Point(269, 4);
+			this->button6->Name = L"button6";
+			this->button6->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->button6->Size = System::Drawing::Size(116, 31);
+			this->button6->TabIndex = 35;
+			this->button6->Text = L"Chercher";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button6_Click);
+			// 
+			// tabPage2
+			// 
+			this->tabPage2->Location = System::Drawing::Point(4, 29);
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(1028, 35);
+			this->tabPage2->TabIndex = 1;
+			this->tabPage2->Text = L"Modifier";
+			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// tabPage3
+			// 
+			this->tabPage3->Location = System::Drawing::Point(4, 29);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Size = System::Drawing::Size(1028, 35);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"Créer";
+			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// tabPage4
+			// 
+			this->tabPage4->Location = System::Drawing::Point(4, 29);
+			this->tabPage4->Name = L"tabPage4";
+			this->tabPage4->Size = System::Drawing::Size(1028, 35);
+			this->tabPage4->TabIndex = 3;
+			this->tabPage4->Text = L"Supprimer";
+			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
 			// GrillePersonnal
 			// 
@@ -186,44 +233,6 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->RowHeadersVisible = false;
 			this->GrillePersonnal->Size = System::Drawing::Size(1032, 467);
 			this->GrillePersonnal->TabIndex = 2;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(6, 0);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(88, 33);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Load";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button1_Click_1);
-			// 
-			// tabPage2
-			// 
-			this->tabPage2->Location = System::Drawing::Point(4, 29);
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1028, 35);
-			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"Modifier";
-			this->tabPage2->UseVisualStyleBackColor = true;
-			// 
-			// tabPage3
-			// 
-			this->tabPage3->Location = System::Drawing::Point(4, 29);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(1028, 501);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"Créer";
-			this->tabPage3->UseVisualStyleBackColor = true;
-			// 
-			// tabPage4
-			// 
-			this->tabPage4->Location = System::Drawing::Point(4, 29);
-			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(1028, 501);
-			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"Supprimer";
-			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
 			// GuiGestionPersonnel
 			// 
@@ -248,6 +257,7 @@ namespace Projetgroupe1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
+			this->tabPage1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -255,17 +265,18 @@ namespace Projetgroupe1 {
 		}
 #pragma endregion
 	private: System::Void GuiGestionPersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
-
-
-
-
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 
+	}
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ nomfiltrez = this->nomfiltre->Text;
+		this->GrillePersonnal->Refresh();
+		this->oDs = this->oSvc->selectStaff("test");
+		this->GrillePersonnal->DataSource = this->oDs;
+		this->GrillePersonnal->DataMember = "test";
 	}
 };
 }
