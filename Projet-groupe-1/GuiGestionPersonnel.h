@@ -27,6 +27,13 @@ namespace Projetgroupe1 {
 			this->oDs = this->oSvc->selectStaff("rsl");
 			this->GrillePersonnal->DataSource = this->oDs;
 			this->GrillePersonnal->DataMember = "rsl";
+
+			GrillePersonnal->Columns["Id_staff"]->HeaderText = "Numéro du staff";
+			GrillePersonnal->Columns["staff_name"]->HeaderText = "Nom du personnel";
+			GrillePersonnal->Columns["staff_first_name"]->HeaderText = "Prénom du personnel";
+			GrillePersonnal->Columns["hire_date"]->HeaderText = "Date d'embauche";
+			GrillePersonnal->Columns["line_manager"]->HeaderText = "Numéro du résponsable";
+			GrillePersonnal->Columns["FK_Staff_Adress"]->HeaderText = "Numéro d'adresse";
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -81,6 +88,8 @@ namespace Projetgroupe1 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuiGestionPersonnel::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -222,14 +231,34 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->AllowUserToAddRows = false;
 			this->GrillePersonnal->AllowUserToResizeColumns = false;
 			this->GrillePersonnal->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->GrillePersonnal->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->GrillePersonnal->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->GrillePersonnal->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Raised;
 			this->GrillePersonnal->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::InactiveBorder;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::Transparent;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->GrillePersonnal->DefaultCellStyle = dataGridViewCellStyle1;
 			this->GrillePersonnal->Enabled = false;
+			this->GrillePersonnal->GridColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->GrillePersonnal->ImeMode = System::Windows::Forms::ImeMode::Disable;
 			this->GrillePersonnal->Location = System::Drawing::Point(7, 170);
 			this->GrillePersonnal->Name = L"GrillePersonnal";
 			this->GrillePersonnal->ReadOnly = true;
 			this->GrillePersonnal->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::HotTrack;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::ControlDark;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->GrillePersonnal->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this->GrillePersonnal->RowHeadersVisible = false;
 			this->GrillePersonnal->Size = System::Drawing::Size(1032, 467);
 			this->GrillePersonnal->TabIndex = 2;
