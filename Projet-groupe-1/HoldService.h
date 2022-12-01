@@ -12,7 +12,7 @@ namespace NS_Comp_Svc
 	public:
 		HoldService(void);
 		void createHold(int, int);
-		System::Data::DataSet^ selectHold(int);
+		System::Data::DataSet^ selectHold(System::String^);
 		void deleteHold(int);
 		void updateHold(int, int);
 	};

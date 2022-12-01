@@ -9,10 +9,11 @@ void createHold(int, int) {
 
 }
 
-System::Data::DataSet^ NS_Comp_Svc::HoldService::selectHold(int id) {
+System::Data::DataSet^ NS_Comp_Svc::HoldService::selectHold(System::String^ dataTableName) {
 	System::String^ sql;
 
 	sql = this->oMappTB->Select();
+	return this->oCad->getRows(sql, dataTableName);
 }
 
 void NS_Comp_Svc::HoldService::createHold(int order, int product) {
