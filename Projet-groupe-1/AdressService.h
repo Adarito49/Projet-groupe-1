@@ -4,16 +4,16 @@
 
 namespace NS_Comp_Svc
 {
-	ref class ProductService
+	ref class AdressService
 	{
 	private:
 		NS_Comp_Data::LinkDB^ oCad;
 		NS_Comp_Mappage::CLAdress^ oMappTB;
 	public:
-		ProductService(void);
-		void createProduct(System::String^, System::String^, System::String^, System::String^, int, int);
-		System::Data::DataSet^ selectProduct(System::String^);
-		void deleteProduct(int);
-		void updateProduct(System::String^, System::String^, System::String^, System::String^, int, int);
+		AdressService(void);
+		void createAdress(System::String^, System::String^, System::String^, System::String^, int, int);
+		System::Data::DataSet^ selectAdress(System::String^);
+		void deleteAdress(int);
+		void updateAdress(System::String^, System::String^, System::String^, System::String^, int, int);
 	};
 }

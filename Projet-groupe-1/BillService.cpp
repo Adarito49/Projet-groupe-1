@@ -5,10 +5,6 @@ NS_Comp_Svc::BillService::BillService(void) {
 	this->oMappTB = gcnew NS_Comp_Mappage::CLBill();
 }
 
-void createBill(System::DateTime^ date, int nbr, double price, int fk) {
-
-}
-
 System::Data::DataSet^ NS_Comp_Svc::BillService::selectBill(System::String^ dataTableName) {
 	System::String^ sql;
 

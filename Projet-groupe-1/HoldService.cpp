@@ -5,10 +5,6 @@ NS_Comp_Svc::HoldService::HoldService(void) {
 	this->oMappTB = gcnew NS_Comp_Mappage::CLHold();
 }
 
-void createHold(int, int) {
-
-}
-
 System::Data::DataSet^ NS_Comp_Svc::HoldService::selectHold(System::String^ dataTableName) {
 	System::String^ sql;
 

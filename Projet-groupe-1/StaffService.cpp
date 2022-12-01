@@ -6,10 +6,6 @@ NS_Comp_Svc::StaffService::StaffService(void)
 	this->oMappTB = gcnew NS_Comp_Mappage::CLStaff();
 }
 
-void createStaff(System::String^, System::String^, System::Int16^, System::DateTime^) {
-
-}
-
 System::Data::DataSet^ NS_Comp_Svc::StaffService::selectStaff(System::String^ dataTableName) {
 	System::String^ sql;
 

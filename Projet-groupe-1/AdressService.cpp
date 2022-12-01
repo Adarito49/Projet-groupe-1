@@ -1,22 +1,18 @@
 #include "AdressService.h"
 
-NS_Comp_Svc::ProductService::ProductService(void) {
+NS_Comp_Svc::AdressService::AdressService(void) {
 	this->oCad = gcnew NS_Comp_Data::LinkDB();
 	this->oMappTB = gcnew NS_Comp_Mappage::CLAdress();
 }
 
-void createProduct(System::String^, System::String^, System::String^, System::String^, int, int) {
-
-}
-
-System::Data::DataSet^ NS_Comp_Svc::ProductService::selectProduct(System::String^ dataTableName) {
+System::Data::DataSet^ NS_Comp_Svc::AdressService::selectAdress(System::String^ dataTableName) {
 	System::String^ sql;
 
 	sql = this->oMappTB->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
 
-void NS_Comp_Svc::ProductService::createProduct(System::String^ n_rue, System::String^ nom_rue, System::String^ code_postal, System::String^ nom_ville, int id_client, int id_client_livraison) {
+void NS_Comp_Svc::AdressService::createAdress(System::String^ n_rue, System::String^ nom_rue, System::String^ code_postal, System::String^ nom_ville, int id_client, int id_client_livraison) {
 	System::String^ sql;
 
 	this->oMappTB->setn_street(n_rue);
@@ -30,7 +26,7 @@ void NS_Comp_Svc::ProductService::createProduct(System::String^ n_rue, System::S
 	this->oCad->actionRows(sql);
 }
 
-void NS_Comp_Svc::ProductService::updateProduct(System::String^ n_rue, System::String^ nom_rue, System::String^ code_postal, System::String^ nom_ville, int id_client, int id_client_livraison) {
+void NS_Comp_Svc::AdressService::updateAdress(System::String^ n_rue, System::String^ nom_rue, System::String^ code_postal, System::String^ nom_ville, int id_client, int id_client_livraison) {
 	System::String^ sql;
 
 	this->oMappTB->setn_street(n_rue);
@@ -44,7 +40,7 @@ void NS_Comp_Svc::ProductService::updateProduct(System::String^ n_rue, System::S
 	this->oCad->actionRows(sql);
 }
 
-void NS_Comp_Svc::ProductService::deleteProduct(int id) {
+void NS_Comp_Svc::AdressService::deleteAdress(int id) {
 	System::String^ sql;
 
 	this->oMappTB->setId(id);

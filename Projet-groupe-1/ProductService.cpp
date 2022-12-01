@@ -5,10 +5,6 @@ NS_Comp_Svc::ProductService::ProductService(void) {
 	this->oMappTB = gcnew NS_Comp_Mappage::CLProduct();
 }
 
-void createProduct(System::String^, System::String^, double, int, int, double, double) {
-
-}
-
 System::Data::DataSet^ NS_Comp_Svc::ProductService::selectProduct(System::String^ dataTableName) {
 	System::String^ sql;
 

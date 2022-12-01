@@ -6,10 +6,6 @@ NS_Comp_Svc::CustomerService::CustomerService(void)
 	this->oMappTB = gcnew NS_Comp_Mappage::CLCustomer();
 }
 
-void createCustomer(System::String^, System::String^, System::DateTime^) {
-
-}
-
 System::Data::DataSet^ NS_Comp_Svc::CustomerService::selectCustomer(System::String^ dataTableName) {
 	System::String^ sql;
 

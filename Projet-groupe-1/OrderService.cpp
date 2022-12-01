@@ -5,10 +5,6 @@ NS_Comp_Svc::OrderService::OrderService(void) {
 	this->oMappTB = gcnew NS_Comp_Mappage::CLOrders();
 }
 
-void createOrder(System::String^, float, System::DateTime^, System::DateTime^, int) {
-
-}
-
 System::Data::DataSet^ NS_Comp_Svc::OrderService::selectOrder(System::String^ dataTableName) {
 	System::String^ sql;
 	
