@@ -13,6 +13,13 @@ System::Data::DataSet^ NS_Comp_Svc::StaffService::selectStaff(System::String^ da
 	return this->oCad->getRows(sql, dataTableName);
 }
 
+System::Data::DataSet^ NS_Comp_Svc::StaffService::FiltrerService(System::String^ dataTableName, System::String^ yo) {
+	System::String^ sql;
+
+	sql = this->oMappTB->Filtrer(yo);
+	return this->oCad->getRows(sql, dataTableName);
+}
+
 void NS_Comp_Svc::StaffService::createStaff(System::String^ nom, System::String^ prenom, int line_manager, System::DateTime^ hire_date, int id_adress)
 {
 	System::String^ sql;
