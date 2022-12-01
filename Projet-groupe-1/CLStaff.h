@@ -30,6 +30,6 @@ namespace NS_Comp_Mappage
 		System::String^ getstaff_first_name(void);
 		int getline_manager(void);
 		System::DateTime^ gethire_date(void);
-		int getid_adress();
+		int getid_adress(void);
 	};
 }

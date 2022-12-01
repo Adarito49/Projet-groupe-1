@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLProduct::Insert(void) {
 	return "";
 }
 System::String^ NS_Comp_Mappage::CLProduct::Delete(void) {
-	return "";
+	return "DELETE from Product where id_product='"+this->Id+"'";
 }
 System::String^ NS_Comp_Mappage::CLProduct::Update(void) {
 	return "";

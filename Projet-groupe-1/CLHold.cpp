@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLHold::Insert(void) {
 	return "";
 }
 System::String^ NS_Comp_Mappage::CLHold::Delete(void) {
-	return "";
+	return "DELETE from Hold where id_hold='"+this->fk_hold_order+"'";
 }
 System::String^ NS_Comp_Mappage::CLHold::Update(void) {
 	return "";

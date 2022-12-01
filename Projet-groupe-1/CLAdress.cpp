@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLAdress::Insert(void) {
 	return "";
 }
 System::String^ NS_Comp_Mappage::CLAdress::Delete(void) {
-	return "";
+	return "DELETE from Adress where id_adress='"+this->Id+"'";
 }
 System::String^ NS_Comp_Mappage::CLAdress::Update(void) {
 	return "";

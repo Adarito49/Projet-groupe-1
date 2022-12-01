@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLBill::Insert(void) {
 	return "";
 }
 System::String^ NS_Comp_Mappage::CLBill::Delete(void) {
-	return "";
+	return "DELETE from Bill where id_bill='"+this->Id+"'";
 }
 System::String^ NS_Comp_Mappage::CLBill::Update(void) {
 	return "";

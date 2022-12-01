@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLOrders::Insert(void) {
 	return "";
 }
 System::String^ NS_Comp_Mappage::CLOrders::Delete(void) {
-	return "";
+	return "DELETE from Orders where id_order='"+this->Id+"'";
 }
 System::String^ NS_Comp_Mappage::CLOrders::Update(void) {
 	return "";
