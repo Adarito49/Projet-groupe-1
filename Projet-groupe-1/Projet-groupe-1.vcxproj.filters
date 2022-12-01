@@ -87,6 +87,18 @@
     <ClInclude Include="OrderService.h">
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
+    <ClInclude Include="CLBill.h">
+      <Filter>Fichiers d%27en-tête\Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="BillService.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="CLHold.h">
+      <Filter>Fichiers d%27en-tête\Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="HoldService.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLStaff.cpp">
@@ -138,6 +150,18 @@
       <Filter>Fichiers sources\Mappage</Filter>
     </ClCompile>
     <ClCompile Include="OrderService.cpp">
+      <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CLBill.cpp">
+      <Filter>Fichiers sources\Mappage</Filter>
+    </ClCompile>
+    <ClCompile Include="BillService.cpp">
+      <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CLHold.cpp">
+      <Filter>Fichiers sources\Mappage</Filter>
+    </ClCompile>
+    <ClCompile Include="HoldService.cpp">
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
   </ItemGroup>
