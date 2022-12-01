@@ -31,5 +31,6 @@ void NS_Comp_Mappage::CLBill::setfk_bill_order(int fk) {
 
 int NS_Comp_Mappage::CLBill::getId(void) { return this->Id; }
 System::DateTime^ NS_Comp_Mappage::CLBill::getpayment_date(void) { return this->payment_date; }
+int NS_Comp_Mappage::CLBill::getpayment_nbr(void) { return this->payment_nbr; }
 double NS_Comp_Mappage::CLBill::getamount(void) { return this->amount; }
 int NS_Comp_Mappage::CLBill::getfk_bill_order(void) { return this->FK_bill_order; }
