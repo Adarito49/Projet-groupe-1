@@ -2,6 +2,7 @@
 #include <string>
 #include "StaffService.h"
 #include "LinkDB.h"
+#include "GuiGestionPersonnelUpdate.h"
 
 namespace Projetgroupe1 {
 
@@ -80,6 +81,9 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Label^ label4;
 
 
 
@@ -113,14 +117,18 @@ namespace Projetgroupe1 {
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
+			this->tabPage2->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->BeginInit();
 			this->SuspendLayout();
@@ -212,6 +220,9 @@ namespace Projetgroupe1 {
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->button1);
+			this->tabPage2->Controls->Add(this->textBox2);
+			this->tabPage2->Controls->Add(this->label4);
 			this->tabPage2->Location = System::Drawing::Point(4, 29);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
@@ -240,6 +251,47 @@ namespace Projetgroupe1 {
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Supprimer";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// button6
+			// 
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::Color::OrangeRed;
+			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
+			this->button6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->button6->Location = System::Drawing::Point(298, 0);
+			this->button6->Name = L"button6";
+			this->button6->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->button6->Size = System::Drawing::Size(118, 39);
+			this->button6->TabIndex = 36;
+			this->button6->Text = L"Supprimer";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button6_Click_1);
+			// 
+			// textBox1
+			// 
+			this->textBox1->ForeColor = System::Drawing::SystemColors::Desktop;
+			this->textBox1->Location = System::Drawing::Point(35, 5);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->textBox1->Size = System::Drawing::Size(257, 26);
+			this->textBox1->TabIndex = 37;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label3.Image")));
+			this->label3->Location = System::Drawing::Point(0, 5);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(30, 26);
+			this->label3->TabIndex = 37;
+			this->label3->Text = L"ID:";
 			// 
 			// GrillePersonnal
 			// 
@@ -284,46 +336,46 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->Size = System::Drawing::Size(1028, 457);
 			this->GrillePersonnal->TabIndex = 35;
 			// 
-			// label3
+			// label4
 			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label3.Image")));
-			this->label3->Location = System::Drawing::Point(0, 5);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(30, 26);
-			this->label3->TabIndex = 37;
-			this->label3->Text = L"ID:";
+			this->label4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label4.Image")));
+			this->label4->Location = System::Drawing::Point(0, 5);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(30, 26);
+			this->label4->TabIndex = 38;
+			this->label4->Text = L"ID:";
 			// 
-			// textBox1
+			// textBox2
 			// 
-			this->textBox1->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox1->Location = System::Drawing::Point(35, 5);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox1->Size = System::Drawing::Size(257, 26);
-			this->textBox1->TabIndex = 37;
+			this->textBox2->ForeColor = System::Drawing::SystemColors::Desktop;
+			this->textBox2->Location = System::Drawing::Point(37, 5);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->textBox2->Size = System::Drawing::Size(257, 26);
+			this->textBox2->TabIndex = 38;
 			// 
-			// button6
+			// button1
 			// 
-			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->ForeColor = System::Drawing::Color::OrangeRed;
-			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
-			this->button6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button6->Location = System::Drawing::Point(298, 0);
-			this->button6->Name = L"button6";
-			this->button6->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button6->Size = System::Drawing::Size(118, 39);
-			this->button6->TabIndex = 36;
-			this->button6->Text = L"Supprimer";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button6_Click_1);
+			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
+			this->button1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->button1->Location = System::Drawing::Point(300, 0);
+			this->button1->Name = L"button1";
+			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->button1->Size = System::Drawing::Size(118, 39);
+			this->button1->TabIndex = 37;
+			this->button1->Text = L"Modifier";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button1_Click);
 			// 
 			// GuiGestionPersonnel
 			// 
@@ -349,6 +401,8 @@ namespace Projetgroupe1 {
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
+			this->tabPage2->ResumeLayout(false);
+			this->tabPage2->PerformLayout();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->EndInit();
@@ -373,8 +427,13 @@ namespace Projetgroupe1 {
 	}
 	private: System::Void button6_Click_1(System::Object^ sender, System::EventArgs^ e) {
 
+
 		this->oSvcc->deleteStaff(int::Parse(textBox1->Text));
 		this->GrillePersonnal->Refresh();
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	//GuiGestionPersonnelUpdate^ GestionPersonelForm2 = gcnew GuiGestionPersonnelUpdate();
+	//GestionPersonelForm2->ShowDialog();
+}
 };
 }

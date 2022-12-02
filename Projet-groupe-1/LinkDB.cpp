@@ -3,7 +3,7 @@
 
 NS_Comp_Data::LinkDB::LinkDB(void)
 {
-	this->sCnx = "Data Source=DESKTOP-5CTVCKF;Initial Catalog=Projet_POO;User ID=Poo;Password=azerty";
+	this->sCnx = "Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty";
 
 	this->sSql = "Rien";
 

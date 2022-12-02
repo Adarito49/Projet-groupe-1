@@ -131,6 +131,7 @@
     <ClCompile Include="CLCustomer.cpp" />
     <ClCompile Include="CustomerService.cpp" />
     <ClCompile Include="AdressService.cpp" />
+    <ClCompile Include="GuiGestionPersonnelUpdate.cpp" />
     <ClCompile Include="HoldService.cpp" />
     <ClCompile Include="OrderService.cpp" />
     <ClCompile Include="ProductService.cpp" />
@@ -154,6 +155,9 @@
     <ClInclude Include="CustomerService.h" />
     <ClInclude Include="CLProduct.h" />
     <ClInclude Include="AdressService.h" />
+    <ClInclude Include="GuiGestionPersonnelUpdate.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="HoldService.h" />
     <ClInclude Include="OrderService.h" />
     <ClInclude Include="ProductService.h" />
@@ -187,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionPersonnel.resx">
       <DependentUpon>GuiGestionPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuiGestionPersonnelUpdate.resx">
+      <DependentUpon>GuiGestionPersonnelUpdate.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionStocks.resx">
       <DependentUpon>GuiGestionStocks.h</DependentUpon>

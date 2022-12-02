@@ -20,6 +20,13 @@ System::Data::DataSet^ NS_Comp_Svc::StaffService::FiltrerService(System::String^
 	return this->oCad->getRows(sql, dataTableName);
 }
 
+void NS_Comp_Svc::StaffService::Envoyer(System::String^ command) {
+	System::String^ sql;
+
+	sql = this->oMappTB->Envoyer(command);
+	this->oCad->actionRows(sql);
+}
+
 void NS_Comp_Svc::StaffService::createStaff(System::String^ nom, System::String^ prenom, int line_manager, System::DateTime^ hire_date, int id_adress)
 {
 	System::String^ sql;
