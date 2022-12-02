@@ -63,6 +63,9 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
 	private: System::Windows::Forms::ComboBox^ comboBox2;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::Label^ label5;
 
 
 	private:
@@ -103,6 +106,9 @@ namespace Projetgroupe1 {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
@@ -354,11 +360,50 @@ namespace Projetgroupe1 {
 			this->comboBox2->Size = System::Drawing::Size(121, 21);
 			this->comboBox2->TabIndex = 80;
 			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label18->ForeColor = System::Drawing::Color::Red;
+			this->label18->Location = System::Drawing::Point(42, 400);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(134, 25);
+			this->label18->TabIndex = 118;
+			this->label18->Text = L"= Obligatoire";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label17->ForeColor = System::Drawing::Color::Red;
+			this->label17->Location = System::Drawing::Point(27, 404);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(20, 25);
+			this->label17->TabIndex = 117;
+			this->label17->Text = L"*";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::Red;
+			this->label5->Location = System::Drawing::Point(53, 147);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(20, 25);
+			this->label5->TabIndex = 116;
+			this->label5->Text = L"*";
+			// 
 			// GuiGestionStocksUpdate
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(576, 447);
+			this->Controls->Add(this->label18);
+			this->Controls->Add(this->label17);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->button1);

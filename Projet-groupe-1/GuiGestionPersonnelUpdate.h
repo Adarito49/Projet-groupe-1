@@ -67,6 +67,9 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Label^ label17;
 	protected:
 
 	private:
@@ -105,6 +108,9 @@ namespace Projetgroupe1 {
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
@@ -375,11 +381,50 @@ namespace Projetgroupe1 {
 			this->dateTimePicker1->TabIndex = 60;
 			this->dateTimePicker1->Value = System::DateTime(2022, 12, 25, 23, 59, 59, 0);
 			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->ForeColor = System::Drawing::Color::Red;
+			this->label11->Location = System::Drawing::Point(55, 122);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(20, 25);
+			this->label11->TabIndex = 82;
+			this->label11->Text = L"*";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label18->ForeColor = System::Drawing::Color::Red;
+			this->label18->Location = System::Drawing::Point(37, 400);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(134, 25);
+			this->label18->TabIndex = 91;
+			this->label18->Text = L"= Obligatoire";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label17->ForeColor = System::Drawing::Color::Red;
+			this->label17->Location = System::Drawing::Point(22, 404);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(20, 25);
+			this->label17->TabIndex = 90;
+			this->label17->Text = L"*";
+			// 
 			// GuiGestionPersonnelUpdate
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(576, 447);
+			this->Controls->Add(this->label18);
+			this->Controls->Add(this->label17);
+			this->Controls->Add(this->label11);
 			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->label10);
