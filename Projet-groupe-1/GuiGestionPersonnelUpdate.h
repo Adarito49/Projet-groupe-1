@@ -1,6 +1,5 @@
 #pragma once
 #include "StaffService.h"
-#include "GuiGestionPersonnel.h"
 
 namespace Projetgroupe1 {
 
@@ -42,6 +41,7 @@ namespace Projetgroupe1 {
 
 	private: Point offset;
 	private: NS_Comp_Svc::StaffService^ oSvcc;
+	private: System::Data::DataSet^ oDs;
 
 
 	private: System::Windows::Forms::Button^ button1;
@@ -50,7 +50,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
+
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::TextBox^ textBox7;
@@ -66,6 +66,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 	protected:
 
 	private:
@@ -88,7 +89,6 @@ namespace Projetgroupe1 {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
@@ -104,6 +104,7 @@ namespace Projetgroupe1 {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
@@ -180,15 +181,6 @@ namespace Projetgroupe1 {
 			this->textBox3->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox3->Size = System::Drawing::Size(257, 20);
 			this->textBox3->TabIndex = 43;
-			// 
-			// textBox4
-			// 
-			this->textBox4->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox4->Location = System::Drawing::Point(21, 307);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox4->Size = System::Drawing::Size(257, 20);
-			this->textBox4->TabIndex = 44;
 			// 
 			// textBox5
 			// 
@@ -373,11 +365,19 @@ namespace Projetgroupe1 {
 			this->pictureBox5->TabStop = false;
 			this->pictureBox5->Click += gcnew System::EventHandler(this, &GuiGestionPersonnelUpdate::pictureBox5_Click);
 			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(21, 307);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
+			this->dateTimePicker1->TabIndex = 60;
+			// 
 			// GuiGestionPersonnelUpdate
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(576, 447);
+			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
@@ -393,7 +393,6 @@ namespace Projetgroupe1 {
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->textBox2);
@@ -436,7 +435,10 @@ namespace Projetgroupe1 {
 		else {
 			if (textBox1->Text->Length != 0) {
 				this->oSvcc->Envoyer("UPDATE [Staff] SET staff_name = '" + textBox1->Text + "' WHERE id_staff='"+ int::Parse(textBox2->Text) +"'");
-				//GuiGestionPersonnel::GrillePersonnal->Refresh();
+				this->Close();
+			}
+			if (textBox3->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE [Staff] SET staff_first_name = '" + textBox3->Text + "' WHERE id_staff='" + int::Parse(textBox2->Text) + "'");
 				this->Close();
 			}
 		}
