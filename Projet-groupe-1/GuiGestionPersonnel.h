@@ -3,6 +3,7 @@
 #include "StaffService.h"
 #include "LinkDB.h"
 #include "GuiGestionPersonnelUpdate.h"
+#include "GuiGestionPersonnelCreate.h"
 
 namespace Projetgroupe1 {
 
@@ -83,6 +84,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
 
 
 
@@ -106,9 +108,9 @@ namespace Projetgroupe1 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuiGestionPersonnel::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -125,11 +127,13 @@ namespace Projetgroupe1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
+			this->tabPage3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->BeginInit();
 			this->SuspendLayout();
@@ -242,7 +246,7 @@ namespace Projetgroupe1 {
 			this->button1->Location = System::Drawing::Point(-4, 3);
 			this->button1->Name = L"button1";
 			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button1->Size = System::Drawing::Size(1032, 29);
+			this->button1->Size = System::Drawing::Size(949, 29);
 			this->button1->TabIndex = 37;
 			this->button1->Text = L"Modifier";
 			this->button1->UseVisualStyleBackColor = true;
@@ -250,9 +254,10 @@ namespace Projetgroupe1 {
 			// 
 			// tabPage3
 			// 
+			this->tabPage3->Controls->Add(this->button3);
 			this->tabPage3->Location = System::Drawing::Point(4, 29);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(1028, 35);
+			this->tabPage3->Size = System::Drawing::Size(949, 35);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Créer";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -264,7 +269,7 @@ namespace Projetgroupe1 {
 			this->tabPage4->Controls->Add(this->label3);
 			this->tabPage4->Location = System::Drawing::Point(4, 29);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(1028, 35);
+			this->tabPage4->Size = System::Drawing::Size(949, 35);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Supprimer";
 			this->tabPage4->UseVisualStyleBackColor = true;
@@ -319,25 +324,25 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->GrillePersonnal->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCells;
 			this->GrillePersonnal->BackgroundColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Underline,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Underline,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->GrillePersonnal->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->GrillePersonnal->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this->GrillePersonnal->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->GrillePersonnal->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->GrillePersonnal->DefaultCellStyle = dataGridViewCellStyle5;
 			this->GrillePersonnal->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->GrillePersonnal->GridColor = System::Drawing::SystemColors::ButtonFace;
 			this->GrillePersonnal->ImeMode = System::Windows::Forms::ImeMode::NoControl;
@@ -346,10 +351,10 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->ReadOnly = true;
 			this->GrillePersonnal->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
 			this->GrillePersonnal->RowHeadersVisible = false;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::White;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::Color::White;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->GrillePersonnal->RowsDefaultCellStyle = dataGridViewCellStyle3;
+			this->GrillePersonnal->RowsDefaultCellStyle = dataGridViewCellStyle6;
 			this->GrillePersonnal->Size = System::Drawing::Size(1028, 457);
 			this->GrillePersonnal->TabIndex = 35;
 			// 
@@ -363,6 +368,24 @@ namespace Projetgroupe1 {
 			this->button2->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button2_Click);
+			// 
+			// button3
+			// 
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
+			this->button3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->button3->Location = System::Drawing::Point(0, 3);
+			this->button3->Name = L"button3";
+			this->button3->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->button3->Size = System::Drawing::Size(946, 29);
+			this->button3->TabIndex = 38;
+			this->button3->Text = L"Créer";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button3_Click);
 			// 
 			// GuiGestionPersonnel
 			// 
@@ -390,6 +413,7 @@ namespace Projetgroupe1 {
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
+			this->tabPage3->ResumeLayout(false);
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->EndInit();
@@ -416,7 +440,10 @@ namespace Projetgroupe1 {
 		if (textBox1->Text->Length == 0) {
 			MessageBox::Show("Veuillez rentrez un ID", "Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}else{
-		this->oSvcc->deleteStaff(int::Parse(textBox1->Text));
+		this->oSvcc->Envoyer("alter table Staff nocheck constraint all");
+		this->oSvcc->Envoyer("DELETE from Adress where id_adress = (select FK_staff_adress from Staff where id_staff = '" + int::Parse(textBox1->Text) + "')");
+		this->oSvcc->Envoyer("alter table Staff check constraint all");
+		this->oSvcc->Envoyer("DELETE from Staff where id_staff = '" + int::Parse(textBox1->Text) + "'");
 		this->GrillePersonnal->Refresh();
 		this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null AND staff_name LIKE '%" + nomfiltre->Text + "%' ;");
 		this->GrillePersonnal->DataSource = this->oDs;
@@ -427,7 +454,6 @@ namespace Projetgroupe1 {
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	GuiGestionPersonnelUpdate^ GuiModifier = gcnew GuiGestionPersonnelUpdate();
 	GuiModifier->ShowDialog();
-
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->GrillePersonnal->Refresh();
@@ -435,6 +461,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->GrillePersonnal->DataSource = this->oDs;
 	this->GrillePersonnal->DataMember = "rsl";
 
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	GuiGestionPersonnelCreate^ GuiCreate = gcnew GuiGestionPersonnelCreate();
+	GuiCreate->ShowDialog();
 }
 };
 }

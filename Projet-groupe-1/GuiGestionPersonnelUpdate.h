@@ -367,10 +367,13 @@ namespace Projetgroupe1 {
 			// 
 			// dateTimePicker1
 			// 
+			this->dateTimePicker1->Checked = false;
 			this->dateTimePicker1->Location = System::Drawing::Point(21, 307);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->ShowCheckBox = true;
 			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
 			this->dateTimePicker1->TabIndex = 60;
+			this->dateTimePicker1->Value = System::DateTime(2022, 12, 25, 23, 59, 59, 0);
 			// 
 			// GuiGestionPersonnelUpdate
 			// 
@@ -435,12 +438,35 @@ namespace Projetgroupe1 {
 		else {
 			if (textBox1->Text->Length != 0) {
 				this->oSvcc->Envoyer("UPDATE [Staff] SET staff_name = '" + textBox1->Text + "' WHERE id_staff='"+ int::Parse(textBox2->Text) +"'");
-				this->Close();
+
 			}
 			if (textBox3->Text->Length != 0) {
 				this->oSvcc->Envoyer("UPDATE [Staff] SET staff_first_name = '" + textBox3->Text + "' WHERE id_staff='" + int::Parse(textBox2->Text) + "'");
-				this->Close();
 			}
+			if (dateTimePicker1->Checked) {
+				this->oSvcc->Envoyer("UPDATE [Staff] SET hire_date = '" + dateTimePicker1->Value.ToString("yyyy-MM-dd") + "' WHERE id_staff='" + int::Parse(textBox2->Text) + "'");
+			}
+			if (textBox3->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE [Staff] SET staff_first_name = '" + textBox3->Text + "' WHERE id_staff='" + int::Parse(textBox2->Text) + "'");
+			}
+			if (textBox5->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE [Staff] SET line_manager = '" + int::Parse(textBox5->Text) + "' WHERE id_staff='" + int::Parse(textBox2->Text) + "'");
+			}
+			if (textBox6->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE Adress SET n_street = '" + int::Parse(textBox6->Text) + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
+			}
+			if (textBox7->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE Adress SET street_name = '" + textBox7->Text + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
+			}
+			if (textBox8->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE Adress SET zip_code = '" + int::Parse(textBox8->Text) + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
+			}
+			if (textBox9->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE Adress SET city_name = '" + textBox9->Text + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
+			}
+
+			MessageBox::Show("Changement effectué avec succès", "Update", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			this->Close();
 		}
 	}
 };

@@ -102,6 +102,9 @@
     <ClInclude Include="GuiGestionPersonnelUpdate.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="GuiGestionPersonnelCreate.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLStaff.cpp">
@@ -168,6 +171,9 @@
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
     <ClCompile Include="GuiGestionPersonnelUpdate.cpp">
+      <Filter>Fichiers d%27en-tête\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiGestionPersonnelCreate.cpp">
       <Filter>Fichiers d%27en-tête\Gui</Filter>
     </ClCompile>
   </ItemGroup>

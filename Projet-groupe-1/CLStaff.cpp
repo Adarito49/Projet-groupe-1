@@ -4,16 +4,15 @@
 
 System::String^ NS_Comp_Mappage::CLStaff::Select(void)
 {
-	//return "SELECT * FROM [master].[dbo].[Customer]";
 	return "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null"; //SELECT * FROM [Projet_POO].[dbo].[Staff] WHERE staff_name = @name
 }
 System::String^ NS_Comp_Mappage::CLStaff::Filtrer(System::String^ filtre)
 {
-	return filtre; //SELECT * FROM [Projet_POO].[dbo].[Staff] WHERE staff_name = @name
+	return filtre;
 }
 System::String^ NS_Comp_Mappage::CLStaff::Envoyer(System::String^ command)
 {
-	return command; //SELECT * FROM [Projet_POO].[dbo].[Staff] WHERE staff_name = @name
+	return command;
 }
 System::String^ NS_Comp_Mappage::CLStaff::Insert(void)
 {
@@ -21,7 +20,7 @@ System::String^ NS_Comp_Mappage::CLStaff::Insert(void)
 }
 System::String^ NS_Comp_Mappage::CLStaff::Delete(void)
 {
-	return "DELETE from Staff where id_staff='"+this->Id+"'";
+	return "";
 }
 System::String^ NS_Comp_Mappage::CLStaff::Update(void)
 {
