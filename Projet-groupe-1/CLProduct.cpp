@@ -1,7 +1,15 @@
 #include "CLProduct.h"
 
 System::String^ NS_Comp_Mappage::CLProduct::Select(void) {
-	return "";
+	return "SELECT * from Product";
+}
+System::String^ NS_Comp_Mappage::CLProduct::Filtrer(System::String^ filtre)
+{
+	return filtre;
+}
+System::String^ NS_Comp_Mappage::CLProduct::Envoyer(System::String^ command)
+{
+	return command;
 }
 System::String^ NS_Comp_Mappage::CLProduct::Insert(void) {
 	return "";

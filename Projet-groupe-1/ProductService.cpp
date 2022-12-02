@@ -12,6 +12,20 @@ System::Data::DataSet^ NS_Comp_Svc::ProductService::selectProduct(System::String
 	return this->oCad->getRows(sql, dataTableName);
 }
 
+System::Data::DataSet^ NS_Comp_Svc::ProductService::FiltrerService(System::String^ dataTableName, System::String^ yo) {
+	System::String^ sql;
+
+	sql = this->oMappTB->Filtrer(yo);
+	return this->oCad->getRows(sql, dataTableName);
+}
+
+void NS_Comp_Svc::ProductService::Envoyer(System::String^ command) {
+	System::String^ sql;
+
+	sql = this->oMappTB->Envoyer(command);
+	this->oCad->actionRows(sql);
+}
+
 void NS_Comp_Svc::ProductService::createProduct(System::String^ nom, System::String^ type, double prix, int quantity, int resupply, double tva, double buying) {
 	System::String^ sql;
 

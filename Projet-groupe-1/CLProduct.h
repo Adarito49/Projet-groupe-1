@@ -15,6 +15,8 @@ namespace NS_Comp_Mappage
 		double buying_price;
 	public:
 		System::String^ Select(void);
+		System::String^ Filtrer(System::String^);
+		System::String^ Envoyer(System::String^);
 		System::String^ Insert(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);
