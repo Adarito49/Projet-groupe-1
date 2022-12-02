@@ -161,7 +161,7 @@ namespace Projetgroupe1 {
 			// 
 			// dateTimePicker1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(21, 287);
+			this->dateTimePicker1->Location = System::Drawing::Point(21, 264);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
 			this->dateTimePicker1->TabIndex = 80;
@@ -175,7 +175,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label10.Image")));
-			this->label10->Location = System::Drawing::Point(305, 310);
+			this->label10->Location = System::Drawing::Point(305, 287);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(39, 26);
 			this->label10->TabIndex = 79;
@@ -189,7 +189,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label9.Image")));
-			this->label9->Location = System::Drawing::Point(305, 257);
+			this->label9->Location = System::Drawing::Point(305, 234);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(82, 26);
 			this->label9->TabIndex = 78;
@@ -203,7 +203,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label8.Image")));
-			this->label8->Location = System::Drawing::Point(305, 203);
+			this->label8->Location = System::Drawing::Point(305, 180);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(80, 26);
 			this->label8->TabIndex = 77;
@@ -217,7 +217,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label7.Image")));
-			this->label7->Location = System::Drawing::Point(305, 149);
+			this->label7->Location = System::Drawing::Point(305, 126);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(98, 26);
 			this->label7->TabIndex = 76;
@@ -231,7 +231,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label6.Image")));
-			this->label6->Location = System::Drawing::Point(22, 310);
+			this->label6->Location = System::Drawing::Point(22, 287);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(78, 26);
 			this->label6->TabIndex = 75;
@@ -245,7 +245,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label5.Image")));
-			this->label5->Location = System::Drawing::Point(22, 257);
+			this->label5->Location = System::Drawing::Point(22, 234);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(106, 26);
 			this->label5->TabIndex = 74;
@@ -259,7 +259,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label3.Image")));
-			this->label3->Location = System::Drawing::Point(22, 203);
+			this->label3->Location = System::Drawing::Point(22, 180);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(114, 26);
 			this->label3->TabIndex = 73;
@@ -273,7 +273,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label2.Image")));
-			this->label2->Location = System::Drawing::Point(22, 148);
+			this->label2->Location = System::Drawing::Point(22, 125);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(99, 26);
 			this->label2->TabIndex = 72;
@@ -282,7 +282,7 @@ namespace Projetgroupe1 {
 			// textBox9
 			// 
 			this->textBox9->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox9->Location = System::Drawing::Point(300, 342);
+			this->textBox9->Location = System::Drawing::Point(300, 319);
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox9->Size = System::Drawing::Size(257, 20);
@@ -291,7 +291,7 @@ namespace Projetgroupe1 {
 			// textBox8
 			// 
 			this->textBox8->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox8->Location = System::Drawing::Point(300, 287);
+			this->textBox8->Location = System::Drawing::Point(300, 264);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox8->Size = System::Drawing::Size(257, 20);
@@ -300,7 +300,7 @@ namespace Projetgroupe1 {
 			// textBox7
 			// 
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox7->Location = System::Drawing::Point(300, 234);
+			this->textBox7->Location = System::Drawing::Point(300, 211);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox7->Size = System::Drawing::Size(257, 20);
@@ -309,7 +309,7 @@ namespace Projetgroupe1 {
 			// textBox6
 			// 
 			this->textBox6->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox6->Location = System::Drawing::Point(300, 179);
+			this->textBox6->Location = System::Drawing::Point(300, 156);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox6->Size = System::Drawing::Size(257, 20);
@@ -318,7 +318,7 @@ namespace Projetgroupe1 {
 			// textBox5
 			// 
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox5->Location = System::Drawing::Point(19, 342);
+			this->textBox5->Location = System::Drawing::Point(19, 319);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox5->Size = System::Drawing::Size(257, 20);
@@ -327,7 +327,7 @@ namespace Projetgroupe1 {
 			// textBox3
 			// 
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox3->Location = System::Drawing::Point(19, 234);
+			this->textBox3->Location = System::Drawing::Point(19, 211);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox3->Size = System::Drawing::Size(257, 20);
@@ -336,7 +336,7 @@ namespace Projetgroupe1 {
 			// textBox1
 			// 
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox1->Location = System::Drawing::Point(21, 179);
+			this->textBox1->Location = System::Drawing::Point(21, 156);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox1->Size = System::Drawing::Size(257, 20);
@@ -351,7 +351,7 @@ namespace Projetgroupe1 {
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button1->Location = System::Drawing::Point(439, 396);
+			this->button1->Location = System::Drawing::Point(439, 373);
 			this->button1->Name = L"button1";
 			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->button1->Size = System::Drawing::Size(118, 39);
@@ -366,7 +366,7 @@ namespace Projetgroupe1 {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::Red;
-			this->label4->Location = System::Drawing::Point(122, 148);
+			this->label4->Location = System::Drawing::Point(122, 125);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(20, 25);
 			this->label4->TabIndex = 81;
@@ -378,7 +378,7 @@ namespace Projetgroupe1 {
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::Color::Red;
-			this->label11->Location = System::Drawing::Point(137, 203);
+			this->label11->Location = System::Drawing::Point(137, 180);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(20, 25);
 			this->label11->TabIndex = 82;
@@ -390,7 +390,7 @@ namespace Projetgroupe1 {
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label12->ForeColor = System::Drawing::Color::Red;
-			this->label12->Location = System::Drawing::Point(129, 257);
+			this->label12->Location = System::Drawing::Point(129, 234);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(20, 25);
 			this->label12->TabIndex = 83;
@@ -402,7 +402,7 @@ namespace Projetgroupe1 {
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::Color::Red;
-			this->label13->Location = System::Drawing::Point(345, 310);
+			this->label13->Location = System::Drawing::Point(345, 287);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(20, 25);
 			this->label13->TabIndex = 84;
@@ -414,7 +414,7 @@ namespace Projetgroupe1 {
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label14->ForeColor = System::Drawing::Color::Red;
-			this->label14->Location = System::Drawing::Point(388, 257);
+			this->label14->Location = System::Drawing::Point(388, 234);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(20, 25);
 			this->label14->TabIndex = 85;
@@ -426,7 +426,7 @@ namespace Projetgroupe1 {
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label15->ForeColor = System::Drawing::Color::Red;
-			this->label15->Location = System::Drawing::Point(386, 203);
+			this->label15->Location = System::Drawing::Point(386, 180);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(20, 25);
 			this->label15->TabIndex = 86;
@@ -438,7 +438,7 @@ namespace Projetgroupe1 {
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label16->ForeColor = System::Drawing::Color::Red;
-			this->label16->Location = System::Drawing::Point(403, 150);
+			this->label16->Location = System::Drawing::Point(403, 127);
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(20, 25);
 			this->label16->TabIndex = 87;
@@ -450,7 +450,7 @@ namespace Projetgroupe1 {
 			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label17->ForeColor = System::Drawing::Color::Red;
-			this->label17->Location = System::Drawing::Point(22, 413);
+			this->label17->Location = System::Drawing::Point(22, 390);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(20, 25);
 			this->label17->TabIndex = 88;
@@ -462,7 +462,7 @@ namespace Projetgroupe1 {
 			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label18->ForeColor = System::Drawing::Color::Red;
-			this->label18->Location = System::Drawing::Point(37, 409);
+			this->label18->Location = System::Drawing::Point(37, 386);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(134, 25);
 			this->label18->TabIndex = 89;

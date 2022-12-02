@@ -1,4 +1,6 @@
 #include "ProductService.h"
+#include "GuiGestionStocksUpdate.h"
+#include "GuiGestionStocksCreate.h"
 #pragma once
 
 namespace Projetgroupe1 {
@@ -32,7 +34,7 @@ namespace Projetgroupe1 {
 			GrillePersonnal->Columns["product_type"]->HeaderText = "Unité du produit";
 			GrillePersonnal->Columns["price"]->HeaderText = "Prix €";
 			GrillePersonnal->Columns["product_quantity"]->HeaderText = "Quantité du produit";
-			GrillePersonnal->Columns["resupply_threshold"]->HeaderText = "Numéro de rue";
+			GrillePersonnal->Columns["resupply_threshold"]->HeaderText = "Seuil de réapprovisionement";
 			GrillePersonnal->Columns["vat_cover"]->HeaderText = "T.V.A %";
 			GrillePersonnal->Columns["buying_price"]->HeaderText = "Prix d'achat €";
 		}
@@ -228,6 +230,7 @@ namespace Projetgroupe1 {
 			this->button1->TabIndex = 37;
 			this->button1->Text = L"Modifier";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionStocks::button1_Click);
 			// 
 			// tabPage3
 			// 
@@ -255,6 +258,7 @@ namespace Projetgroupe1 {
 			this->button3->TabIndex = 38;
 			this->button3->Text = L"Créer";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &GuiGestionStocks::button3_Click);
 			// 
 			// tabPage4
 			// 
@@ -410,6 +414,7 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 		MessageBox::Show("Veuillez rentrez un ID", "Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 	else {
+		MessageBox::Show("Suppression réussi", "Félicitations", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 		this->oSvcc->Envoyer("DELETE from Product where id_product = '" + int::Parse(textBox1->Text) + "'");
 		this->GrillePersonnal->Refresh();
 		this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT * from product");
@@ -422,6 +427,14 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT * from product");
 	this->GrillePersonnal->DataSource = this->oDs;
 	this->GrillePersonnal->DataMember = "rsl";
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	GuiGestionStocksUpdate^ GuiUpdate = gcnew GuiGestionStocksUpdate();
+	GuiUpdate->ShowDialog();
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	GuiGestionStocksCreate^ GuiUpdate = gcnew GuiGestionStocksCreate();
+	GuiUpdate->ShowDialog();
 }
 };
 }

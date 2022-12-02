@@ -440,6 +440,7 @@ namespace Projetgroupe1 {
 		if (textBox1->Text->Length == 0) {
 			MessageBox::Show("Veuillez rentrez un ID", "Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}else{
+		MessageBox::Show("Suppression réussi", "Félicitations", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 		this->oSvcc->Envoyer("alter table Staff nocheck constraint all");
 		this->oSvcc->Envoyer("DELETE from Adress where id_adress = (select FK_staff_adress from Staff where id_staff = '" + int::Parse(textBox1->Text) + "')");
 		this->oSvcc->Envoyer("alter table Staff check constraint all");
