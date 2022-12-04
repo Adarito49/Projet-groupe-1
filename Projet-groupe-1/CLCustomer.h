@@ -11,9 +11,6 @@ namespace NS_Comp_Mappage
 		System::DateTime^ birth_date;
 	public:
 		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
 
 		void setId(int);
 		void setcustomer_name(System::String^);

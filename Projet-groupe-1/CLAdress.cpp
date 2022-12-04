@@ -3,15 +3,6 @@
 System::String^ NS_Comp_Mappage::CLAdress::Select(void) {
 	return "";
 }
-System::String^ NS_Comp_Mappage::CLAdress::Insert(void) {
-	return "";
-}
-System::String^ NS_Comp_Mappage::CLAdress::Delete(void) {
-	return "DELETE from Adress where id_adress='"+this->Id+"'";
-}
-System::String^ NS_Comp_Mappage::CLAdress::Update(void) {
-	return "";
-}
 
 void NS_Comp_Mappage::CLAdress::setId(int id) {
 	this->Id = id;

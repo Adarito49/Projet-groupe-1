@@ -11,9 +11,6 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLHold^ oMappTB;
 	public:
 		HoldService(void);
-		void createHold(int, int);
 		System::Data::DataSet^ selectHold(System::String^);
-		void deleteHold(int);
-		void updateHold(int, int);
 	};
 }

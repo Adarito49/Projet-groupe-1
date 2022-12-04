@@ -3,15 +3,6 @@
 System::String^ NS_Comp_Mappage::CLBill::Select(void) {
 	return "";
 }
-System::String^ NS_Comp_Mappage::CLBill::Insert(void) {
-	return "";
-}
-System::String^ NS_Comp_Mappage::CLBill::Delete(void) {
-	return "DELETE from Bill where id_bill='"+this->Id+"'";
-}
-System::String^ NS_Comp_Mappage::CLBill::Update(void) {
-	return "";
-}
 
 void NS_Comp_Mappage::CLBill::setId(int id) {
 	this->Id = id;

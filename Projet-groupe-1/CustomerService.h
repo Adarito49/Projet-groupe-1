@@ -11,9 +11,6 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLCustomer^ oMappTB;
 	public:
 		CustomerService(void);
-		void createCustomer(System::String^, System::String^, System::DateTime^);
 		System::Data::DataSet^ selectCustomer(System::String^);
-		void deleteCustomer(int);
-		void updateCustomer(System::String^, System::String^, System::DateTime^);
 	};
 }

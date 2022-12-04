@@ -13,9 +13,6 @@ namespace NS_Comp_Mappage
 		int FK_order_customer;
 	public:
 		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
 
 		void setId(int);
 		void setref_order(System::String^);

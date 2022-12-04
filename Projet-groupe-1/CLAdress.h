@@ -14,9 +14,6 @@ namespace NS_Comp_Mappage
 		int FK_adress_customer_invoice;
 	public:
 		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
 
 		void setId(int);
 		void setn_street(System::String^);

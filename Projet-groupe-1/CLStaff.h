@@ -15,9 +15,6 @@ namespace NS_Comp_Mappage
 		System::String^ Select(void);
 		System::String^ Filtrer(System::String^);
 		System::String^ Envoyer(System::String^);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
 
 		void setId(int);
 		void setstaff_name(System::String^);

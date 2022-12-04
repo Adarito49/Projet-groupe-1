@@ -12,9 +12,6 @@ namespace NS_Comp_Mappage
 		int FK_bill_order;
 	public:
 		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
 
 		void setId(int);
 		void setpayment_date(System::DateTime^);

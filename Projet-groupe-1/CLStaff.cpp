@@ -14,19 +14,6 @@ System::String^ NS_Comp_Mappage::CLStaff::Envoyer(System::String^ command)
 {
 	return command;
 }
-System::String^ NS_Comp_Mappage::CLStaff::Insert(void)
-{
-	return "";
-}
-System::String^ NS_Comp_Mappage::CLStaff::Delete(void)
-{
-	return "";
-}
-System::String^ NS_Comp_Mappage::CLStaff::Update(void)
-{
-	return "";
-}
-
 
 void NS_Comp_Mappage::CLStaff::setId(int Id)
 {

@@ -9,9 +9,6 @@ namespace NS_Comp_Mappage
 		int fk_hold_product;
 	public:
 		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
 
 		void setfk_order(int);
 		void setfk_product(int);

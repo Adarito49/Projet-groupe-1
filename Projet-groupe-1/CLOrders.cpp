@@ -3,15 +3,6 @@
 System::String^ NS_Comp_Mappage::CLOrders::Select(void) {
 	return "";
 }
-System::String^ NS_Comp_Mappage::CLOrders::Insert(void) {
-	return "";
-}
-System::String^ NS_Comp_Mappage::CLOrders::Delete(void) {
-	return "DELETE from Orders where id_order='"+this->Id+"'";
-}
-System::String^ NS_Comp_Mappage::CLOrders::Update(void) {
-	return "";
-}
 
 void NS_Comp_Mappage::CLOrders::setId(int id) {
 	this->Id = id;

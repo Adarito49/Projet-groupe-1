@@ -11,15 +11,6 @@ System::String^ NS_Comp_Mappage::CLProduct::Envoyer(System::String^ command)
 {
 	return command;
 }
-System::String^ NS_Comp_Mappage::CLProduct::Insert(void) {
-	return "";
-}
-System::String^ NS_Comp_Mappage::CLProduct::Delete(void) {
-	return "DELETE from Product where id_product='"+this->Id+"'";
-}
-System::String^ NS_Comp_Mappage::CLProduct::Update(void) {
-	return "";
-}
 
 void NS_Comp_Mappage::CLProduct::setId(int id) {
 	this->Id = id;
