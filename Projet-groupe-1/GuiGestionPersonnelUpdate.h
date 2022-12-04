@@ -9,6 +9,7 @@ namespace Projetgroupe1 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
 	/// Description résumée de GuiGestionPersonnelUpdate
@@ -43,6 +44,10 @@ namespace Projetgroupe1 {
 	private: NS_Comp_Svc::StaffService^ oSvcc;
 	private: System::Data::DataSet^ oDs;
 
+	private: SqlConnection^ cn;
+	private: SqlCommand^ cmd;
+	private: SqlDataReader^ dr;
+
 
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
@@ -55,7 +60,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
+
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -70,6 +75,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
 	protected:
 
 	private:
@@ -96,7 +102,6 @@ namespace Projetgroupe1 {
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -111,6 +116,7 @@ namespace Projetgroupe1 {
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
@@ -223,15 +229,7 @@ namespace Projetgroupe1 {
 			this->textBox8->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox8->Size = System::Drawing::Size(257, 20);
 			this->textBox8->TabIndex = 48;
-			// 
-			// textBox9
-			// 
-			this->textBox9->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox9->Location = System::Drawing::Point(302, 342);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox9->Size = System::Drawing::Size(257, 20);
-			this->textBox9->TabIndex = 49;
+			this->textBox8->Leave += gcnew System::EventHandler(this, &GuiGestionPersonnelUpdate::textBox8_Leave);
 			// 
 			// label4
 			// 
@@ -417,11 +415,21 @@ namespace Projetgroupe1 {
 			this->label17->TabIndex = 90;
 			this->label17->Text = L"*";
 			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Location = System::Drawing::Point(302, 339);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(257, 21);
+			this->comboBox2->TabIndex = 92;
+			// 
 			// GuiGestionPersonnelUpdate
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(576, 447);
+			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->label17);
 			this->Controls->Add(this->label11);
@@ -436,7 +444,6 @@ namespace Projetgroupe1 {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->textBox6);
@@ -450,6 +457,7 @@ namespace Projetgroupe1 {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"GuiGestionPersonnelUpdate";
 			this->Text = L"Modifier Personnel";
+			this->Load += gcnew System::EventHandler(this, &GuiGestionPersonnelUpdate::GuiGestionPersonnelUpdate_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
@@ -506,14 +514,30 @@ namespace Projetgroupe1 {
 			if (textBox8->Text->Length != 0) {
 				this->oSvcc->Envoyer("UPDATE Adress SET zip_code = '" + int::Parse(textBox8->Text) + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
 			}
-			if (textBox9->Text->Length != 0) {
-				this->oSvcc->Envoyer("UPDATE Adress SET city_name = '" + textBox9->Text + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
+			if (comboBox2->Text->Length != 0) {
+				this->oSvcc->Envoyer("UPDATE Adress SET city_name = '" + comboBox2->Text + "' WHERE id_adress = (select FK_staff_adress from  staff where id_staff = '" + int::Parse(textBox2->Text) + "')");
 			}
 
 			MessageBox::Show("Changement effectué avec succès", "Update", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			this->Close();
 		}
 	}
+	private: System::Void GuiGestionPersonnelUpdate_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+private: System::Void textBox8_Leave(System::Object^ sender, System::EventArgs^ e) {
+	comboBox2->Items->Clear();
+	cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
+	cn->Open();
+
+	cmd = gcnew SqlCommand("select city_name from Postal where postal_code LIKE '%" + textBox8->Text + "%'", cn);
+	dr = cmd->ExecuteReader();
+	while (dr->Read())
+	{
+		comboBox2->Items->Add(dr[0]);
+	}
+	dr->Close();
+}
 };
 
 

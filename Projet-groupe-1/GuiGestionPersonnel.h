@@ -461,6 +461,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null AND staff_name LIKE '%" + nomfiltre->Text + "%' ;");
 	this->GrillePersonnal->DataSource = this->oDs;
 	this->GrillePersonnal->DataMember = "rsl";
+	MessageBox::Show("Base de données rafraîchi avec succès !", "OK", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {

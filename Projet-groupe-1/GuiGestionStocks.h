@@ -427,6 +427,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT * from product");
 	this->GrillePersonnal->DataSource = this->oDs;
 	this->GrillePersonnal->DataMember = "rsl";
+	MessageBox::Show("Base de données rafraîchi avec succès !", "OK", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	GuiGestionStocksUpdate^ GuiUpdate = gcnew GuiGestionStocksUpdate();

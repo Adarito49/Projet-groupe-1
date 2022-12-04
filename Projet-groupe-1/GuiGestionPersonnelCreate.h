@@ -9,6 +9,7 @@ namespace Projetgroupe1 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
 	/// Description résumée de GuiGestionPersonnelCreate
@@ -41,6 +42,11 @@ namespace Projetgroupe1 {
 
 	private: Point offset;
 	private: NS_Comp_Svc::StaffService^ oSvcc;
+
+
+	private: SqlConnection^ cn;
+	private: SqlCommand^ cmd;
+	private: SqlDataReader^ dr;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
 	private: System::Windows::Forms::Label^ label1;
@@ -53,7 +59,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox9;
+
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox6;
@@ -70,6 +76,7 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
 	protected:
 
 	private:
@@ -98,7 +105,6 @@ namespace Projetgroupe1 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
@@ -115,6 +121,7 @@ namespace Projetgroupe1 {
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
@@ -279,15 +286,6 @@ namespace Projetgroupe1 {
 			this->label2->TabIndex = 72;
 			this->label2->Text = L"Nom personnel:";
 			// 
-			// textBox9
-			// 
-			this->textBox9->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox9->Location = System::Drawing::Point(300, 319);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox9->Size = System::Drawing::Size(257, 20);
-			this->textBox9->TabIndex = 70;
-			// 
 			// textBox8
 			// 
 			this->textBox8->ForeColor = System::Drawing::SystemColors::Desktop;
@@ -296,6 +294,7 @@ namespace Projetgroupe1 {
 			this->textBox8->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox8->Size = System::Drawing::Size(257, 20);
 			this->textBox8->TabIndex = 69;
+			this->textBox8->Leave += gcnew System::EventHandler(this, &GuiGestionPersonnelCreate::textBox8_Leave);
 			// 
 			// textBox7
 			// 
@@ -468,11 +467,21 @@ namespace Projetgroupe1 {
 			this->label18->TabIndex = 89;
 			this->label18->Text = L"= Obligatoire";
 			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Location = System::Drawing::Point(300, 319);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(257, 21);
+			this->comboBox2->TabIndex = 93;
+			// 
 			// GuiGestionPersonnelCreate
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(576, 447);
+			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->label17);
 			this->Controls->Add(this->label16);
@@ -491,7 +500,6 @@ namespace Projetgroupe1 {
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->textBox6);
@@ -536,11 +544,11 @@ namespace Projetgroupe1 {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 
-		if (textBox1->Text->Length == 0 || textBox3->Text->Length == 0 || textBox6->Text->Length == 0 || textBox3->Text->Length == 0 || textBox7->Text->Length == 0 || textBox8->Text->Length == 0 || textBox9->Text->Length == 0) {
+		if (textBox1->Text->Length == 0 || textBox3->Text->Length == 0 || textBox6->Text->Length == 0 || textBox3->Text->Length == 0 || textBox7->Text->Length == 0 || textBox8->Text->Length == 0 || comboBox2->Text->Length == 0) {
 			MessageBox::Show("Veuillez remplir toutes les champs obligatoires", "Erreur NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 		else {
-			this->oSvcc->Envoyer("insert into adress(n_street, street_name, zip_code, city_name) values('" + int::Parse(textBox6->Text) + "', '" + textBox7->Text + "', '" + int::Parse(textBox8->Text) + "', '" + textBox9->Text + "')");
+			this->oSvcc->Envoyer("insert into adress(n_street, street_name, zip_code, city_name) values('" + int::Parse(textBox6->Text) + "', '" + textBox7->Text + "', '" + int::Parse(textBox8->Text) + "', '" + comboBox2->Text + "')");
 			this->oSvcc->Envoyer("insert into Staff (staff_name, staff_first_name, hire_date, FK_staff_adress) values ('" + textBox1->Text + "', '" + textBox3->Text + "', '"+ dateTimePicker1->Value.ToString("yyyy-MM-dd") +"', (select id_adress from adress where n_street = '" + int::Parse(textBox6->Text) + "' and street_name = '" + textBox7->Text + "' ))");
 			if (textBox5->Text->Length > 0) {
 				this->oSvcc->Envoyer("UPDATE Staff SET line_manager = '" + int::Parse(this->textBox5->Text) + "' where staff_name = '"+ textBox1->Text+"' and staff_first_name = '" + textBox3->Text + "'");
@@ -549,5 +557,18 @@ namespace Projetgroupe1 {
 			this->Close();
 		}
 	}
+private: System::Void textBox8_Leave(System::Object^ sender, System::EventArgs^ e) {
+	comboBox2->Items->Clear();
+	cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
+	cn->Open();
+
+	cmd = gcnew SqlCommand("select city_name from Postal where postal_code LIKE '%" + textBox8->Text + "%'", cn);
+	dr = cmd->ExecuteReader();
+	while (dr->Read())
+	{
+		comboBox2->Items->Add(dr[0]);
+	}
+	dr->Close();
+}
 };
 }
