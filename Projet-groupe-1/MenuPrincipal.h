@@ -297,25 +297,36 @@ namespace Projetgroupe1 {
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {  // BOUTON GESTION PERSONNEL
+		this->Hide();
 		GuiGestionPersonnel^ GestionPersonelForm = gcnew GuiGestionPersonnel();
-			GestionPersonelForm->ShowDialog();
+		GestionPersonelForm->ShowDialog();
+		this->Show();
+
 	}
 
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTONS GESTION CLIENTS
+		this->Hide();
 		GuiGestionClients^ GestionClientsForm = gcnew GuiGestionClients();
 		GestionClientsForm->ShowDialog();
+		this->Show();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTONS GESTIONS COMMANDES
+		this->Hide();
 			GuiCommandes^ GestionCommandesForm = gcnew GuiCommandes();
 			GestionCommandesForm->ShowDialog();
+			this->Show();
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTONS GESTIONS DES STOCKS
+		this->Hide();
 			GuiGestionStocks^ GestionStocks = gcnew GuiGestionStocks();
 			GestionStocks->ShowDialog();
+			this->Show();
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {  // BOUTONS STATISTIQUES
+		this->Hide();
 		GuiStatistiques^ GestionStats = gcnew GuiStatistiques();
 		GestionStats->ShowDialog();
+		this->Show();
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
