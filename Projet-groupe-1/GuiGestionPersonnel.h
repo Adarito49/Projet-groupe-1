@@ -24,21 +24,6 @@ namespace Projetgroupe1 {
 		GuiGestionPersonnel(void)
 		{
 			InitializeComponent();
-			this->oSvcc = gcnew NS_Comp_Svc::StaffService();
-			this->GrillePersonnal->Refresh();
-			this->oDs = this->oSvcc->selectStaff("rsl");
-			this->GrillePersonnal->DataSource = this->oDs;
-			this->GrillePersonnal->DataMember = "rsl";
-
-			GrillePersonnal->Columns["Id_staff"]->HeaderText = "Numéro du staff";
-			GrillePersonnal->Columns["staff_name"]->HeaderText = "Nom du personnel";
-			GrillePersonnal->Columns["staff_first_name"]->HeaderText = "Prénom du personnel";
-			GrillePersonnal->Columns["hire_date"]->HeaderText = "Date d'embauche";
-			GrillePersonnal->Columns["line_manager"]->HeaderText = "Numéro du résponsable";
-			GrillePersonnal->Columns["n_street"]->HeaderText = "Numéro de rue";
-			GrillePersonnal->Columns["street_name"]->HeaderText = "Nom de rue";
-			GrillePersonnal->Columns["zip_code"]->HeaderText = "Code postale";
-			GrillePersonnal->Columns["city_name"]->HeaderText = "Nom de ville";
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -63,7 +48,6 @@ namespace Projetgroupe1 {
 	private: System::Data::DataSet^ oDs;
 
 	private: System::Windows::Forms::PictureBox^ pictureBox12;
-
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TabControl^ tabControl1;
@@ -71,24 +55,15 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
-
-
-
-
-
 	private: System::Windows::Forms::TextBox^ nomfiltre;
 	private: System::Windows::Forms::DataGridView^ GrillePersonnal;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ buttonsupprimer;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-
-
-
-
+	private: System::Windows::Forms::Button^ buttoncreer;
+	private: System::Windows::Forms::Button^ buttonmodifier;
 
 
 	protected:
@@ -108,9 +83,9 @@ namespace Projetgroupe1 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuiGestionPersonnel::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -119,15 +94,15 @@ namespace Projetgroupe1 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->nomfiltre = (gcnew System::Windows::Forms::TextBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->buttonmodifier = (gcnew System::Windows::Forms::Button());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->buttoncreer = (gcnew System::Windows::Forms::Button());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->buttonsupprimer = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -221,11 +196,11 @@ namespace Projetgroupe1 {
 			this->nomfiltre->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->nomfiltre->Size = System::Drawing::Size(257, 26);
 			this->nomfiltre->TabIndex = 36;
-			this->nomfiltre->TextChanged += gcnew System::EventHandler(this, &GuiGestionPersonnel::textBox1_TextChanged);
+			this->nomfiltre->TextChanged += gcnew System::EventHandler(this, &GuiGestionPersonnel::nomfiltre_TextChanged);
 			// 
 			// tabPage2
 			// 
-			this->tabPage2->Controls->Add(this->button1);
+			this->tabPage2->Controls->Add(this->buttonmodifier);
 			this->tabPage2->Location = System::Drawing::Point(4, 29);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
@@ -234,27 +209,27 @@ namespace Projetgroupe1 {
 			this->tabPage2->Text = L"Modifier";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// buttonmodifier
 			// 
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->buttonmodifier->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonmodifier->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->buttonmodifier->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
-			this->button1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button1->Location = System::Drawing::Point(-4, 3);
-			this->button1->Name = L"button1";
-			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button1->Size = System::Drawing::Size(949, 29);
-			this->button1->TabIndex = 37;
-			this->button1->Text = L"Modifier";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button1_Click);
+			this->buttonmodifier->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->buttonmodifier->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonmodifier.Image")));
+			this->buttonmodifier->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->buttonmodifier->Location = System::Drawing::Point(0, 3);
+			this->buttonmodifier->Name = L"buttonmodifier";
+			this->buttonmodifier->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->buttonmodifier->Size = System::Drawing::Size(946, 29);
+			this->buttonmodifier->TabIndex = 39;
+			this->buttonmodifier->Text = L"Modifier";
+			this->buttonmodifier->UseVisualStyleBackColor = true;
+			this->buttonmodifier->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::buttonmodifier_Click);
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->button3);
+			this->tabPage3->Controls->Add(this->buttoncreer);
 			this->tabPage3->Location = System::Drawing::Point(4, 29);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Size = System::Drawing::Size(949, 35);
@@ -262,9 +237,27 @@ namespace Projetgroupe1 {
 			this->tabPage3->Text = L"Créer";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
+			// buttoncreer
+			// 
+			this->buttoncreer->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttoncreer->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->buttoncreer->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->buttoncreer->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->buttoncreer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttoncreer.Image")));
+			this->buttoncreer->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->buttoncreer->Location = System::Drawing::Point(0, 3);
+			this->buttoncreer->Name = L"buttoncreer";
+			this->buttoncreer->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->buttoncreer->Size = System::Drawing::Size(946, 29);
+			this->buttoncreer->TabIndex = 38;
+			this->buttoncreer->Text = L"Créer";
+			this->buttoncreer->UseVisualStyleBackColor = true;
+			this->buttoncreer->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::buttoncreer_Click);
+			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->button6);
+			this->tabPage4->Controls->Add(this->buttonsupprimer);
 			this->tabPage4->Controls->Add(this->textBox1);
 			this->tabPage4->Controls->Add(this->label3);
 			this->tabPage4->Location = System::Drawing::Point(4, 29);
@@ -274,23 +267,23 @@ namespace Projetgroupe1 {
 			this->tabPage4->Text = L"Supprimer";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
-			// button6
+			// buttonsupprimer
 			// 
-			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->buttonsupprimer->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonsupprimer->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->buttonsupprimer->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->ForeColor = System::Drawing::Color::OrangeRed;
-			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
-			this->button6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button6->Location = System::Drawing::Point(298, 0);
-			this->button6->Name = L"button6";
-			this->button6->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button6->Size = System::Drawing::Size(118, 39);
-			this->button6->TabIndex = 36;
-			this->button6->Text = L"Supprimer";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button6_Click_1);
+			this->buttonsupprimer->ForeColor = System::Drawing::Color::OrangeRed;
+			this->buttonsupprimer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonsupprimer.Image")));
+			this->buttonsupprimer->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->buttonsupprimer->Location = System::Drawing::Point(298, 0);
+			this->buttonsupprimer->Name = L"buttonsupprimer";
+			this->buttonsupprimer->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->buttonsupprimer->Size = System::Drawing::Size(118, 39);
+			this->buttonsupprimer->TabIndex = 36;
+			this->buttonsupprimer->Text = L"Supprimer";
+			this->buttonsupprimer->UseVisualStyleBackColor = true;
+			this->buttonsupprimer->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::buttonsupprimer_Click);
 			// 
 			// textBox1
 			// 
@@ -324,25 +317,25 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->GrillePersonnal->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCells;
 			this->GrillePersonnal->BackgroundColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Underline,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Underline,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->GrillePersonnal->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->GrillePersonnal->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->GrillePersonnal->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->GrillePersonnal->DefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->GrillePersonnal->DefaultCellStyle = dataGridViewCellStyle2;
 			this->GrillePersonnal->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->GrillePersonnal->GridColor = System::Drawing::SystemColors::ButtonFace;
 			this->GrillePersonnal->ImeMode = System::Windows::Forms::ImeMode::NoControl;
@@ -351,10 +344,10 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->ReadOnly = true;
 			this->GrillePersonnal->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
 			this->GrillePersonnal->RowHeadersVisible = false;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::Color::White;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::White;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->GrillePersonnal->RowsDefaultCellStyle = dataGridViewCellStyle6;
+			this->GrillePersonnal->RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this->GrillePersonnal->Size = System::Drawing::Size(1028, 457);
 			this->GrillePersonnal->TabIndex = 35;
 			// 
@@ -367,25 +360,7 @@ namespace Projetgroupe1 {
 			this->button2->TabIndex = 37;
 			this->button2->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button2_Click);
-			// 
-			// button3
-			// 
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
-			this->button3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button3->Location = System::Drawing::Point(0, 3);
-			this->button3->Name = L"button3";
-			this->button3->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button3->Size = System::Drawing::Size(946, 29);
-			this->button3->TabIndex = 38;
-			this->button3->Text = L"Créer";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::button3_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &GuiGestionPersonnel::refresh_Click);
 			// 
 			// GuiGestionPersonnel
 			// 
@@ -421,22 +396,34 @@ namespace Projetgroupe1 {
 			this->PerformLayout();
 
 		}
+
+		public : void refreshData(System::Data::DataSet^ dataSet) { //FONCTION REFRESH AVEC DATASET
+			this->GrillePersonnal->Refresh();
+			this->oDs = dataSet;
+			this->GrillePersonnal->DataSource = this->oDs;
+			this->GrillePersonnal->DataMember = "rsl";
+		}
+
+
 #pragma endregion
-	private: System::Void GuiGestionPersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void GuiGestionPersonnel_Load(System::Object^ sender, System::EventArgs^ e) { // Ce qui s'effectue lors du lancement de la formm
+		this->oSvcc = gcnew NS_Comp_Svc::StaffService();
+		refreshData(this->oSvcc->selectStaff("rsl"));
+		GrillePersonnal->Columns["Id_staff"]->HeaderText = "Numéro du staff";
+		GrillePersonnal->Columns["staff_name"]->HeaderText = "Nom du personnel";
+		GrillePersonnal->Columns["staff_first_name"]->HeaderText = "Prénom du personnel";
+		GrillePersonnal->Columns["hire_date"]->HeaderText = "Date d'embauche";
+		GrillePersonnal->Columns["line_manager"]->HeaderText = "Numéro du résponsable";
+		GrillePersonnal->Columns["n_street"]->HeaderText = "Numéro de rue";
+		GrillePersonnal->Columns["street_name"]->HeaderText = "Nom de rue";
+		GrillePersonnal->Columns["zip_code"]->HeaderText = "Code postale";
+		GrillePersonnal->Columns["city_name"]->HeaderText = "Nom de ville";
 	}
-	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void nomfiltre_TextChanged(System::Object^ sender, System::EventArgs^ e) { //Action lors d'ajout d'un caractere dans la textBox permettant de filtrer la database
+		refreshData(this->oSvcc->FiltrerService("rsl", "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null AND staff_name LIKE '%" + nomfiltre->Text + "%' ;"));
+	}
 
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-
-		this->GrillePersonnal->Refresh();
-		this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null AND staff_name LIKE '%" +nomfiltre->Text+"%' ;");
-		this->GrillePersonnal->DataSource = this->oDs;
-		this->GrillePersonnal->DataMember = "rsl";
-	}
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button6_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void buttonsupprimer_Click(System::Object^ sender, System::EventArgs^ e) { //BUTTON SUPPRIMER
 		if (textBox1->Text->Length == 0) {
 			MessageBox::Show("Veuillez rentrez un ID", "Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}else{
@@ -445,28 +432,24 @@ namespace Projetgroupe1 {
 		this->oSvcc->Envoyer("DELETE from Adress where id_adress = (select FK_staff_adress from Staff where id_staff = '" + int::Parse(textBox1->Text) + "')");
 		this->oSvcc->Envoyer("alter table Staff check constraint all");
 		this->oSvcc->Envoyer("DELETE from Staff where id_staff = '" + int::Parse(textBox1->Text) + "'");
-		this->GrillePersonnal->Refresh();
-		this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null AND staff_name LIKE '%" + nomfiltre->Text + "%' ;");
-		this->GrillePersonnal->DataSource = this->oDs;
-		this->GrillePersonnal->DataMember = "rsl";
+		refreshData(this->oSvcc->selectStaff("rsl"));
 		}
 	}
 
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	GuiGestionPersonnelUpdate^ GuiModifier = gcnew GuiGestionPersonnelUpdate();
-	GuiModifier->ShowDialog();
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->GrillePersonnal->Refresh();
-	this->oDs = this->oSvcc->FiltrerService("rsl", "SELECT id_staff, staff_name, staff_first_name, hire_date, line_manager, n_street, street_name, zip_code, city_name FROM staff RIGHT JOIN Adress ON staff.FK_staff_adress = Adress.id_adress  where id_staff is not null AND staff_name LIKE '%" + nomfiltre->Text + "%' ;");
-	this->GrillePersonnal->DataSource = this->oDs;
-	this->GrillePersonnal->DataMember = "rsl";
+private: System::Void refresh_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTTON REFRESH (form)
+	refreshData(this->oSvcc->selectStaff("rsl"));
+	//this->label4->Text = "test de ta mère la pute";
 	MessageBox::Show("Base de données rafraîchi avec succès !", "OK", MessageBoxButtons::OK, MessageBoxIcon::Information);
-
 }
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+private: System::Void buttoncreer_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTTON CREER (form)
 	GuiGestionPersonnelCreate^ GuiCreate = gcnew GuiGestionPersonnelCreate();
 	GuiCreate->ShowDialog();
+}
+
+private: System::Void buttonmodifier_Click(System::Object^ sender, System::EventArgs^ e) { // BOUTTON MODIFIER (form)
+	GuiGestionPersonnelUpdate^ GuiModifier = gcnew GuiGestionPersonnelUpdate();
+	GuiModifier->ShowDialog();
 }
 };
 }

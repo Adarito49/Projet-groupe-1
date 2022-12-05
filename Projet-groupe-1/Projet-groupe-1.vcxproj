@@ -131,6 +131,8 @@
     <ClCompile Include="CLCustomer.cpp" />
     <ClCompile Include="CustomerService.cpp" />
     <ClCompile Include="AdressService.cpp" />
+    <ClCompile Include="GuiGestionClientsCreate.cpp" />
+    <ClCompile Include="GuiGestionClientsUpdate.cpp" />
     <ClCompile Include="GuiGestionPersonnelCreate.cpp" />
     <ClCompile Include="GuiGestionPersonnelUpdate.cpp" />
     <ClCompile Include="GuiGestionStocksCreate.cpp" />
@@ -158,6 +160,12 @@
     <ClInclude Include="CustomerService.h" />
     <ClInclude Include="CLProduct.h" />
     <ClInclude Include="AdressService.h" />
+    <ClInclude Include="GuiGestionClientsCreate.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="GuiGestionClientsUpdate.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="GuiGestionPersonnelCreate.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -201,8 +209,15 @@
     <EmbeddedResource Include="GuiGestionClients.resx">
       <DependentUpon>GuiGestionClients.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GuiGestionClientsCreate.resx">
+      <DependentUpon>GuiGestionClientsCreate.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuiGestionClientsUpdate.resx">
+      <DependentUpon>GuiGestionClientsUpdate.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionPersonnel.resx">
       <DependentUpon>GuiGestionPersonnel.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionPersonnelCreate.resx">
       <DependentUpon>GuiGestionPersonnelCreate.h</DependentUpon>

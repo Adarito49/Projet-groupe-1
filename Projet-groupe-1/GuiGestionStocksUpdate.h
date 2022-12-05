@@ -19,7 +19,7 @@ namespace Projetgroupe1 {
 		GuiGestionStocksUpdate(void)
 		{
 			InitializeComponent();
-			this->oSvcc = gcnew NS_Comp_Svc::ProductService();
+
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -427,6 +427,7 @@ namespace Projetgroupe1 {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"GuiGestionStocksUpdate";
 			this->Text = L"GuiGestionStocksUpdate";
+			this->Load += gcnew System::EventHandler(this, &GuiGestionStocksUpdate::GuiGestionStocksUpdate_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
@@ -462,7 +463,7 @@ namespace Projetgroupe1 {
 				this->oSvcc->Envoyer("update Product set product_type = '" + comboBox1->Text + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
 			}
 			if (textBox5->Text->Length != 0) {
-				this->oSvcc->Envoyer("update Product set price = '" + int::Parse(textBox5->Text) + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
+				this->oSvcc->Envoyer("update Product set price = '" + textBox5->Text + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
 			}
 			if (textBox6->Text->Length != 0) {
 				this->oSvcc->Envoyer("update Product set product_quantity = '" + int::Parse(textBox6->Text) + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
@@ -474,12 +475,15 @@ namespace Projetgroupe1 {
 				this->oSvcc->Envoyer("update Product set vat_cover = '" + int::Parse(comboBox2->Text) + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
 			}
 			if (textBox9->Text->Length != 0) {
-				this->oSvcc->Envoyer("update Product set buying_price = '" + float::Parse(textBox9->Text) + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
+				this->oSvcc->Envoyer("update Product set buying_price = '" + textBox9->Text + "' WHERE id_product='" + int::Parse(textBox2->Text) + "'");
 			}
 
 			MessageBox::Show("Changement effectué avec succès", "Update", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			this->Close();
 		}
 	}
+private: System::Void GuiGestionStocksUpdate_Load(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvcc = gcnew NS_Comp_Svc::ProductService();
+}
 };
 }

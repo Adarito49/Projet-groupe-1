@@ -10,17 +10,17 @@ namespace Projetgroupe1 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::SqlClient;
-
 	/// <summary>
 	/// Description résumée de GuiGestionPersonnelCreate
 	/// </summary>
+	/// 
+	///
 	public ref class GuiGestionPersonnelCreate : public System::Windows::Forms::Form
 	{
 	public:
 		GuiGestionPersonnelCreate(void)
 		{
 			InitializeComponent();
-			this->oSvcc = gcnew NS_Comp_Svc::StaffService();
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -357,7 +357,7 @@ namespace Projetgroupe1 {
 			this->button1->TabIndex = 62;
 			this->button1->Text = L"Ajouter";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnelCreate::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionPersonnelCreate::buttonCreer_Click);
 			// 
 			// label4
 			// 
@@ -521,6 +521,7 @@ namespace Projetgroupe1 {
 
 		}
 #pragma endregion
+///////////////////////////////////////////// DESIGN FORM AVEC DEPLACEMENT ET FERMETURE DE LA FORM
 	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
@@ -538,12 +539,13 @@ namespace Projetgroupe1 {
 	private: System::Void pictureBox2_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { //LORSE QU'ON LACHE LE CLICK
 		this->dragging = false;
 	}
+//////////////////////////////////////////////
+
 	private: System::Void GuiGestionPersonnelCreate_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvcc = gcnew NS_Comp_Svc::StaffService();
 	}
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
+	private: System::Void buttonCreer_Click(System::Object^ sender, System::EventArgs^ e) { //Bouton créer personnel
 		if (textBox1->Text->Length == 0 || textBox3->Text->Length == 0 || textBox6->Text->Length == 0 || textBox3->Text->Length == 0 || textBox7->Text->Length == 0 || textBox8->Text->Length == 0 || comboBox2->Text->Length == 0) {
 			MessageBox::Show("Veuillez remplir toutes les champs obligatoires", "Erreur NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
@@ -557,18 +559,19 @@ namespace Projetgroupe1 {
 			this->Close();
 		}
 	}
-private: System::Void textBox8_Leave(System::Object^ sender, System::EventArgs^ e) {
-	comboBox2->Items->Clear();
-	cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
-	cn->Open();
 
-	cmd = gcnew SqlCommand("select city_name from Postal where postal_code LIKE '%" + textBox8->Text + "%'", cn);
-	dr = cmd->ExecuteReader();
-	while (dr->Read())
-	{
-		comboBox2->Items->Add(dr[0]);
-	}
-	dr->Close();
+	private: System::Void textBox8_Leave(System::Object^ sender, System::EventArgs^ e) { // SYSTEME VILLE EN FONCTION CODE POSTALE, VIA BDD 
+		comboBox2->Items->Clear();
+		cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
+		cn->Open();
+
+		cmd = gcnew SqlCommand("select city_name from Postal where postal_code LIKE '%" + textBox8->Text + "%'", cn);
+		dr = cmd->ExecuteReader();
+		while (dr->Read())
+		{
+			comboBox2->Items->Add(dr[0]);
+		}
+		dr->Close();
 }
 };
 }
