@@ -1,5 +1,5 @@
 #pragma once
-#include "GuiCommandesCréer.h"
+#include "GuiCommandesCreate.h"
 
 namespace Projetgroupe1 {
 
@@ -347,7 +347,7 @@ namespace Projetgroupe1 {
 		}
 #pragma endregion
 private: System::Void buttoncreer_Click(System::Object^ sender, System::EventArgs^ e) {
-	GuiCommandesCréer^ GuiModifier = gcnew GuiCommandesCréer();
+	GuiCommandesCreate^ GuiModifier = gcnew GuiCommandesCreate();
 	GuiModifier->ShowDialog();
 }
 };

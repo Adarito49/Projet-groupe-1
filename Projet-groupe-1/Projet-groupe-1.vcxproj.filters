@@ -69,12 +69,6 @@
     <ClInclude Include="CustomerService.h">
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
-    <ClInclude Include="CLAdress.h">
-      <Filter>Fichiers d%27en-tête\Mappage</Filter>
-    </ClInclude>
-    <ClInclude Include="AdressService.h">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
-    </ClInclude>
     <ClInclude Include="CLProduct.h">
       <Filter>Fichiers d%27en-tête\Mappage</Filter>
     </ClInclude>
@@ -85,18 +79,6 @@
       <Filter>Fichiers d%27en-tête\Mappage</Filter>
     </ClInclude>
     <ClInclude Include="OrderService.h">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
-    </ClInclude>
-    <ClInclude Include="CLBill.h">
-      <Filter>Fichiers d%27en-tête\Mappage</Filter>
-    </ClInclude>
-    <ClInclude Include="BillService.h">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
-    </ClInclude>
-    <ClInclude Include="CLHold.h">
-      <Filter>Fichiers d%27en-tête\Mappage</Filter>
-    </ClInclude>
-    <ClInclude Include="HoldService.h">
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
     <ClInclude Include="GuiGestionPersonnelUpdate.h">
@@ -117,7 +99,7 @@
     <ClInclude Include="GuiGestionClientsCreate.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="GuiCommandesCréer.h">
+    <ClInclude Include="GuiCommandesCreate.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>
@@ -155,12 +137,6 @@
     <ClCompile Include="CustomerService.cpp">
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
-    <ClCompile Include="CLAdress.cpp">
-      <Filter>Fichiers sources\Mappage</Filter>
-    </ClCompile>
-    <ClCompile Include="AdressService.cpp">
-      <Filter>Fichiers sources\Services</Filter>
-    </ClCompile>
     <ClCompile Include="CLProduct.cpp">
       <Filter>Fichiers sources\Mappage</Filter>
     </ClCompile>
@@ -171,18 +147,6 @@
       <Filter>Fichiers sources\Mappage</Filter>
     </ClCompile>
     <ClCompile Include="OrderService.cpp">
-      <Filter>Fichiers sources\Services</Filter>
-    </ClCompile>
-    <ClCompile Include="CLBill.cpp">
-      <Filter>Fichiers sources\Mappage</Filter>
-    </ClCompile>
-    <ClCompile Include="BillService.cpp">
-      <Filter>Fichiers sources\Services</Filter>
-    </ClCompile>
-    <ClCompile Include="CLHold.cpp">
-      <Filter>Fichiers sources\Mappage</Filter>
-    </ClCompile>
-    <ClCompile Include="HoldService.cpp">
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
     <ClCompile Include="GuiGestionPersonnelUpdate.cpp">
@@ -203,7 +167,7 @@
     <ClCompile Include="GuiGestionClientsCreate.cpp">
       <Filter>Fichiers d%27en-tête\Gui</Filter>
     </ClCompile>
-    <ClCompile Include="GuiCommandesCréer.cpp">
+    <ClCompile Include="GuiCommandesCreate.cpp">
       <Filter>Fichiers d%27en-tête\Gui</Filter>
     </ClCompile>
   </ItemGroup>

@@ -121,24 +121,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BillService.cpp" />
-    <ClCompile Include="CLAdress.cpp" />
-    <ClCompile Include="CLBill.cpp" />
-    <ClCompile Include="CLHold.cpp" />
     <ClCompile Include="CLOrders.cpp" />
     <ClCompile Include="CLProduct.cpp" />
     <ClCompile Include="CLStaff.cpp" />
     <ClCompile Include="CLCustomer.cpp" />
     <ClCompile Include="CustomerService.cpp" />
-    <ClCompile Include="AdressService.cpp" />
-    <ClCompile Include="GuiCommandesCréer.cpp" />
+    <ClCompile Include="GuiCommandesCreate.cpp" />
     <ClCompile Include="GuiGestionClientsCreate.cpp" />
     <ClCompile Include="GuiGestionClientsUpdate.cpp" />
     <ClCompile Include="GuiGestionPersonnelCreate.cpp" />
     <ClCompile Include="GuiGestionPersonnelUpdate.cpp" />
     <ClCompile Include="GuiGestionStocksCreate.cpp" />
     <ClCompile Include="GuiGestionStocksUpdate.cpp" />
-    <ClCompile Include="HoldService.cpp" />
     <ClCompile Include="OrderService.cpp" />
     <ClCompile Include="ProductService.cpp" />
     <ClCompile Include="StaffService.cpp" />
@@ -151,17 +145,12 @@
     <ClCompile Include="GuiStatistiques.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BillService.h" />
-    <ClInclude Include="CLAdress.h" />
-    <ClInclude Include="CLBill.h" />
-    <ClInclude Include="CLHold.h" />
     <ClInclude Include="CLOrders.h" />
     <ClInclude Include="CLStaff.h" />
     <ClInclude Include="CLCustomer.h" />
     <ClInclude Include="CustomerService.h" />
     <ClInclude Include="CLProduct.h" />
-    <ClInclude Include="AdressService.h" />
-    <ClInclude Include="GuiCommandesCréer.h">
+    <ClInclude Include="GuiCommandesCreate.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="GuiGestionClientsCreate.h">
@@ -182,7 +171,6 @@
     <ClInclude Include="GuiGestionStocksUpdate.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="HoldService.h" />
     <ClInclude Include="OrderService.h" />
     <ClInclude Include="ProductService.h" />
     <ClInclude Include="StaffService.h" />
@@ -210,8 +198,8 @@
     <EmbeddedResource Include="GuiCommandes.resx">
       <DependentUpon>GuiCommandes.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GuiCommandesCréer.resx">
-      <DependentUpon>GuiCommandesCréer.h</DependentUpon>
+    <EmbeddedResource Include="GuiCommandesCreate.resx">
+      <DependentUpon>GuiCommandesCreate.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GuiGestionClients.resx">
       <DependentUpon>GuiGestionClients.h</DependentUpon>

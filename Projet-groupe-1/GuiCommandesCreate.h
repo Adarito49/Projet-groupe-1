@@ -14,10 +14,10 @@ namespace Projetgroupe1 {
 	/// <summary>
 	/// Description résumée de GuiCommandesCréer
 	/// </summary>
-	public ref class GuiCommandesCréer : public System::Windows::Forms::Form
+	public ref class GuiCommandesCreate : public System::Windows::Forms::Form
 	{
 	public:
-		GuiCommandesCréer(void)
+		GuiCommandesCreate(void)
 		{
 			InitializeComponent();
 			//
@@ -29,7 +29,7 @@ namespace Projetgroupe1 {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~GuiCommandesCréer()
+		~GuiCommandesCreate()
 		{
 			if (components)
 			{
@@ -214,7 +214,7 @@ private: System::Windows::Forms::Label^ label67;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuiCommandesCréer::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuiCommandesCreate::typeid));
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
@@ -361,9 +361,9 @@ private: System::Windows::Forms::Label^ label67;
 			this->pictureBox2->Size = System::Drawing::Size(1173, 121);
 			this->pictureBox2->TabIndex = 37;
 			this->pictureBox2->TabStop = false;
-			this->pictureBox2->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCréer::pictureBox2_MouseDown);
-			this->pictureBox2->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCréer::pictureBox2_MouseMove);
-			this->pictureBox2->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCréer::pictureBox2_MouseUp);
+			this->pictureBox2->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCreate::pictureBox2_MouseDown);
+			this->pictureBox2->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCreate::pictureBox2_MouseMove);
+			this->pictureBox2->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCreate::pictureBox2_MouseUp);
 			// 
 			// label1
 			// 
@@ -449,7 +449,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(203, 21);
 			this->comboBox1->TabIndex = 45;
-			this->comboBox1->TextChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::comboBox1_TextChanged);
+			this->comboBox1->TextChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::comboBox1_TextChanged);
 			// 
 			// label4
 			// 
@@ -487,7 +487,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->checkBox1->TabIndex = 49;
 			this->checkBox1->Text = L"Identique à adresse de factiration";
 			this->checkBox1->UseVisualStyleBackColor = false;
-			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::checkBox1_CheckedChanged);
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::checkBox1_CheckedChanged);
 			// 
 			// textBox2
 			// 
@@ -505,7 +505,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(71, 20);
 			this->textBox3->TabIndex = 52;
-			this->textBox3->Leave += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox3_Leave);
+			this->textBox3->Leave += gcnew System::EventHandler(this, &GuiCommandesCreate::textBox3_Leave);
 			// 
 			// textBox4
 			// 
@@ -515,7 +515,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(71, 20);
 			this->textBox4->TabIndex = 56;
-			this->textBox4->Leave += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox4_Leave);
+			this->textBox4->Leave += gcnew System::EventHandler(this, &GuiCommandesCreate::textBox4_Leave);
 			// 
 			// textBox5
 			// 
@@ -820,8 +820,8 @@ private: System::Windows::Forms::Label^ label67;
 			this->checkBox2->TabIndex = 80;
 			this->checkBox2->Text = L"Nouvelle adresse";
 			this->checkBox2->UseVisualStyleBackColor = false;
-			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::checkBox2_CheckedChanged);
-			this->checkBox2->EnabledChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::checkBox2_EnabledChanged);
+			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::checkBox2_CheckedChanged);
+			this->checkBox2->EnabledChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::checkBox2_EnabledChanged);
 			// 
 			// label18
 			// 
@@ -858,7 +858,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->checkBox3->TabIndex = 83;
 			this->checkBox3->Text = L"Nouvelle adresse";
 			this->checkBox3->UseVisualStyleBackColor = false;
-			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::checkBox3_CheckedChanged);
+			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::checkBox3_CheckedChanged);
 			// 
 			// comboBox14
 			// 
@@ -1223,7 +1223,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown1->TabIndex = 146;
-			this->numericUpDown1->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown1_ValueChanged);
+			this->numericUpDown1->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown1_ValueChanged);
 			// 
 			// numericUpDown2
 			// 
@@ -1232,7 +1232,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown2->Name = L"numericUpDown2";
 			this->numericUpDown2->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown2->TabIndex = 147;
-			this->numericUpDown2->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown2_ValueChanged);
+			this->numericUpDown2->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown2_ValueChanged);
 			// 
 			// numericUpDown3
 			// 
@@ -1241,7 +1241,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown3->Name = L"numericUpDown3";
 			this->numericUpDown3->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown3->TabIndex = 148;
-			this->numericUpDown3->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown3_ValueChanged);
+			this->numericUpDown3->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown3_ValueChanged);
 			// 
 			// numericUpDown4
 			// 
@@ -1250,7 +1250,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown4->Name = L"numericUpDown4";
 			this->numericUpDown4->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown4->TabIndex = 149;
-			this->numericUpDown4->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown4_ValueChanged);
+			this->numericUpDown4->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown4_ValueChanged);
 			// 
 			// numericUpDown5
 			// 
@@ -1259,7 +1259,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown5->Name = L"numericUpDown5";
 			this->numericUpDown5->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown5->TabIndex = 150;
-			this->numericUpDown5->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown5_ValueChanged);
+			this->numericUpDown5->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown5_ValueChanged);
 			// 
 			// numericUpDown6
 			// 
@@ -1268,7 +1268,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown6->Name = L"numericUpDown6";
 			this->numericUpDown6->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown6->TabIndex = 151;
-			this->numericUpDown6->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown6_ValueChanged);
+			this->numericUpDown6->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown6_ValueChanged);
 			// 
 			// numericUpDown7
 			// 
@@ -1277,7 +1277,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown7->Name = L"numericUpDown7";
 			this->numericUpDown7->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown7->TabIndex = 152;
-			this->numericUpDown7->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown7_ValueChanged);
+			this->numericUpDown7->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown7_ValueChanged);
 			// 
 			// numericUpDown8
 			// 
@@ -1286,7 +1286,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown8->Name = L"numericUpDown8";
 			this->numericUpDown8->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown8->TabIndex = 153;
-			this->numericUpDown8->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown8_ValueChanged);
+			this->numericUpDown8->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown8_ValueChanged);
 			// 
 			// numericUpDown9
 			// 
@@ -1295,7 +1295,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown9->Name = L"numericUpDown9";
 			this->numericUpDown9->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown9->TabIndex = 154;
-			this->numericUpDown9->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown9_ValueChanged);
+			this->numericUpDown9->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown9_ValueChanged);
 			// 
 			// numericUpDown10
 			// 
@@ -1304,7 +1304,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown10->Name = L"numericUpDown10";
 			this->numericUpDown10->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown10->TabIndex = 155;
-			this->numericUpDown10->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown10_ValueChanged);
+			this->numericUpDown10->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown10_ValueChanged);
 			// 
 			// textBox1
 			// 
@@ -1336,7 +1336,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->pictureBox8->Size = System::Drawing::Size(45, 45);
 			this->pictureBox8->TabIndex = 158;
 			this->pictureBox8->TabStop = false;
-			this->pictureBox8->Click += gcnew System::EventHandler(this, &GuiCommandesCréer::pictureBox8_Click);
+			this->pictureBox8->Click += gcnew System::EventHandler(this, &GuiCommandesCreate::pictureBox8_Click);
 			// 
 			// label45
 			// 
@@ -1728,7 +1728,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"GuiCommandesCréer";
 			this->Text = L"GuiCommandesCréer";
-			this->Load += gcnew System::EventHandler(this, &GuiCommandesCréer::GuiCommandesCréer_Load);
+			this->Load += gcnew System::EventHandler(this, &GuiCommandesCreate::GuiCommandesCréer_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -1849,6 +1849,9 @@ private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::E
 	textBox2->Enabled = true;
 	textBox3->Enabled = true;
 	comboBox2->Enabled = true;
+	if (checkBox3->Checked == true){
+	checkBox1->Enabled = true;
+	}
 	}
 	if (checkBox2->Checked == false)
 	{
@@ -1858,6 +1861,7 @@ private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::E
 		textBox2->Enabled = false;
 		textBox3->Enabled = false;
 		comboBox2->Enabled = false;
+		checkBox1->Enabled = false;
 	}
 }
 private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -1869,7 +1873,10 @@ private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::E
 		textBox5->Enabled = true;
 		textBox6->Enabled = true;
 		comboBox3->Enabled = true;
-		checkBox1->Enabled = true;
+		if (checkBox2->Checked == true) {
+			checkBox1->Enabled = true;
+		}
+
 	}
 	if (checkBox3->Checked == false)
 	{
@@ -1880,11 +1887,21 @@ private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::E
 		textBox6->Enabled = false;
 		comboBox3->Enabled = false;
 		checkBox1->Enabled = false;
+
 	}
 }
 private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	if (checkBox1->Checked == true)
 	{
+		if (textBox3->Text->Length == 0 || textBox2->Text->Length == 0 || textBox1->Text->Length == 0 || comboBox2->Text->Length == 0) {
+			textBox4->Text = "";
+			textBox5->Text = "";
+			textBox6->Text = "";
+			comboBox3->Text = "";
+
+			MessageBox::Show("Remplissez tout les champs d'addresse de livraison dans un premier temps", "Error", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			checkBox1->Checked == false;
+		}else{
 		textBox4->Text = textBox3->Text;
 		textBox5->Text = textBox2->Text;
 		textBox6->Text = textBox1->Text;
@@ -1895,6 +1912,7 @@ private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::E
 		textBox5->Enabled = false;
 		textBox6->Enabled = false;
 		comboBox3->Enabled = false;
+		}
 	}
 	if (checkBox1->Checked == false)
 	{
@@ -1903,6 +1921,7 @@ private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::E
 		textBox6->Enabled = true;
 		comboBox3->Enabled = true;
 	}
+	
 }
 private: System::Void textBox3_Leave(System::Object^ sender, System::EventArgs^ e) {
 	comboBox2->Items->Clear();

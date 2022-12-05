@@ -515,7 +515,7 @@ namespace Projetgroupe1 {
 			MessageBox::Show("Veuillez remplir toutes les champs obligatoires", "Erreur NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 		else {
-			this->oSvcc->Envoyer("insert into product(product_name, product_type, price, product_quantity, resupply_threshold, vat_cover, buying_price) values('" + textBox1->Text + "', '" + comboBox1->Text + "', '" + int::Parse(textBox5->Text) + "', '" + int::Parse(textBox6->Text) + "', '" + int::Parse(textBox7->Text) + "', '" + int::Parse(comboBox2->Text) + "', '" + int::Parse(textBox2->Text) + "')");
+			this->oSvcc->Envoyer("insert into product(product_name, product_type, price, product_quantity, resupply_threshold, vat_cover, buying_price) values('" + textBox1->Text + "', '" + comboBox1->Text + "', '" + int::Parse(textBox5->Text) + "', '" + int::Parse(textBox7->Text) + "', '" + int::Parse(textBox6->Text) + "', '" + int::Parse(comboBox2->Text) + "', '" + int::Parse(textBox2->Text) + "')");
 
 			MessageBox::Show("Ajout réussi", "Félicitations", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			this->Close();
