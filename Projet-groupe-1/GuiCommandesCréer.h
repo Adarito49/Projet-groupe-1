@@ -37,6 +37,8 @@ namespace Projetgroupe1 {
 			}
 		}
 
+	private: String^ test;
+	private: int^ calcul;
 
 	private: SqlConnection^ cn;
 	private: SqlCommand^ cmd;
@@ -57,12 +59,15 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::ComboBox^ comboBox2;
 	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::TextBox^ textBox1;
+
+
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
+
+
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
+
 	private: System::Windows::Forms::ComboBox^ comboBox3;
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
 	private: System::Windows::Forms::Label^ label5;
@@ -93,16 +98,16 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::CheckBox^ checkBox3;
 	private: System::Windows::Forms::ComboBox^ comboBox14;
 	private: System::Windows::Forms::ComboBox^ comboBox15;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::TextBox^ textBox12;
-	private: System::Windows::Forms::TextBox^ textBox13;
-	private: System::Windows::Forms::TextBox^ textBox14;
-	private: System::Windows::Forms::TextBox^ textBox15;
-	private: System::Windows::Forms::TextBox^ textBox16;
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 	private: System::Windows::Forms::Label^ label20;
@@ -119,25 +124,79 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Label^ label30;
 	private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::DataGridView^ dataGridView1;
-private: System::Windows::Forms::Button^ button2;
-private: System::Windows::Forms::DataGridView^ dataGridView2;
-private: System::Windows::Forms::Button^ button3;
-private: System::Windows::Forms::Button^ button4;
-private: System::Windows::Forms::DataGridView^ dataGridView3;
-private: System::Windows::Forms::Button^ button5;
-private: System::Windows::Forms::DataGridView^ dataGridView4;
-private: System::Windows::Forms::Button^ button6;
-private: System::Windows::Forms::DataGridView^ dataGridView5;
-private: System::Windows::Forms::Button^ button7;
-private: System::Windows::Forms::DataGridView^ dataGridView6;
-private: System::Windows::Forms::Button^ button8;
-private: System::Windows::Forms::DataGridView^ dataGridView7;
-private: System::Windows::Forms::Button^ button9;
-private: System::Windows::Forms::DataGridView^ dataGridView8;
-private: System::Windows::Forms::Button^ button10;
-private: System::Windows::Forms::DataGridView^ dataGridView9;
-private: System::Windows::Forms::Button^ button11;
-private: System::Windows::Forms::DataGridView^ dataGridView10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Label^ label36;
+private: System::Windows::Forms::Label^ label37;
+private: System::Windows::Forms::Label^ label38;
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::Label^ label42;
+private: System::Windows::Forms::PictureBox^ pictureBox7;
+private: System::Windows::Forms::Label^ label43;
+private: System::Windows::Forms::Label^ label44;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown3;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown4;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown5;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown6;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown7;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown8;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown9;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown10;
+private: System::Windows::Forms::NumericUpDown^ textBox1;
+private: System::Windows::Forms::NumericUpDown^ textBox6;
+private: System::Windows::Forms::PictureBox^ pictureBox8;
+private: System::Windows::Forms::Label^ label45;
+private: System::Windows::Forms::Label^ label46;
+private: System::Windows::Forms::Label^ label47;
+private: System::Windows::Forms::Label^ label48;
+private: System::Windows::Forms::Label^ label49;
+private: System::Windows::Forms::Label^ label50;
+private: System::Windows::Forms::Label^ label51;
+private: System::Windows::Forms::Label^ label52;
+private: System::Windows::Forms::Label^ label53;
+private: System::Windows::Forms::Label^ label54;
+private: System::Windows::Forms::Label^ label55;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Label^ label56;
+private: System::Windows::Forms::Label^ label57;
+private: System::Windows::Forms::Label^ label58;
+private: System::Windows::Forms::Label^ label59;
+private: System::Windows::Forms::Label^ label60;
+private: System::Windows::Forms::Label^ label61;
+private: System::Windows::Forms::Label^ label62;
+private: System::Windows::Forms::Label^ label63;
+private: System::Windows::Forms::Label^ label64;
+private: System::Windows::Forms::Label^ label65;
+private: System::Windows::Forms::Label^ label66;
+private: System::Windows::Forms::Label^ label67;
+
+
+
 
 
 	protected:
@@ -167,12 +226,10 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -203,16 +260,6 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
 			this->comboBox14 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox15 = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
@@ -229,25 +276,57 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView6 = (gcnew System::Windows::Forms::DataGridView());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView7 = (gcnew System::Windows::Forms::DataGridView());
-			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView8 = (gcnew System::Windows::Forms::DataGridView());
-			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView9 = (gcnew System::Windows::Forms::DataGridView());
-			this->button11 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView10 = (gcnew System::Windows::Forms::DataGridView());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown3 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown4 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown6 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown7 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown8 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown9 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->textBox1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->textBox6 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->label46 = (gcnew System::Windows::Forms::Label());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->label48 = (gcnew System::Windows::Forms::Label());
+			this->label49 = (gcnew System::Windows::Forms::Label());
+			this->label50 = (gcnew System::Windows::Forms::Label());
+			this->label51 = (gcnew System::Windows::Forms::Label());
+			this->label52 = (gcnew System::Windows::Forms::Label());
+			this->label53 = (gcnew System::Windows::Forms::Label());
+			this->label54 = (gcnew System::Windows::Forms::Label());
+			this->label55 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label56 = (gcnew System::Windows::Forms::Label());
+			this->label57 = (gcnew System::Windows::Forms::Label());
+			this->label58 = (gcnew System::Windows::Forms::Label());
+			this->label59 = (gcnew System::Windows::Forms::Label());
+			this->label60 = (gcnew System::Windows::Forms::Label());
+			this->label61 = (gcnew System::Windows::Forms::Label());
+			this->label62 = (gcnew System::Windows::Forms::Label());
+			this->label63 = (gcnew System::Windows::Forms::Label());
+			this->label64 = (gcnew System::Windows::Forms::Label());
+			this->label65 = (gcnew System::Windows::Forms::Label());
+			this->label66 = (gcnew System::Windows::Forms::Label());
+			this->label67 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -256,15 +335,20 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView7))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView8))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView9))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView10))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox2
@@ -277,6 +361,9 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->pictureBox2->Size = System::Drawing::Size(1173, 121);
 			this->pictureBox2->TabIndex = 37;
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCréer::pictureBox2_MouseDown);
+			this->pictureBox2->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCréer::pictureBox2_MouseMove);
+			this->pictureBox2->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &GuiCommandesCréer::pictureBox2_MouseUp);
 			// 
 			// label1
 			// 
@@ -380,6 +467,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			// 
 			// comboBox2
 			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox2->Enabled = false;
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Location = System::Drawing::Point(479, 228);
@@ -401,14 +489,6 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->checkBox1->UseVisualStyleBackColor = false;
 			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::checkBox1_CheckedChanged);
 			// 
-			// textBox1
-			// 
-			this->textBox1->Enabled = false;
-			this->textBox1->Location = System::Drawing::Point(381, 182);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(40, 20);
-			this->textBox1->TabIndex = 50;
-			// 
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
@@ -420,7 +500,8 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(381, 229);
+			this->textBox3->Location = System::Drawing::Point(379, 228);
+			this->textBox3->MaxLength = 5;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(71, 20);
 			this->textBox3->TabIndex = 52;
@@ -430,9 +511,11 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			// 
 			this->textBox4->Enabled = false;
 			this->textBox4->Location = System::Drawing::Point(732, 229);
+			this->textBox4->MaxLength = 5;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(71, 20);
 			this->textBox4->TabIndex = 56;
+			this->textBox4->Leave += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox4_Leave);
 			// 
 			// textBox5
 			// 
@@ -441,14 +524,6 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(235, 20);
 			this->textBox5->TabIndex = 55;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Enabled = false;
-			this->textBox6->Location = System::Drawing::Point(732, 182);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(40, 20);
-			this->textBox6->TabIndex = 54;
 			// 
 			// comboBox3
 			// 
@@ -803,93 +878,13 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->comboBox15->Size = System::Drawing::Size(207, 21);
 			this->comboBox15->TabIndex = 85;
 			// 
-			// textBox7
-			// 
-			this->textBox7->Location = System::Drawing::Point(382, 333);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(55, 20);
-			this->textBox7->TabIndex = 86;
-			this->textBox7->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox7_Enter);
-			// 
-			// textBox8
-			// 
-			this->textBox8->Location = System::Drawing::Point(382, 360);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(55, 20);
-			this->textBox8->TabIndex = 87;
-			this->textBox8->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox8_Enter);
-			// 
-			// textBox9
-			// 
-			this->textBox9->Location = System::Drawing::Point(382, 387);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(55, 20);
-			this->textBox9->TabIndex = 88;
-			this->textBox9->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox9_Enter);
-			// 
-			// textBox10
-			// 
-			this->textBox10->Location = System::Drawing::Point(382, 414);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(55, 20);
-			this->textBox10->TabIndex = 89;
-			this->textBox10->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox10_Enter);
-			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(382, 441);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(55, 20);
-			this->textBox11->TabIndex = 90;
-			this->textBox11->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox11_Enter);
-			// 
-			// textBox12
-			// 
-			this->textBox12->Location = System::Drawing::Point(382, 469);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(55, 20);
-			this->textBox12->TabIndex = 91;
-			this->textBox12->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox12_Enter);
-			// 
-			// textBox13
-			// 
-			this->textBox13->Location = System::Drawing::Point(382, 496);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(55, 20);
-			this->textBox13->TabIndex = 92;
-			this->textBox13->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox13_Enter);
-			// 
-			// textBox14
-			// 
-			this->textBox14->Location = System::Drawing::Point(382, 523);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(55, 20);
-			this->textBox14->TabIndex = 93;
-			this->textBox14->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox14_Enter);
-			// 
-			// textBox15
-			// 
-			this->textBox15->Location = System::Drawing::Point(382, 549);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(55, 20);
-			this->textBox15->TabIndex = 94;
-			this->textBox15->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox15_Enter);
-			// 
-			// textBox16
-			// 
-			this->textBox16->Location = System::Drawing::Point(382, 576);
-			this->textBox16->Name = L"textBox16";
-			this->textBox16->Size = System::Drawing::Size(55, 20);
-			this->textBox16->TabIndex = 95;
-			this->textBox16->Enter += gcnew System::EventHandler(this, &GuiCommandesCréer::textBox16_Enter);
-			// 
 			// pictureBox3
 			// 
 			this->pictureBox3->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->pictureBox3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox3->Location = System::Drawing::Point(12, 305);
+			this->pictureBox3->Location = System::Drawing::Point(12, 302);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(1066, 209);
+			this->pictureBox3->Size = System::Drawing::Size(1066, 212);
 			this->pictureBox3->TabIndex = 96;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -899,7 +894,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->pictureBox6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->pictureBox6->Location = System::Drawing::Point(12, 426);
 			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(1066, 189);
+			this->pictureBox6->Size = System::Drawing::Size(1066, 209);
 			this->pictureBox6->TabIndex = 97;
 			this->pictureBox6->TabStop = false;
 			// 
@@ -1028,12 +1023,12 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button1->Location = System::Drawing::Point(960, 665);
+			this->button1->Location = System::Drawing::Point(960, 641);
 			this->button1->Name = L"button1";
 			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->button1->Size = System::Drawing::Size(118, 39);
 			this->button1->TabIndex = 110;
-			this->button1->Text = L"Ajouter";
+			this->button1->Text = L"Créer";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// dataGridView1
@@ -1047,8 +1042,10 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->dataGridView1->ColumnHeadersVisible = false;
-			this->dataGridView1->Location = System::Drawing::Point(574, 329);
+			this->dataGridView1->Enabled = false;
+			this->dataGridView1->Location = System::Drawing::Point(213, 641);
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->ShowCellErrors = false;
@@ -1057,416 +1054,618 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->dataGridView1->ShowRowErrors = false;
 			this->dataGridView1->Size = System::Drawing::Size(102, 25);
 			this->dataGridView1->TabIndex = 111;
+			this->dataGridView1->Visible = false;
 			// 
-			// button2
+			// label32
 			// 
-			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button2->Enabled = false;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label32->AutoSize = true;
+			this->label32->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
-			this->button2->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button2->Location = System::Drawing::Point(479, 329);
-			this->button2->Name = L"button2";
-			this->button2->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button2->Size = System::Drawing::Size(74, 25);
-			this->button2->TabIndex = 112;
-			this->button2->Text = L"Ajouter";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &GuiCommandesCréer::button2_Click);
+			this->label32->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label32->Location = System::Drawing::Point(585, 305);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(72, 32);
+			this->label32->TabIndex = 132;
+			this->label32->Text = L"Prix HT:";
 			// 
-			// dataGridView2
+			// label33
 			// 
-			this->dataGridView2->AllowUserToAddRows = false;
-			this->dataGridView2->AllowUserToDeleteRows = false;
-			this->dataGridView2->AllowUserToResizeColumns = false;
-			this->dataGridView2->AllowUserToResizeRows = false;
-			this->dataGridView2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView2->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView2->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView2->ColumnHeadersVisible = false;
-			this->dataGridView2->Location = System::Drawing::Point(574, 355);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView2->RowHeadersVisible = false;
-			this->dataGridView2->ShowCellErrors = false;
-			this->dataGridView2->ShowCellToolTips = false;
-			this->dataGridView2->ShowEditingIcon = false;
-			this->dataGridView2->ShowRowErrors = false;
-			this->dataGridView2->Size = System::Drawing::Size(102, 25);
-			this->dataGridView2->TabIndex = 113;
-			// 
-			// button3
-			// 
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->Enabled = false;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label33->AutoSize = true;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
-			this->button3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button3->Location = System::Drawing::Point(479, 355);
-			this->button3->Name = L"button3";
-			this->button3->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button3->Size = System::Drawing::Size(74, 25);
-			this->button3->TabIndex = 114;
-			this->button3->Text = L"Ajouter";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &GuiCommandesCréer::button3_Click);
+			this->label33->Location = System::Drawing::Point(593, 330);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(18, 20);
+			this->label33->TabIndex = 133;
+			this->label33->Text = L"0";
 			// 
-			// button4
+			// label34
 			// 
-			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button4->Enabled = false;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label34->AutoSize = true;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
-			this->button4->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button4->Location = System::Drawing::Point(479, 408);
-			this->button4->Name = L"button4";
-			this->button4->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button4->Size = System::Drawing::Size(74, 25);
-			this->button4->TabIndex = 118;
-			this->button4->Text = L"Ajouter";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &GuiCommandesCréer::button4_Click);
+			this->label34->Location = System::Drawing::Point(593, 356);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(18, 20);
+			this->label34->TabIndex = 134;
+			this->label34->Text = L"0";
 			// 
-			// dataGridView3
+			// label35
 			// 
-			this->dataGridView3->AllowUserToAddRows = false;
-			this->dataGridView3->AllowUserToDeleteRows = false;
-			this->dataGridView3->AllowUserToResizeColumns = false;
-			this->dataGridView3->AllowUserToResizeRows = false;
-			this->dataGridView3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView3->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView3->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView3->ColumnHeadersVisible = false;
-			this->dataGridView3->Location = System::Drawing::Point(574, 408);
-			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView3->RowHeadersVisible = false;
-			this->dataGridView3->ShowCellErrors = false;
-			this->dataGridView3->ShowCellToolTips = false;
-			this->dataGridView3->ShowEditingIcon = false;
-			this->dataGridView3->ShowRowErrors = false;
-			this->dataGridView3->Size = System::Drawing::Size(102, 25);
-			this->dataGridView3->TabIndex = 117;
-			// 
-			// button5
-			// 
-			this->button5->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button5->Enabled = false;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label35->AutoSize = true;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
-			this->button5->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button5->Location = System::Drawing::Point(479, 382);
-			this->button5->Name = L"button5";
-			this->button5->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button5->Size = System::Drawing::Size(74, 25);
-			this->button5->TabIndex = 116;
-			this->button5->Text = L"Ajouter";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &GuiCommandesCréer::button5_Click);
+			this->label35->Location = System::Drawing::Point(593, 383);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(18, 20);
+			this->label35->TabIndex = 135;
+			this->label35->Text = L"0";
 			// 
-			// dataGridView4
+			// label36
 			// 
-			this->dataGridView4->AllowUserToAddRows = false;
-			this->dataGridView4->AllowUserToDeleteRows = false;
-			this->dataGridView4->AllowUserToResizeColumns = false;
-			this->dataGridView4->AllowUserToResizeRows = false;
-			this->dataGridView4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView4->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView4->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView4->ColumnHeadersVisible = false;
-			this->dataGridView4->Location = System::Drawing::Point(574, 382);
-			this->dataGridView4->Name = L"dataGridView4";
-			this->dataGridView4->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView4->RowHeadersVisible = false;
-			this->dataGridView4->ShowCellErrors = false;
-			this->dataGridView4->ShowCellToolTips = false;
-			this->dataGridView4->ShowEditingIcon = false;
-			this->dataGridView4->ShowRowErrors = false;
-			this->dataGridView4->Size = System::Drawing::Size(102, 25);
-			this->dataGridView4->TabIndex = 115;
-			// 
-			// button6
-			// 
-			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button6->Enabled = false;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
-			this->button6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button6->Location = System::Drawing::Point(479, 462);
-			this->button6->Name = L"button6";
-			this->button6->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button6->Size = System::Drawing::Size(74, 25);
-			this->button6->TabIndex = 122;
-			this->button6->Text = L"Ajouter";
-			this->button6->UseVisualStyleBackColor = true;
+			this->label36->Location = System::Drawing::Point(593, 411);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(18, 20);
+			this->label36->TabIndex = 136;
+			this->label36->Text = L"0";
 			// 
-			// dataGridView5
+			// label37
 			// 
-			this->dataGridView5->AllowUserToAddRows = false;
-			this->dataGridView5->AllowUserToDeleteRows = false;
-			this->dataGridView5->AllowUserToResizeColumns = false;
-			this->dataGridView5->AllowUserToResizeRows = false;
-			this->dataGridView5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView5->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView5->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView5->ColumnHeadersVisible = false;
-			this->dataGridView5->Location = System::Drawing::Point(574, 462);
-			this->dataGridView5->Name = L"dataGridView5";
-			this->dataGridView5->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView5->RowHeadersVisible = false;
-			this->dataGridView5->ShowCellErrors = false;
-			this->dataGridView5->ShowCellToolTips = false;
-			this->dataGridView5->ShowEditingIcon = false;
-			this->dataGridView5->ShowRowErrors = false;
-			this->dataGridView5->Size = System::Drawing::Size(102, 25);
-			this->dataGridView5->TabIndex = 121;
-			// 
-			// button7
-			// 
-			this->button7->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button7->Enabled = false;
-			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label37->AutoSize = true;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button7->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
-			this->button7->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button7->Location = System::Drawing::Point(479, 436);
-			this->button7->Name = L"button7";
-			this->button7->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button7->Size = System::Drawing::Size(74, 25);
-			this->button7->TabIndex = 120;
-			this->button7->Text = L"Ajouter";
-			this->button7->UseVisualStyleBackColor = true;
+			this->label37->Location = System::Drawing::Point(593, 521);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(18, 20);
+			this->label37->TabIndex = 140;
+			this->label37->Text = L"0";
 			// 
-			// dataGridView6
+			// label38
 			// 
-			this->dataGridView6->AllowUserToAddRows = false;
-			this->dataGridView6->AllowUserToDeleteRows = false;
-			this->dataGridView6->AllowUserToResizeColumns = false;
-			this->dataGridView6->AllowUserToResizeRows = false;
-			this->dataGridView6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView6->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView6->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView6->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView6->ColumnHeadersVisible = false;
-			this->dataGridView6->Location = System::Drawing::Point(574, 436);
-			this->dataGridView6->Name = L"dataGridView6";
-			this->dataGridView6->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView6->RowHeadersVisible = false;
-			this->dataGridView6->ShowCellErrors = false;
-			this->dataGridView6->ShowCellToolTips = false;
-			this->dataGridView6->ShowEditingIcon = false;
-			this->dataGridView6->ShowRowErrors = false;
-			this->dataGridView6->Size = System::Drawing::Size(102, 25);
-			this->dataGridView6->TabIndex = 119;
-			// 
-			// button8
-			// 
-			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button8->Enabled = false;
-			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label38->AutoSize = true;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button8->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
-			this->button8->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button8->Location = System::Drawing::Point(479, 516);
-			this->button8->Name = L"button8";
-			this->button8->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button8->Size = System::Drawing::Size(74, 25);
-			this->button8->TabIndex = 126;
-			this->button8->Text = L"Ajouter";
-			this->button8->UseVisualStyleBackColor = true;
+			this->label38->Location = System::Drawing::Point(593, 493);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(18, 20);
+			this->label38->TabIndex = 139;
+			this->label38->Text = L"0";
 			// 
-			// dataGridView7
+			// label39
 			// 
-			this->dataGridView7->AllowUserToAddRows = false;
-			this->dataGridView7->AllowUserToDeleteRows = false;
-			this->dataGridView7->AllowUserToResizeColumns = false;
-			this->dataGridView7->AllowUserToResizeRows = false;
-			this->dataGridView7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView7->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView7->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView7->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView7->ColumnHeadersVisible = false;
-			this->dataGridView7->Location = System::Drawing::Point(574, 516);
-			this->dataGridView7->Name = L"dataGridView7";
-			this->dataGridView7->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView7->RowHeadersVisible = false;
-			this->dataGridView7->ShowCellErrors = false;
-			this->dataGridView7->ShowCellToolTips = false;
-			this->dataGridView7->ShowEditingIcon = false;
-			this->dataGridView7->ShowRowErrors = false;
-			this->dataGridView7->Size = System::Drawing::Size(102, 25);
-			this->dataGridView7->TabIndex = 125;
-			// 
-			// button9
-			// 
-			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button9->Enabled = false;
-			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button9->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
-			this->button9->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button9->Location = System::Drawing::Point(479, 490);
-			this->button9->Name = L"button9";
-			this->button9->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button9->Size = System::Drawing::Size(74, 25);
-			this->button9->TabIndex = 124;
-			this->button9->Text = L"Ajouter";
-			this->button9->UseVisualStyleBackColor = true;
+			this->label39->Location = System::Drawing::Point(593, 466);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(18, 20);
+			this->label39->TabIndex = 138;
+			this->label39->Text = L"0";
 			// 
-			// dataGridView8
+			// label40
 			// 
-			this->dataGridView8->AllowUserToAddRows = false;
-			this->dataGridView8->AllowUserToDeleteRows = false;
-			this->dataGridView8->AllowUserToResizeColumns = false;
-			this->dataGridView8->AllowUserToResizeRows = false;
-			this->dataGridView8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView8->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView8->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView8->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView8->ColumnHeadersVisible = false;
-			this->dataGridView8->Location = System::Drawing::Point(574, 490);
-			this->dataGridView8->Name = L"dataGridView8";
-			this->dataGridView8->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView8->RowHeadersVisible = false;
-			this->dataGridView8->ShowCellErrors = false;
-			this->dataGridView8->ShowCellToolTips = false;
-			this->dataGridView8->ShowEditingIcon = false;
-			this->dataGridView8->ShowRowErrors = false;
-			this->dataGridView8->Size = System::Drawing::Size(102, 25);
-			this->dataGridView8->TabIndex = 123;
-			// 
-			// button10
-			// 
-			this->button10->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button10->Enabled = false;
-			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label40->AutoSize = true;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button10->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.Image")));
-			this->button10->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button10->Location = System::Drawing::Point(479, 570);
-			this->button10->Name = L"button10";
-			this->button10->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button10->Size = System::Drawing::Size(74, 25);
-			this->button10->TabIndex = 130;
-			this->button10->Text = L"Ajouter";
-			this->button10->UseVisualStyleBackColor = true;
+			this->label40->Location = System::Drawing::Point(593, 438);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(18, 20);
+			this->label40->TabIndex = 137;
+			this->label40->Text = L"0";
 			// 
-			// dataGridView9
+			// label41
 			// 
-			this->dataGridView9->AllowUserToAddRows = false;
-			this->dataGridView9->AllowUserToDeleteRows = false;
-			this->dataGridView9->AllowUserToResizeColumns = false;
-			this->dataGridView9->AllowUserToResizeRows = false;
-			this->dataGridView9->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView9->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView9->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView9->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView9->ColumnHeadersVisible = false;
-			this->dataGridView9->Location = System::Drawing::Point(574, 570);
-			this->dataGridView9->Name = L"dataGridView9";
-			this->dataGridView9->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView9->RowHeadersVisible = false;
-			this->dataGridView9->ShowCellErrors = false;
-			this->dataGridView9->ShowCellToolTips = false;
-			this->dataGridView9->ShowEditingIcon = false;
-			this->dataGridView9->ShowRowErrors = false;
-			this->dataGridView9->Size = System::Drawing::Size(102, 25);
-			this->dataGridView9->TabIndex = 129;
-			// 
-			// button11
-			// 
-			this->button11->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button11->Enabled = false;
-			this->button11->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label41->AutoSize = true;
+			this->label41->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button11->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button11.Image")));
-			this->button11->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button11->Location = System::Drawing::Point(479, 544);
-			this->button11->Name = L"button11";
-			this->button11->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button11->Size = System::Drawing::Size(74, 25);
-			this->button11->TabIndex = 128;
-			this->button11->Text = L"Ajouter";
-			this->button11->UseVisualStyleBackColor = true;
+			this->label41->Location = System::Drawing::Point(593, 574);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(18, 20);
+			this->label41->TabIndex = 142;
+			this->label41->Text = L"0";
 			// 
-			// dataGridView10
+			// label42
 			// 
-			this->dataGridView10->AllowUserToAddRows = false;
-			this->dataGridView10->AllowUserToDeleteRows = false;
-			this->dataGridView10->AllowUserToResizeColumns = false;
-			this->dataGridView10->AllowUserToResizeRows = false;
-			this->dataGridView10->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->dataGridView10->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::None;
-			this->dataGridView10->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView10->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView10->ColumnHeadersVisible = false;
-			this->dataGridView10->Location = System::Drawing::Point(574, 544);
-			this->dataGridView10->Name = L"dataGridView10";
-			this->dataGridView10->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->dataGridView10->RowHeadersVisible = false;
-			this->dataGridView10->ShowCellErrors = false;
-			this->dataGridView10->ShowCellToolTips = false;
-			this->dataGridView10->ShowEditingIcon = false;
-			this->dataGridView10->ShowRowErrors = false;
-			this->dataGridView10->Size = System::Drawing::Size(102, 25);
-			this->dataGridView10->TabIndex = 127;
+			this->label42->AutoSize = true;
+			this->label42->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label42->Location = System::Drawing::Point(593, 548);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(18, 20);
+			this->label42->TabIndex = 141;
+			this->label42->Text = L"0";
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.BackgroundImage")));
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->pictureBox7->Location = System::Drawing::Point(12, 602);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(1066, 33);
+			this->pictureBox7->TabIndex = 143;
+			this->pictureBox7->TabStop = false;
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label43->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label43->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label43->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label43.Image")));
+			this->label43->Location = System::Drawing::Point(489, 605);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(57, 28);
+			this->label43->TabIndex = 144;
+			this->label43->Text = L"Totaux:";
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label44->ForeColor = System::Drawing::Color::Chocolate;
+			this->label44->Location = System::Drawing::Point(593, 607);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(18, 20);
+			this->label44->TabIndex = 145;
+			this->label44->Text = L"0";
+			// 
+			// numericUpDown1
+			// 
+			this->numericUpDown1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown1->Location = System::Drawing::Point(383, 332);
+			this->numericUpDown1->Name = L"numericUpDown1";
+			this->numericUpDown1->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown1->TabIndex = 146;
+			this->numericUpDown1->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown1_ValueChanged);
+			// 
+			// numericUpDown2
+			// 
+			this->numericUpDown2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown2->Location = System::Drawing::Point(383, 361);
+			this->numericUpDown2->Name = L"numericUpDown2";
+			this->numericUpDown2->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown2->TabIndex = 147;
+			this->numericUpDown2->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown2_ValueChanged);
+			// 
+			// numericUpDown3
+			// 
+			this->numericUpDown3->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown3->Location = System::Drawing::Point(383, 387);
+			this->numericUpDown3->Name = L"numericUpDown3";
+			this->numericUpDown3->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown3->TabIndex = 148;
+			this->numericUpDown3->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown3_ValueChanged);
+			// 
+			// numericUpDown4
+			// 
+			this->numericUpDown4->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown4->Location = System::Drawing::Point(383, 415);
+			this->numericUpDown4->Name = L"numericUpDown4";
+			this->numericUpDown4->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown4->TabIndex = 149;
+			this->numericUpDown4->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown4_ValueChanged);
+			// 
+			// numericUpDown5
+			// 
+			this->numericUpDown5->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown5->Location = System::Drawing::Point(383, 441);
+			this->numericUpDown5->Name = L"numericUpDown5";
+			this->numericUpDown5->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown5->TabIndex = 150;
+			this->numericUpDown5->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown5_ValueChanged);
+			// 
+			// numericUpDown6
+			// 
+			this->numericUpDown6->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown6->Location = System::Drawing::Point(383, 469);
+			this->numericUpDown6->Name = L"numericUpDown6";
+			this->numericUpDown6->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown6->TabIndex = 151;
+			this->numericUpDown6->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown6_ValueChanged);
+			// 
+			// numericUpDown7
+			// 
+			this->numericUpDown7->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown7->Location = System::Drawing::Point(383, 496);
+			this->numericUpDown7->Name = L"numericUpDown7";
+			this->numericUpDown7->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown7->TabIndex = 152;
+			this->numericUpDown7->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown7_ValueChanged);
+			// 
+			// numericUpDown8
+			// 
+			this->numericUpDown8->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown8->Location = System::Drawing::Point(383, 523);
+			this->numericUpDown8->Name = L"numericUpDown8";
+			this->numericUpDown8->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown8->TabIndex = 153;
+			this->numericUpDown8->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown8_ValueChanged);
+			// 
+			// numericUpDown9
+			// 
+			this->numericUpDown9->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown9->Location = System::Drawing::Point(383, 549);
+			this->numericUpDown9->Name = L"numericUpDown9";
+			this->numericUpDown9->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown9->TabIndex = 154;
+			this->numericUpDown9->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown9_ValueChanged);
+			// 
+			// numericUpDown10
+			// 
+			this->numericUpDown10->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDown10->Location = System::Drawing::Point(383, 576);
+			this->numericUpDown10->Name = L"numericUpDown10";
+			this->numericUpDown10->Size = System::Drawing::Size(55, 20);
+			this->numericUpDown10->TabIndex = 155;
+			this->numericUpDown10->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCréer::numericUpDown10_ValueChanged);
+			// 
+			// textBox1
+			// 
+			this->textBox1->Cursor = System::Windows::Forms::Cursors::Default;
+			this->textBox1->Enabled = false;
+			this->textBox1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->textBox1->Location = System::Drawing::Point(381, 182);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(57, 20);
+			this->textBox1->TabIndex = 156;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Cursor = System::Windows::Forms::Cursors::Default;
+			this->textBox6->Enabled = false;
+			this->textBox6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->textBox6->Location = System::Drawing::Point(732, 182);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(57, 20);
+			this->textBox6->TabIndex = 157;
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->pictureBox8->Location = System::Drawing::Point(1033, 9);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(45, 45);
+			this->pictureBox8->TabIndex = 158;
+			this->pictureBox8->TabStop = false;
+			this->pictureBox8->Click += gcnew System::EventHandler(this, &GuiCommandesCréer::pictureBox8_Click);
+			// 
+			// label45
+			// 
+			this->label45->AutoSize = true;
+			this->label45->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label45->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label45->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label45->Location = System::Drawing::Point(684, 305);
+			this->label45->Name = L"label45";
+			this->label45->Size = System::Drawing::Size(58, 32);
+			this->label45->TabIndex = 159;
+			this->label45->Text = L"T.V.A:";
+			// 
+			// label46
+			// 
+			this->label46->AutoSize = true;
+			this->label46->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label46->Location = System::Drawing::Point(697, 574);
+			this->label46->Name = L"label46";
+			this->label46->Size = System::Drawing::Size(18, 20);
+			this->label46->TabIndex = 169;
+			this->label46->Text = L"0";
+			// 
+			// label47
+			// 
+			this->label47->AutoSize = true;
+			this->label47->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label47->Location = System::Drawing::Point(697, 548);
+			this->label47->Name = L"label47";
+			this->label47->Size = System::Drawing::Size(18, 20);
+			this->label47->TabIndex = 168;
+			this->label47->Text = L"0";
+			// 
+			// label48
+			// 
+			this->label48->AutoSize = true;
+			this->label48->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label48->Location = System::Drawing::Point(697, 521);
+			this->label48->Name = L"label48";
+			this->label48->Size = System::Drawing::Size(18, 20);
+			this->label48->TabIndex = 167;
+			this->label48->Text = L"0";
+			// 
+			// label49
+			// 
+			this->label49->AutoSize = true;
+			this->label49->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label49->Location = System::Drawing::Point(697, 493);
+			this->label49->Name = L"label49";
+			this->label49->Size = System::Drawing::Size(18, 20);
+			this->label49->TabIndex = 166;
+			this->label49->Text = L"0";
+			// 
+			// label50
+			// 
+			this->label50->AutoSize = true;
+			this->label50->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label50->Location = System::Drawing::Point(697, 466);
+			this->label50->Name = L"label50";
+			this->label50->Size = System::Drawing::Size(18, 20);
+			this->label50->TabIndex = 165;
+			this->label50->Text = L"0";
+			// 
+			// label51
+			// 
+			this->label51->AutoSize = true;
+			this->label51->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label51->Location = System::Drawing::Point(697, 438);
+			this->label51->Name = L"label51";
+			this->label51->Size = System::Drawing::Size(18, 20);
+			this->label51->TabIndex = 164;
+			this->label51->Text = L"0";
+			// 
+			// label52
+			// 
+			this->label52->AutoSize = true;
+			this->label52->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label52->Location = System::Drawing::Point(697, 411);
+			this->label52->Name = L"label52";
+			this->label52->Size = System::Drawing::Size(18, 20);
+			this->label52->TabIndex = 163;
+			this->label52->Text = L"0";
+			// 
+			// label53
+			// 
+			this->label53->AutoSize = true;
+			this->label53->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label53->Location = System::Drawing::Point(697, 383);
+			this->label53->Name = L"label53";
+			this->label53->Size = System::Drawing::Size(18, 20);
+			this->label53->TabIndex = 162;
+			this->label53->Text = L"0";
+			// 
+			// label54
+			// 
+			this->label54->AutoSize = true;
+			this->label54->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label54->Location = System::Drawing::Point(697, 356);
+			this->label54->Name = L"label54";
+			this->label54->Size = System::Drawing::Size(18, 20);
+			this->label54->TabIndex = 161;
+			this->label54->Text = L"0";
+			// 
+			// label55
+			// 
+			this->label55->AutoSize = true;
+			this->label55->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label55->Location = System::Drawing::Point(697, 330);
+			this->label55->Name = L"label55";
+			this->label55->Size = System::Drawing::Size(18, 20);
+			this->label55->TabIndex = 160;
+			this->label55->Text = L"0";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label31->ForeColor = System::Drawing::Color::Chocolate;
+			this->label31->Location = System::Drawing::Point(855, 609);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(18, 20);
+			this->label31->TabIndex = 181;
+			this->label31->Text = L"0";
+			// 
+			// label56
+			// 
+			this->label56->AutoSize = true;
+			this->label56->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label56->Location = System::Drawing::Point(855, 576);
+			this->label56->Name = L"label56";
+			this->label56->Size = System::Drawing::Size(18, 20);
+			this->label56->TabIndex = 180;
+			this->label56->Text = L"0";
+			// 
+			// label57
+			// 
+			this->label57->AutoSize = true;
+			this->label57->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label57->Location = System::Drawing::Point(855, 550);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(18, 20);
+			this->label57->TabIndex = 179;
+			this->label57->Text = L"0";
+			// 
+			// label58
+			// 
+			this->label58->AutoSize = true;
+			this->label58->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label58->Location = System::Drawing::Point(855, 523);
+			this->label58->Name = L"label58";
+			this->label58->Size = System::Drawing::Size(18, 20);
+			this->label58->TabIndex = 178;
+			this->label58->Text = L"0";
+			// 
+			// label59
+			// 
+			this->label59->AutoSize = true;
+			this->label59->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label59->Location = System::Drawing::Point(855, 495);
+			this->label59->Name = L"label59";
+			this->label59->Size = System::Drawing::Size(18, 20);
+			this->label59->TabIndex = 177;
+			this->label59->Text = L"0";
+			// 
+			// label60
+			// 
+			this->label60->AutoSize = true;
+			this->label60->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label60->Location = System::Drawing::Point(855, 468);
+			this->label60->Name = L"label60";
+			this->label60->Size = System::Drawing::Size(18, 20);
+			this->label60->TabIndex = 176;
+			this->label60->Text = L"0";
+			// 
+			// label61
+			// 
+			this->label61->AutoSize = true;
+			this->label61->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label61->Location = System::Drawing::Point(855, 440);
+			this->label61->Name = L"label61";
+			this->label61->Size = System::Drawing::Size(18, 20);
+			this->label61->TabIndex = 175;
+			this->label61->Text = L"0";
+			// 
+			// label62
+			// 
+			this->label62->AutoSize = true;
+			this->label62->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label62->Location = System::Drawing::Point(855, 413);
+			this->label62->Name = L"label62";
+			this->label62->Size = System::Drawing::Size(18, 20);
+			this->label62->TabIndex = 174;
+			this->label62->Text = L"0";
+			// 
+			// label63
+			// 
+			this->label63->AutoSize = true;
+			this->label63->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label63->Location = System::Drawing::Point(855, 385);
+			this->label63->Name = L"label63";
+			this->label63->Size = System::Drawing::Size(18, 20);
+			this->label63->TabIndex = 173;
+			this->label63->Text = L"0";
+			// 
+			// label64
+			// 
+			this->label64->AutoSize = true;
+			this->label64->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label64->Location = System::Drawing::Point(855, 358);
+			this->label64->Name = L"label64";
+			this->label64->Size = System::Drawing::Size(18, 20);
+			this->label64->TabIndex = 172;
+			this->label64->Text = L"0";
+			// 
+			// label65
+			// 
+			this->label65->AutoSize = true;
+			this->label65->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label65->Location = System::Drawing::Point(855, 332);
+			this->label65->Name = L"label65";
+			this->label65->Size = System::Drawing::Size(18, 20);
+			this->label65->TabIndex = 171;
+			this->label65->Text = L"0";
+			// 
+			// label66
+			// 
+			this->label66->AutoSize = true;
+			this->label66->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label66->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label66->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label66->Location = System::Drawing::Point(847, 307);
+			this->label66->Name = L"label66";
+			this->label66->Size = System::Drawing::Size(89, 32);
+			this->label66->TabIndex = 170;
+			this->label66->Text = L"Prix T.T.C:";
+			// 
+			// label67
+			// 
+			this->label67->AutoSize = true;
+			this->label67->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label67->ForeColor = System::Drawing::Color::Chocolate;
+			this->label67->Location = System::Drawing::Point(1001, 609);
+			this->label67->Name = L"label67";
+			this->label67->Size = System::Drawing::Size(67, 20);
+			this->label67->TabIndex = 182;
+			this->label67->Text = L"EUROS";
 			// 
 			// GuiCommandesCréer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1090, 716);
-			this->Controls->Add(this->button10);
-			this->Controls->Add(this->dataGridView9);
-			this->Controls->Add(this->button11);
-			this->Controls->Add(this->dataGridView10);
-			this->Controls->Add(this->button8);
-			this->Controls->Add(this->dataGridView7);
-			this->Controls->Add(this->button9);
-			this->Controls->Add(this->dataGridView8);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->dataGridView5);
-			this->Controls->Add(this->button7);
-			this->Controls->Add(this->dataGridView6);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->dataGridView3);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->dataGridView4);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->dataGridView2);
-			this->Controls->Add(this->button2);
+			this->ClientSize = System::Drawing::Size(1090, 690);
+			this->Controls->Add(this->label67);
+			this->Controls->Add(this->label31);
+			this->Controls->Add(this->label56);
+			this->Controls->Add(this->label57);
+			this->Controls->Add(this->label58);
+			this->Controls->Add(this->label59);
+			this->Controls->Add(this->label60);
+			this->Controls->Add(this->label61);
+			this->Controls->Add(this->label62);
+			this->Controls->Add(this->label63);
+			this->Controls->Add(this->label64);
+			this->Controls->Add(this->label65);
+			this->Controls->Add(this->label66);
+			this->Controls->Add(this->label46);
+			this->Controls->Add(this->label47);
+			this->Controls->Add(this->label48);
+			this->Controls->Add(this->label49);
+			this->Controls->Add(this->label50);
+			this->Controls->Add(this->label51);
+			this->Controls->Add(this->label52);
+			this->Controls->Add(this->label53);
+			this->Controls->Add(this->label54);
+			this->Controls->Add(this->label55);
+			this->Controls->Add(this->label45);
+			this->Controls->Add(this->pictureBox8);
+			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->numericUpDown10);
+			this->Controls->Add(this->numericUpDown9);
+			this->Controls->Add(this->numericUpDown8);
+			this->Controls->Add(this->numericUpDown7);
+			this->Controls->Add(this->numericUpDown6);
+			this->Controls->Add(this->numericUpDown5);
+			this->Controls->Add(this->numericUpDown4);
+			this->Controls->Add(this->numericUpDown3);
+			this->Controls->Add(this->numericUpDown2);
+			this->Controls->Add(this->numericUpDown1);
+			this->Controls->Add(this->label44);
+			this->Controls->Add(this->label43);
+			this->Controls->Add(this->pictureBox7);
+			this->Controls->Add(this->label41);
+			this->Controls->Add(this->label42);
+			this->Controls->Add(this->label37);
+			this->Controls->Add(this->label38);
+			this->Controls->Add(this->label39);
+			this->Controls->Add(this->label40);
+			this->Controls->Add(this->label36);
+			this->Controls->Add(this->label35);
+			this->Controls->Add(this->label34);
+			this->Controls->Add(this->label33);
+			this->Controls->Add(this->label32);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->label30);
 			this->Controls->Add(this->comboBox4);
 			this->Controls->Add(this->label29);
@@ -1480,15 +1679,6 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->Controls->Add(this->label21);
 			this->Controls->Add(this->label19);
 			this->Controls->Add(this->label20);
-			this->Controls->Add(this->textBox16);
-			this->Controls->Add(this->textBox15);
-			this->Controls->Add(this->textBox14);
-			this->Controls->Add(this->textBox13);
-			this->Controls->Add(this->textBox12);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->textBox10);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->comboBox15);
 			this->Controls->Add(this->comboBox14);
 			this->Controls->Add(this->checkBox3);
@@ -1516,9 +1706,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->label11);
-			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->label10);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
@@ -1537,6 +1725,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox6);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"GuiCommandesCréer";
 			this->Text = L"GuiCommandesCréer";
 			this->Load += gcnew System::EventHandler(this, &GuiCommandesCréer::GuiCommandesCréer_Load);
@@ -1548,15 +1737,20 @@ private: System::Windows::Forms::DataGridView^ dataGridView10;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView7))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView8))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView9))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView10))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1721,54 +1915,157 @@ private: System::Void textBox3_Leave(System::Object^ sender, System::EventArgs^ 
 	}
 	dr->Close();
 }
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oDs = this->oSvcc->FiltrerService("rsl", "select Price*" + textBox7->Text + " from Product where product_name = '" + comboBox4->Text + "'");;
-	this->dataGridView1->DataSource = this->oDs;
-	this->dataGridView1->DataMember = "rsl";
+
+private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown1->Text + " as test from Product where product_name = '" + comboBox4->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label33->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox4->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label55->Text = test;
+	this->label65->Text = ((float::Parse(label33->Text)) * (((float::Parse(label55->Text))/100)+1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
 }
-private: System::Void textBox7_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button2->Enabled = true;
-}
-private: System::Void textBox8_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button3->Enabled = true;
-}
-private: System::Void textBox9_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button5->Enabled = true;
-}
-private: System::Void textBox10_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button4->Enabled = true;
-}
-private: System::Void textBox11_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button7->Enabled = true;
-}
-private: System::Void textBox12_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button6->Enabled = true;
-}
-private: System::Void textBox13_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button9->Enabled = true;
-}
-private: System::Void textBox14_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button8->Enabled = true;
-}
-private: System::Void textBox15_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button11->Enabled = true;
-}
-private: System::Void textBox16_Enter(System::Object^ sender, System::EventArgs^ e) {
-	button10->Enabled = true;
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oDs = this->oSvcc->FiltrerService("rsl142", "select Price*" + textBox8->Text + " as test from Product where product_name = '" + comboBox5->Text + "'");;
-	this->dataGridView2->DataSource = this->oDs;
-	this->dataGridView2->DataMember = "rsl142";
-	//String^ teaze = dataGridView2->Rows[0]->Cells["test"]->Value;
-}
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + textBox6->Text + " from Product where product_name = '" + comboBox9->Text + "'"));
+
+private: System::Void numericUpDown2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown2->Text + " as test from Product where product_name = '" + comboBox5->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label34->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox5->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label54->Text = test;
+	this->label64->Text = ((float::Parse(label34->Text)) * (((float::Parse(label54->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
 
 }
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + textBox7->Text + " from Product where product_name = '" + comboBox10->Text + "'"));
+private: System::Void numericUpDown3_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown3->Text + " as test from Product where product_name = '" + comboBox6->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label35->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox6->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label53->Text = test;
+	this->label63->Text = ((float::Parse(label35->Text)) * (((float::Parse(label53->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
 
 }
+private: System::Void numericUpDown4_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown4->Text + " as test from Product where product_name = '" + comboBox7->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label36->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox7->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label52->Text = test;
+	this->label62->Text = ((float::Parse(label36->Text)) * (((float::Parse(label52->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+private: System::Void numericUpDown5_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown5->Text + " as test from Product where product_name = '" + comboBox8->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label40->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox8->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label51->Text = test;
+	this->label61->Text = ((float::Parse(label40->Text)) * (((float::Parse(label51->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+private: System::Void numericUpDown6_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown6->Text + " as test from Product where product_name = '" + comboBox9->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label39->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox9->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label50->Text = test;
+	this->label60->Text = ((float::Parse(label39->Text)) * (((float::Parse(label50->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+private: System::Void numericUpDown7_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown7->Text + " as test from Product where product_name = '" + comboBox10->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label38->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox10->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label49->Text = test;
+	this->label59->Text = ((float::Parse(label38->Text)) * (((float::Parse(label49->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+private: System::Void numericUpDown8_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown8->Text + " as test from Product where product_name = '" + comboBox11->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label37->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox11->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label48->Text = test;
+	this->label58->Text = ((float::Parse(label37->Text)) * (((float::Parse(label48->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+private: System::Void numericUpDown9_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown9->Text + " as test from Product where product_name = '" + comboBox14->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label42->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox14->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label47->Text = test;
+	this->label57->Text = ((float::Parse(label42->Text)) * (((float::Parse(label47->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+private: System::Void numericUpDown10_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select Price*" + numericUpDown10->Text + " as test from Product where product_name = '" + comboBox15->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label41->Text = test;
+	this->label44->Text = (float::Parse(label33->Text) + float::Parse(label34->Text) + float::Parse(label35->Text) + float::Parse(label36->Text) + float::Parse(label40->Text) + float::Parse(label39->Text) + float::Parse(label38->Text) + float::Parse(label37->Text) + float::Parse(label42->Text) + float::Parse(label41->Text)).ToString();
+	refreshData(this->oSvcc->FiltrerService("rsl", "select vat_cover as test from Product where product_name = '" + comboBox15->Text + "'"));
+	test = dataGridView1->Rows[0]->Cells["test"]->Value->ToString();
+	this->label46->Text = test;
+	this->label56->Text = ((float::Parse(label41->Text)) * (((float::Parse(label46->Text)) / 100) + 1)).ToString();
+	this->label31->Text = (float::Parse(label65->Text) + float::Parse(label64->Text) + float::Parse(label63->Text) + float::Parse(label62->Text) + float::Parse(label61->Text) + float::Parse(label60->Text) + float::Parse(label59->Text) + float::Parse(label58->Text) + float::Parse(label57->Text) + float::Parse(label56->Text)).ToString();
+
+}
+
+private: System::Void textBox4_Leave(System::Object^ sender, System::EventArgs^ e) {
+	comboBox3->Items->Clear();
+
+	cmd = gcnew SqlCommand("select city_name from Postal where postal_code LIKE '%" + textBox4->Text + "%'", cn);
+	dr = cmd->ExecuteReader();
+	while (dr->Read())
+	{
+		comboBox3->Items->Add(dr[0]);
+	}
+	dr->Close();
+}
+	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+
+	private: System::Void pictureBox2_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { // LORSQUE ON CLICK
+		this->dragging = true;
+		this->offset = Point(e->X, e->Y);
+	}
+	private: System::Void pictureBox2_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { // DEPLACEMENT DE LA FORM EN FONCTION DE LA SOURIS
+		if (this->dragging) {
+			Point currentScreenPos = PointToScreen(e->Location);
+			Location = Point(currentScreenPos.X - this->offset.X, currentScreenPos.Y - this->offset.Y);
+		}
+	}
+	private: System::Void pictureBox2_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { //LORSE QU'ON LACHE LE CLICK
+		this->dragging = false;
+	}
 };
 }
