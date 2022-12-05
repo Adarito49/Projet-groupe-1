@@ -530,7 +530,7 @@ private: System::Void textBox8_Leave(System::Object^ sender, System::EventArgs^ 
 	cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
 	cn->Open();
 
-	cmd = gcnew SqlCommand("select city_name from Postal where postal_code LIKE '%" + textBox8->Text + "%'", cn);
+	cmd = gcnew SqlCommand("select Concat(customer_name, ' ', customer_first_name) from customer where Customer_name LIKE '%" + comboBox2->Text + "%'", cn);
 	dr = cmd->ExecuteReader();
 	while (dr->Read())
 	{

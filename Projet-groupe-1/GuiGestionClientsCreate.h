@@ -167,12 +167,12 @@ namespace Projetgroupe1 {
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->button1->Location = System::Drawing::Point(243, 380);
+			this->button1->Location = System::Drawing::Point(253, 384);
 			this->button1->Name = L"button1";
 			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->button1->Size = System::Drawing::Size(118, 39);
 			this->button1->TabIndex = 104;
-			this->button1->Text = L"Modifier";
+			this->button1->Text = L"Créer";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &GuiGestionClientsCreate::button1_Click);
 			// 
