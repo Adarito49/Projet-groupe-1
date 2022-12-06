@@ -1,7 +1,7 @@
 #include "LinkDB.h"
 
 
-NS_Comp_Data::LinkDB::LinkDB(void)
+NS_Comp_Data::LinkDB::LinkDB(void) // CONSTRUCTEUR, Connection à la database 
 {
 	this->sCnx = "Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty";
 
@@ -14,7 +14,7 @@ NS_Comp_Data::LinkDB::LinkDB(void)
 
 	this->oCmd->CommandType = System::Data::CommandType::Text;
 }
-System::Data::DataSet^ NS_Comp_Data::LinkDB::getRows(System::String^ sSql, System::String^ sDataTableName)
+System::Data::DataSet^ NS_Comp_Data::LinkDB::getRows(System::String^ sSql, System::String^ sDataTableName) // methodes récupération ligne dans la database
 {
 	this->oDs->Clear();
 	this->sSql = sSql;
@@ -24,7 +24,7 @@ System::Data::DataSet^ NS_Comp_Data::LinkDB::getRows(System::String^ sSql, Syste
 
 	return this->oDs;
 }
-void NS_Comp_Data::LinkDB::actionRows(System::String^ sSql)
+void NS_Comp_Data::LinkDB::actionRows(System::String^ sSql)// methodes action sur une ligne dans la database
 {
 	this->sSql = sSql;
 	this->oCmd->CommandText = this->sSql;
