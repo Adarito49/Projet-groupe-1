@@ -682,11 +682,8 @@ namespace Projetgroupe1 {
 			comboBox1->Items->Add(dr[0]);
 		}
 		dr->Close();
-
-
-
-
 	}
+
 	private: System::Void paniermoyen_Click(System::Object^ sender, System::EventArgs^ e) {
 		refreshData("rsl",this->oSvcc->FiltrerService("rsl", "select Round(AVG(amount),2) as panier_moyen from Bill"));
 		GrillePersonnal->Columns["panier_moyen"]->HeaderText = "Panier moyen";

@@ -69,10 +69,10 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::Button^ buttonmodifier;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::Button^ buttoncreer;
-	private: System::Windows::Forms::TabPage^ tabPage4;
-	private: System::Windows::Forms::Button^ buttonsupprimer;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label5;
+
+
+
+
 	private: System::Windows::Forms::Button^ button2;
 
 
@@ -110,10 +110,6 @@ namespace Projetgroupe1 {
 			this->buttonmodifier = (gcnew System::Windows::Forms::Button());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->buttoncreer = (gcnew System::Windows::Forms::Button());
-			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->buttonsupprimer = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
@@ -124,7 +120,6 @@ namespace Projetgroupe1 {
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
-			this->tabPage4->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pictureBox12
@@ -251,7 +246,6 @@ namespace Projetgroupe1 {
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
-			this->tabControl1->Controls->Add(this->tabPage4);
 			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tabControl1->Location = System::Drawing::Point(2, 103);
@@ -353,58 +347,6 @@ namespace Projetgroupe1 {
 			this->buttoncreer->UseVisualStyleBackColor = true;
 			this->buttoncreer->Click += gcnew System::EventHandler(this, &GuiGestionClients::buttoncreer_Click);
 			// 
-			// tabPage4
-			// 
-			this->tabPage4->Controls->Add(this->buttonsupprimer);
-			this->tabPage4->Controls->Add(this->textBox1);
-			this->tabPage4->Controls->Add(this->label5);
-			this->tabPage4->Location = System::Drawing::Point(4, 29);
-			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(949, 35);
-			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"Supprimer";
-			this->tabPage4->UseVisualStyleBackColor = true;
-			// 
-			// buttonsupprimer
-			// 
-			this->buttonsupprimer->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->buttonsupprimer->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->buttonsupprimer->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->buttonsupprimer->ForeColor = System::Drawing::Color::OrangeRed;
-			this->buttonsupprimer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonsupprimer.Image")));
-			this->buttonsupprimer->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->buttonsupprimer->Location = System::Drawing::Point(298, 0);
-			this->buttonsupprimer->Name = L"buttonsupprimer";
-			this->buttonsupprimer->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->buttonsupprimer->Size = System::Drawing::Size(118, 39);
-			this->buttonsupprimer->TabIndex = 36;
-			this->buttonsupprimer->Text = L"Supprimer";
-			this->buttonsupprimer->UseVisualStyleBackColor = true;
-			// 
-			// textBox1
-			// 
-			this->textBox1->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->textBox1->Location = System::Drawing::Point(35, 5);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox1->Size = System::Drawing::Size(257, 26);
-			this->textBox1->TabIndex = 37;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label5.Image")));
-			this->label5->Location = System::Drawing::Point(0, 5);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(30, 26);
-			this->label5->TabIndex = 37;
-			this->label5->Text = L"ID:";
-			// 
 			// button2
 			// 
 			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
@@ -449,8 +391,6 @@ namespace Projetgroupe1 {
 			this->tabPage1->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage3->ResumeLayout(false);
-			this->tabPage4->ResumeLayout(false);
-			this->tabPage4->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
