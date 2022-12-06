@@ -334,10 +334,12 @@ namespace Projetgroupe1 {
 		else {
 			if (textBox1->Text->Length != 0) {
 				this->oSvc->Envoyer("UPDATE [Customer] SET customer_name = '" + textBox1->Text + "' WHERE id_customer='" + int::Parse(textBox2->Text) + "'");
+				this->oSvc->Envoyer("UPDATE orders SET ref_order = REPLACE(ref_order, upper(Substring((select top 1 ref_order from orders where FK_order_customer = '" + int::Parse(textBox2->Text) + "'),1,2)), upper(substring(('" + textBox1->Text + "'),1,2)))");
 
 			}
 			if (textBox3->Text->Length != 0) {
 				this->oSvc->Envoyer("UPDATE [Customer] SET customer_first_name = '" + textBox3->Text + "' WHERE id_customer='" + int::Parse(textBox2->Text) + "'");
+				this->oSvc->Envoyer("UPDATE orders SET ref_order = REPLACE(ref_order, upper(Substring((select top 1 ref_order from orders where FK_order_customer = '" + int::Parse(textBox2->Text) + "'),3,2)), upper(substring(('" + textBox3->Text + "'),1,2)))");
 			}
 			if (dateTimePicker1->Checked) {
 				this->oSvc->Envoyer("UPDATE [Customer] SET birth_date = '" + dateTimePicker1->Value.ToString("yyyy-MM-dd") + "' WHERE id_customer='" + int::Parse(textBox2->Text) + "'");

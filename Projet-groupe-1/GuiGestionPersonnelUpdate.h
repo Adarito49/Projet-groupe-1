@@ -485,6 +485,7 @@ namespace Projetgroupe1 {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		try{
 		if (textBox2->Text->Length == 0) {
 			MessageBox::Show("Veuillez rentrez un ID","Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
@@ -520,6 +521,10 @@ namespace Projetgroupe1 {
 
 			MessageBox::Show("Changement effectué avec succès", "Update", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			this->Close();
+		}
+		}
+		catch (Exception^ e) {
+			MessageBox::Show("Vous faîtes une erreur de saisie veuillez faire attention au caractères demandées", "", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		}
 	}
 	private: System::Void GuiGestionPersonnelUpdate_Load(System::Object^ sender, System::EventArgs^ e) {

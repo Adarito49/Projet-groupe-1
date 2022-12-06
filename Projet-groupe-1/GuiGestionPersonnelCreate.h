@@ -546,6 +546,7 @@ namespace Projetgroupe1 {
 	}
 
 	private: System::Void buttonCreer_Click(System::Object^ sender, System::EventArgs^ e) { //Bouton créer personnel
+		try{
 		if (textBox1->Text->Length == 0 || textBox3->Text->Length == 0 || textBox6->Text->Length == 0 || textBox3->Text->Length == 0 || textBox7->Text->Length == 0 || textBox8->Text->Length == 0 || comboBox2->Text->Length == 0) {
 			MessageBox::Show("Veuillez remplir toutes les champs obligatoires", "Erreur NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
@@ -557,6 +558,10 @@ namespace Projetgroupe1 {
 			}
 			MessageBox::Show("Ajout réussi", "Create", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			this->Close();
+		}
+		}
+		catch (Exception^ e) {
+			MessageBox::Show("Vous faîtes une erreur de saisie veuillez faire attention au caractères demandées", "Erreur saisie", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		}
 	}
 

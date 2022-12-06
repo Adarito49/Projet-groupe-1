@@ -49,8 +49,8 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ nomfiltre;
-	private: System::Windows::Forms::TabPage^ tabPage2;
-	private: System::Windows::Forms::Button^ buttonmodifier;
+
+
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::Button^ buttoncreer;
 	private: System::Windows::Forms::TabPage^ tabPage4;
@@ -92,8 +92,6 @@ namespace Projetgroupe1 {
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->nomfiltre = (gcnew System::Windows::Forms::TextBox());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->buttonmodifier = (gcnew System::Windows::Forms::Button());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->buttoncreer = (gcnew System::Windows::Forms::Button());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
@@ -106,7 +104,6 @@ namespace Projetgroupe1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
-			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->BeginInit();
@@ -150,7 +147,6 @@ namespace Projetgroupe1 {
 			// tabControl1
 			// 
 			this->tabControl1->Controls->Add(this->tabPage1);
-			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Controls->Add(this->tabPage4);
 			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -196,34 +192,6 @@ namespace Projetgroupe1 {
 			this->nomfiltre->Size = System::Drawing::Size(257, 26);
 			this->nomfiltre->TabIndex = 36;
 			this->nomfiltre->TextChanged += gcnew System::EventHandler(this, &GuiCommandes::nomfiltre_TextChanged);
-			// 
-			// tabPage2
-			// 
-			this->tabPage2->Controls->Add(this->buttonmodifier);
-			this->tabPage2->Location = System::Drawing::Point(4, 29);
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(949, 35);
-			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"Modifier";
-			this->tabPage2->UseVisualStyleBackColor = true;
-			// 
-			// buttonmodifier
-			// 
-			this->buttonmodifier->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->buttonmodifier->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->buttonmodifier->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->buttonmodifier->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonmodifier->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"buttonmodifier.Image")));
-			this->buttonmodifier->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->buttonmodifier->Location = System::Drawing::Point(0, 3);
-			this->buttonmodifier->Name = L"buttonmodifier";
-			this->buttonmodifier->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->buttonmodifier->Size = System::Drawing::Size(946, 29);
-			this->buttonmodifier->TabIndex = 39;
-			this->buttonmodifier->Text = L"Modifier";
-			this->buttonmodifier->UseVisualStyleBackColor = true;
 			// 
 			// tabPage3
 			// 
@@ -281,6 +249,7 @@ namespace Projetgroupe1 {
 			this->buttonsupprimer->TabIndex = 36;
 			this->buttonsupprimer->Text = L"Supprimer";
 			this->buttonsupprimer->UseVisualStyleBackColor = true;
+			this->buttonsupprimer->Click += gcnew System::EventHandler(this, &GuiCommandes::buttonsupprimer_Click);
 			// 
 			// textBox1
 			// 
@@ -384,7 +353,6 @@ namespace Projetgroupe1 {
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
-			this->tabPage2->ResumeLayout(false);
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
@@ -429,5 +397,16 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	refreshData(this->oSvcc->selectOrder("rsl"));
 	MessageBox::Show("Base de données rafraîchi avec succès !", "OK", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
+private: System::Void buttonsupprimer_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox1->Text->Length == 0) {
+		MessageBox::Show("Veuillez rentrez un ID", "Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+	else {
+		MessageBox::Show("Suppression réussi", "Félicitations", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+		this->oSvcc->Envoyer("IF EXISTS (select FK_hold_order from Hold where FK_hold_order = '" + int::Parse(textBox1->Text) + "')  Begin delete from Hold where FK_hold_order = '" + int::Parse(textBox1->Text) + "' end IF EXISTS (select FK_bill_order from bill where FK_bill_order = '" + int::Parse(textBox1->Text) + "') Begin delete from bill where FK_bill_order = '" + int::Parse(textBox1->Text) + "' end IF EXISTS (select id_order from Orders where id_order = '" + int::Parse(textBox1->Text) + "')  Begin delete from orders where id_order = '" + int::Parse(textBox1->Text) + "' end");
+		refreshData(this->oSvcc->selectOrder("rsl"));
+	}
+}
+	   
 };
 }

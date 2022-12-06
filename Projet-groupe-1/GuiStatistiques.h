@@ -69,6 +69,15 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
 	private: System::Windows::Forms::Label^ label6;
+
+	private: System::Windows::Forms::PictureBox^ pictureBox8;
+
+	private: System::Windows::Forms::ComboBox^ comboBox3;
+	private: System::Windows::Forms::ComboBox^ comboBox4;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
 	protected:
 
 	private:
@@ -113,6 +122,13 @@ namespace Projetgroupe1 {
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -121,6 +137,7 @@ namespace Projetgroupe1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox2
@@ -197,7 +214,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->ImageAlign = System::Drawing::ContentAlignment::TopLeft;
-			this->button3->Location = System::Drawing::Point(250, 592);
+			this->button3->Location = System::Drawing::Point(320, 513);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(232, 73);
 			this->button3->TabIndex = 41;
@@ -213,7 +230,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->ImageAlign = System::Drawing::ContentAlignment::TopLeft;
-			this->button4->Location = System::Drawing::Point(12, 513);
+			this->button4->Location = System::Drawing::Point(563, 513);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(232, 73);
 			this->button4->TabIndex = 42;
@@ -245,7 +262,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->ImageAlign = System::Drawing::ContentAlignment::TopLeft;
-			this->button6->Location = System::Drawing::Point(249, 126);
+			this->button6->Location = System::Drawing::Point(250, 126);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(232, 73);
 			this->button6->TabIndex = 44;
@@ -295,7 +312,7 @@ namespace Projetgroupe1 {
 				static_cast<System::Byte>(0)));
 			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->ImageAlign = System::Drawing::ContentAlignment::TopLeft;
-			this->button9->Location = System::Drawing::Point(250, 513);
+			this->button9->Location = System::Drawing::Point(563, 592);
 			this->button9->Name = L"button9";
 			this->button9->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->button9->Size = System::Drawing::Size(232, 73);
@@ -303,6 +320,7 @@ namespace Projetgroupe1 {
 			this->button9->Text = L"Variations \rde valeurs";
 			this->button9->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &GuiStatistiques::button9_Click);
 			// 
 			// label2
 			// 
@@ -375,7 +393,7 @@ namespace Projetgroupe1 {
 			this->pictureBox4->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->pictureBox4->Location = System::Drawing::Point(12, 477);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(470, 32);
+			this->pictureBox4->Size = System::Drawing::Size(796, 32);
 			this->pictureBox4->TabIndex = 54;
 			this->pictureBox4->TabStop = false;
 			// 
@@ -410,7 +428,7 @@ namespace Projetgroupe1 {
 			this->GrillePersonnal->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->GrillePersonnal->GridColor = System::Drawing::SystemColors::ButtonFace;
 			this->GrillePersonnal->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->GrillePersonnal->Location = System::Drawing::Point(487, 92);
+			this->GrillePersonnal->Location = System::Drawing::Point(488, 92);
 			this->GrillePersonnal->Name = L"GrillePersonnal";
 			this->GrillePersonnal->ReadOnly = true;
 			this->GrillePersonnal->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
@@ -419,17 +437,16 @@ namespace Projetgroupe1 {
 			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->GrillePersonnal->RowsDefaultCellStyle = dataGridViewCellStyle3;
-			this->GrillePersonnal->Size = System::Drawing::Size(321, 573);
+			this->GrillePersonnal->Size = System::Drawing::Size(320, 382);
 			this->GrillePersonnal->TabIndex = 55;
 			// 
 			// pictureBox5
 			// 
-			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.BackgroundImage")));
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->pictureBox5->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox5->Location = System::Drawing::Point(12, 592);
+			this->pictureBox5->Location = System::Drawing::Point(12, 513);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(470, 73);
+			this->pictureBox5->Size = System::Drawing::Size(544, 73);
 			this->pictureBox5->TabIndex = 56;
 			this->pictureBox5->TabStop = false;
 			// 
@@ -439,9 +456,8 @@ namespace Projetgroupe1 {
 			this->label5->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label5.Image")));
-			this->label5->Location = System::Drawing::Point(25, 592);
+			this->label5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label5->Location = System::Drawing::Point(25, 515);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(213, 32);
 			this->label5->TabIndex = 57;
@@ -457,7 +473,7 @@ namespace Projetgroupe1 {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
 			this->dateTimePicker1->ImeMode = System::Windows::Forms::ImeMode::Disable;
-			this->dateTimePicker1->Location = System::Drawing::Point(41, 622);
+			this->dateTimePicker1->Location = System::Drawing::Point(40, 545);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->ShowUpDown = true;
 			this->dateTimePicker1->Size = System::Drawing::Size(176, 31);
@@ -465,12 +481,11 @@ namespace Projetgroupe1 {
 			// 
 			// pictureBox6
 			// 
-			this->pictureBox6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.BackgroundImage")));
-			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->pictureBox6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->pictureBox6->Location = System::Drawing::Point(12, 126);
 			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(469, 73);
+			this->pictureBox6->Size = System::Drawing::Size(473, 73);
 			this->pictureBox6->TabIndex = 58;
 			this->pictureBox6->TabStop = false;
 			// 
@@ -490,19 +505,114 @@ namespace Projetgroupe1 {
 			this->label6->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label6.Image")));
+			this->label6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->label6->Location = System::Drawing::Point(52, 127);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(151, 32);
 			this->label6->TabIndex = 60;
 			this->label6->Text = L"Selectionnez le client";
 			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->pictureBox8->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->pictureBox8->Location = System::Drawing::Point(12, 592);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(787, 73);
+			this->pictureBox8->TabIndex = 62;
+			this->pictureBox8->TabStop = false;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(1) { L"5" });
+			this->comboBox2->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::ListItems;
+			this->comboBox2->Cursor = System::Windows::Forms::Cursors::Default;
+			this->comboBox2->DisplayMember = L"0";
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5", L"10", L"20" });
+			this->comboBox2->Location = System::Drawing::Point(21, 624);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(162, 32);
+			this->comboBox2->TabIndex = 63;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5", L"10", L"15" });
+			this->comboBox3->Location = System::Drawing::Point(192, 624);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(162, 32);
+			this->comboBox3->TabIndex = 64;
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0", L"5", L"6" });
+			this->comboBox4->Location = System::Drawing::Point(367, 624);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(162, 32);
+			this->comboBox4->TabIndex = 65;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label7->Location = System::Drawing::Point(63, 596);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(54, 32);
+			this->label7->TabIndex = 66;
+			this->label7->Text = L"T.V.A";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label8->Location = System::Drawing::Point(202, 596);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(144, 32);
+			this->label8->TabIndex = 67;
+			this->label8->Text = L"Marge commerciale";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 18, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label9->Location = System::Drawing::Point(375, 596);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(149, 32);
+			this->label9->TabIndex = 68;
+			this->label9->Text = L"Remise commerciale";
+			// 
 			// GuiStatistiques
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(811, 670);
+			this->Controls->Add(this->comboBox4);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->comboBox3);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->comboBox2);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->dateTimePicker1);
@@ -528,6 +638,7 @@ namespace Projetgroupe1 {
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->pictureBox6);
+			this->Controls->Add(this->pictureBox8);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
@@ -544,6 +655,7 @@ namespace Projetgroupe1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -613,6 +725,16 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	catch(Exception^ e) {
 		MessageBox::Show("Nom de client incorrect", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+	}
+}
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	if(comboBox2->Text->Length == 0 || comboBox3->Text->Length == 0 || comboBox4->Text->Length == 0) {
+		MessageBox::Show("Remplissez les champs obligatoires", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+	}
+	else {
+		refreshData("rsl8", this->oSvcc->FiltrerService("rsl8", "select round(sum(buying_price*(1+("+float::Parse(comboBox2->Text)+"*0.01))*(1+(" + float::Parse(comboBox3->Text) + "*0.01))*(1-(" + float::Parse(comboBox4->Text) + "*0.01))*product_quantity),2) as valeur_stock from Product"));
+		GrillePersonnal->Columns["valeur_stock"]->HeaderText = "Valeur du stock avec variations";
+
 	}
 }
 };
