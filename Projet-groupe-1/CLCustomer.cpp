@@ -1,14 +1,14 @@
 #include "CLCustomer.h"
 
-System::String^ NS_Comp_Mappage::CLCustomer::Select(void) {
+System::String^ NS_Comp_Mappage::CLCustomer::Select(void) { // méthode afficher une database sur une datagridview
 	return "select id_customer, customer_name, customer_first_name, birth_date, t1.n_street, t1.street_name, t1.zip_code, t1.city_name, t2.n_street, t2.street_name, t2.zip_code, t2.city_name from Customer left join Adress as t1 on Customer.id_customer = t1.FK_adress_customer LEFT OUTER JOIN Adress as t2 ON Customer.id_customer = t2.FK_adress_customer_invoice where id_customer is not null";
 }
 
-System::String^ NS_Comp_Mappage::CLCustomer::Filtrer(System::String^ filtre)
+System::String^ NS_Comp_Mappage::CLCustomer::Filtrer(System::String^ filtre) // méthode afficher une database sur une datagridview avec filtrage en fonction du customer_name
 {
 	return filtre;
 }
-System::String^ NS_Comp_Mappage::CLCustomer::Envoyer(System::String^ command)
+System::String^ NS_Comp_Mappage::CLCustomer::Envoyer(System::String^ command) // methode permettant de faire un ajout un update et autre fonction
 {
 	return command;
 }
