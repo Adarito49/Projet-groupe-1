@@ -483,7 +483,6 @@ namespace Projetgroupe1 {
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(162, 32);
 			this->comboBox1->TabIndex = 59;
-			this->comboBox1->Leave += gcnew System::EventHandler(this, &GuiStatistiques::comboBox1_Leave);
 			// 
 			// label6
 			// 
@@ -560,6 +559,17 @@ namespace Projetgroupe1 {
 	private: System::Void GuiStatistiques_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvcc = gcnew NS_Comp_Svc::StaffService();
 
+		cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
+		cn->Open();
+		comboBox1->Items->Clear();
+		cmd = gcnew SqlCommand("select Concat(customer_name, ' ', customer_first_name) from customer", cn);
+
+		dr = cmd->ExecuteReader();
+		while (dr->Read())
+		{
+			comboBox1->Items->Add(dr[0]);
+		}
+		dr->Close();
 
 
 
@@ -596,20 +606,6 @@ namespace Projetgroupe1 {
 		GrillePersonnal->Columns["valeur_achat_stock"]->HeaderText = "Valeur d'achat du stock";
 
 	}
-private: System::Void comboBox1_Leave(System::Object^ sender, System::EventArgs^ e) {
-
-	cn = gcnew SqlConnection("Data Source=ADAR-PC\\ADARITO;Initial Catalog=Projet_POO;User ID=Adarito;Password=azerty");
-	cn->Open();
-	comboBox1->Items->Clear();
-	cmd = gcnew SqlCommand("select Concat(customer_name, ' ', customer_first_name) from customer where Customer_name LIKE '%" + comboBox1->Text + "%'", cn);
-
-	dr = cmd->ExecuteReader();
-	while (dr->Read())
-	{
-		comboBox1->Items->Add(dr[0]);
-	}
-	dr->Close();
-}
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	try{
 	refreshData("rsl8", this->oSvcc->FiltrerService("rsl8", "DECLARE @FullName VARCHAR(100) SET @FullName = '"+comboBox1->Text+"' select customer_name, customer_first_name, amount into somme from bill full join orders on bill.FK_bill_order=Orders.id_order full join customer on orders.fk_order_customer = customer.id_customer where FK_order_customer = (select id_customer from customer where customer_name = SUBSTRING(@FullName, 1, CHARINDEX(' ', @FullName) - 1) and customer_first_name = SUBSTRING(@FullName, CHARINDEX(' ', @FullName) + 1, LEN(@FullName)))  select sum(amount) as total_achat from somme  drop table somme"));

@@ -1,4 +1,4 @@
-#include "StaffService.h"
+#include "OrderService.h"
 #pragma once
 
 namespace Projetgroupe1 {
@@ -44,7 +44,7 @@ namespace Projetgroupe1 {
 	private: SqlCommand^ cmd;
 	private: SqlDataReader^ dr;
 	private: bool dragging;
-	private: NS_Comp_Svc::StaffService^ oSvcc;
+	private: NS_Comp_Svc::OrderService^ oSvcc;
 	private: System::Data::DataSet^ oDs;
 
 	private: Point offset;
@@ -167,8 +167,8 @@ private: System::Windows::Forms::NumericUpDown^ numericUpDown7;
 private: System::Windows::Forms::NumericUpDown^ numericUpDown8;
 private: System::Windows::Forms::NumericUpDown^ numericUpDown9;
 private: System::Windows::Forms::NumericUpDown^ numericUpDown10;
-private: System::Windows::Forms::NumericUpDown^ textBox1;
-private: System::Windows::Forms::NumericUpDown^ textBox6;
+
+
 private: System::Windows::Forms::PictureBox^ pictureBox8;
 private: System::Windows::Forms::Label^ label45;
 private: System::Windows::Forms::Label^ label46;
@@ -194,6 +194,10 @@ private: System::Windows::Forms::Label^ label64;
 private: System::Windows::Forms::Label^ label65;
 private: System::Windows::Forms::Label^ label66;
 private: System::Windows::Forms::Label^ label67;
+private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::TextBox^ textBox6;
+private: System::Windows::Forms::Label^ label68;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown11;
 
 
 
@@ -300,8 +304,6 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown8 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown9 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->textBox1 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->textBox6 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
 			this->label45 = (gcnew System::Windows::Forms::Label());
 			this->label46 = (gcnew System::Windows::Forms::Label());
@@ -327,6 +329,10 @@ private: System::Windows::Forms::Label^ label67;
 			this->label65 = (gcnew System::Windows::Forms::Label());
 			this->label66 = (gcnew System::Windows::Forms::Label());
 			this->label67 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->label68 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -346,9 +352,8 @@ private: System::Windows::Forms::Label^ label67;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox2
@@ -394,9 +399,9 @@ private: System::Windows::Forms::Label^ label67;
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox1->Location = System::Drawing::Point(369, 124);
+			this->pictureBox1->Location = System::Drawing::Point(423, 124);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(326, 141);
+			this->pictureBox1->Size = System::Drawing::Size(326, 170);
 			this->pictureBox1->TabIndex = 40;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -405,9 +410,9 @@ private: System::Windows::Forms::Label^ label67;
 			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.BackgroundImage")));
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
 			this->pictureBox4->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox4->Location = System::Drawing::Point(12, 124);
+			this->pictureBox4->Location = System::Drawing::Point(-25, 124);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(326, 177);
+			this->pictureBox4->Size = System::Drawing::Size(423, 177);
 			this->pictureBox4->TabIndex = 42;
 			this->pictureBox4->TabStop = false;
 			// 
@@ -419,7 +424,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label2.Image")));
-			this->label2->Location = System::Drawing::Point(373, 128);
+			this->label2->Location = System::Drawing::Point(427, 128);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(175, 36);
 			this->label2->TabIndex = 43;
@@ -433,7 +438,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label3.Image")));
-			this->label3->Location = System::Drawing::Point(726, 125);
+			this->label3->Location = System::Drawing::Point(774, 125);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(193, 36);
 			this->label3->TabIndex = 44;
@@ -470,7 +475,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox2->Enabled = false;
 			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Location = System::Drawing::Point(479, 228);
+			this->comboBox2->Location = System::Drawing::Point(534, 254);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(207, 21);
 			this->comboBox2->TabIndex = 47;
@@ -481,7 +486,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->checkBox1->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->checkBox1->Enabled = false;
 			this->checkBox1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->checkBox1->Location = System::Drawing::Point(895, 154);
+			this->checkBox1->Location = System::Drawing::Point(775, 164);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(183, 17);
 			this->checkBox1->TabIndex = 49;
@@ -492,7 +497,7 @@ private: System::Windows::Forms::Label^ label67;
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(451, 182);
+			this->textBox2->Location = System::Drawing::Point(506, 208);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(235, 20);
 			this->textBox2->TabIndex = 51;
@@ -500,7 +505,7 @@ private: System::Windows::Forms::Label^ label67;
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(379, 228);
+			this->textBox3->Location = System::Drawing::Point(434, 254);
 			this->textBox3->MaxLength = 5;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(71, 20);
@@ -510,7 +515,7 @@ private: System::Windows::Forms::Label^ label67;
 			// textBox4
 			// 
 			this->textBox4->Enabled = false;
-			this->textBox4->Location = System::Drawing::Point(732, 229);
+			this->textBox4->Location = System::Drawing::Point(775, 255);
 			this->textBox4->MaxLength = 5;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(71, 20);
@@ -520,7 +525,7 @@ private: System::Windows::Forms::Label^ label67;
 			// textBox5
 			// 
 			this->textBox5->Enabled = false;
-			this->textBox5->Location = System::Drawing::Point(802, 182);
+			this->textBox5->Location = System::Drawing::Point(845, 208);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(235, 20);
 			this->textBox5->TabIndex = 55;
@@ -529,7 +534,7 @@ private: System::Windows::Forms::Label^ label67;
 			// 
 			this->comboBox3->Enabled = false;
 			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Location = System::Drawing::Point(830, 228);
+			this->comboBox3->Location = System::Drawing::Point(873, 254);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(207, 21);
 			this->comboBox3->TabIndex = 53;
@@ -539,9 +544,9 @@ private: System::Windows::Forms::Label^ label67;
 			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.BackgroundImage")));
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
 			this->pictureBox5->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox5->Location = System::Drawing::Point(723, 124);
+			this->pictureBox5->Location = System::Drawing::Point(763, 124);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(364, 141);
+			this->pictureBox5->Size = System::Drawing::Size(345, 170);
 			this->pictureBox5->TabIndex = 57;
 			this->pictureBox5->TabStop = false;
 			// 
@@ -609,7 +614,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label9.Image")));
-			this->label9->Location = System::Drawing::Point(380, 159);
+			this->label9->Location = System::Drawing::Point(435, 185);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(25, 28);
 			this->label9->TabIndex = 62;
@@ -623,7 +628,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label10.Image")));
-			this->label10->Location = System::Drawing::Point(731, 161);
+			this->label10->Location = System::Drawing::Point(774, 187);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(25, 28);
 			this->label10->TabIndex = 63;
@@ -637,7 +642,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label11.Image")));
-			this->label11->Location = System::Drawing::Point(452, 160);
+			this->label11->Location = System::Drawing::Point(507, 186);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(78, 28);
 			this->label11->TabIndex = 64;
@@ -651,7 +656,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label12->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label12.Image")));
-			this->label12->Location = System::Drawing::Point(802, 160);
+			this->label12->Location = System::Drawing::Point(845, 186);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(78, 28);
 			this->label12->TabIndex = 65;
@@ -665,7 +670,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label13.Image")));
-			this->label13->Location = System::Drawing::Point(377, 204);
+			this->label13->Location = System::Drawing::Point(432, 230);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(82, 28);
 			this->label13->TabIndex = 66;
@@ -679,7 +684,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label14->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label14.Image")));
-			this->label14->Location = System::Drawing::Point(727, 204);
+			this->label14->Location = System::Drawing::Point(770, 230);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(82, 28);
 			this->label14->TabIndex = 67;
@@ -693,7 +698,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label15->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label15.Image")));
-			this->label15->Location = System::Drawing::Point(481, 205);
+			this->label15->Location = System::Drawing::Point(536, 231);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(37, 28);
 			this->label15->TabIndex = 68;
@@ -707,7 +712,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label16->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label16.Image")));
-			this->label16->Location = System::Drawing::Point(834, 208);
+			this->label16->Location = System::Drawing::Point(877, 234);
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(37, 28);
 			this->label16->TabIndex = 69;
@@ -792,7 +797,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->comboBox12->FormattingEnabled = true;
 			this->comboBox12->Location = System::Drawing::Point(21, 242);
 			this->comboBox12->Name = L"comboBox12";
-			this->comboBox12->Size = System::Drawing::Size(151, 21);
+			this->comboBox12->Size = System::Drawing::Size(186, 21);
 			this->comboBox12->TabIndex = 78;
 			// 
 			// label17
@@ -831,7 +836,7 @@ private: System::Windows::Forms::Label^ label67;
 				static_cast<System::Byte>(0)));
 			this->label18->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label18->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label18.Image")));
-			this->label18->Location = System::Drawing::Point(190, 214);
+			this->label18->Location = System::Drawing::Point(251, 214);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(122, 26);
 			this->label18->TabIndex = 81;
@@ -842,9 +847,9 @@ private: System::Windows::Forms::Label^ label67;
 			this->comboBox13->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox13->Enabled = false;
 			this->comboBox13->FormattingEnabled = true;
-			this->comboBox13->Location = System::Drawing::Point(178, 242);
+			this->comboBox13->Location = System::Drawing::Point(213, 242);
 			this->comboBox13->Name = L"comboBox13";
-			this->comboBox13->Size = System::Drawing::Size(151, 21);
+			this->comboBox13->Size = System::Drawing::Size(177, 21);
 			this->comboBox13->TabIndex = 82;
 			// 
 			// checkBox3
@@ -852,7 +857,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->checkBox3->AutoSize = true;
 			this->checkBox3->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->checkBox3->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->checkBox3->Location = System::Drawing::Point(195, 269);
+			this->checkBox3->Location = System::Drawing::Point(256, 269);
 			this->checkBox3->Name = L"checkBox3";
 			this->checkBox3->Size = System::Drawing::Size(108, 17);
 			this->checkBox3->TabIndex = 83;
@@ -1030,6 +1035,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->button1->TabIndex = 110;
 			this->button1->Text = L"Créer";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &GuiCommandesCreate::button1_Click);
 			// 
 			// dataGridView1
 			// 
@@ -1305,26 +1311,6 @@ private: System::Windows::Forms::Label^ label67;
 			this->numericUpDown10->Size = System::Drawing::Size(55, 20);
 			this->numericUpDown10->TabIndex = 155;
 			this->numericUpDown10->ValueChanged += gcnew System::EventHandler(this, &GuiCommandesCreate::numericUpDown10_ValueChanged);
-			// 
-			// textBox1
-			// 
-			this->textBox1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->textBox1->Enabled = false;
-			this->textBox1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->textBox1->Location = System::Drawing::Point(381, 182);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(57, 20);
-			this->textBox1->TabIndex = 156;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Cursor = System::Windows::Forms::Cursors::Default;
-			this->textBox6->Enabled = false;
-			this->textBox6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->textBox6->Location = System::Drawing::Point(732, 182);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(57, 20);
-			this->textBox6->TabIndex = 157;
 			// 
 			// pictureBox8
 			// 
@@ -1608,11 +1594,59 @@ private: System::Windows::Forms::Label^ label67;
 			this->label67->TabIndex = 182;
 			this->label67->Text = L"EUROS";
 			// 
-			// GuiCommandesCréer
+			// textBox1
+			// 
+			this->textBox1->Enabled = false;
+			this->textBox1->Location = System::Drawing::Point(434, 208);
+			this->textBox1->MaxLength = 5;
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(46, 20);
+			this->textBox1->TabIndex = 183;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Enabled = false;
+			this->textBox6->Location = System::Drawing::Point(775, 208);
+			this->textBox6->MaxLength = 5;
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(49, 20);
+			this->textBox6->TabIndex = 184;
+			// 
+			// label68
+			// 
+			this->label68->AutoSize = true;
+			this->label68->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label68->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 14.25F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label68->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label68->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label68.Image")));
+			this->label68->Location = System::Drawing::Point(592, 649);
+			this->label68->Name = L"label68";
+			this->label68->Size = System::Drawing::Size(130, 26);
+			this->label68->TabIndex = 185;
+			this->label68->Text = L"Nombre de paiement:";
+			// 
+			// numericUpDown11
+			// 
+			this->numericUpDown11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->numericUpDown11->Location = System::Drawing::Point(730, 648);
+			this->numericUpDown11->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 3, 0, 0, 0 });
+			this->numericUpDown11->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown11->Name = L"numericUpDown11";
+			this->numericUpDown11->Size = System::Drawing::Size(36, 26);
+			this->numericUpDown11->TabIndex = 186;
+			this->numericUpDown11->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// GuiCommandesCreate
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1090, 690);
+			this->Controls->Add(this->numericUpDown11);
+			this->Controls->Add(this->label68);
+			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label67);
 			this->Controls->Add(this->label31);
 			this->Controls->Add(this->label56);
@@ -1638,8 +1672,6 @@ private: System::Windows::Forms::Label^ label67;
 			this->Controls->Add(this->label55);
 			this->Controls->Add(this->label45);
 			this->Controls->Add(this->pictureBox8);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->numericUpDown10);
 			this->Controls->Add(this->numericUpDown9);
 			this->Controls->Add(this->numericUpDown8);
@@ -1726,7 +1758,7 @@ private: System::Windows::Forms::Label^ label67;
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox6);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Name = L"GuiCommandesCréer";
+			this->Name = L"GuiCommandesCreate";
 			this->Text = L"GuiCommandesCréer";
 			this->Load += gcnew System::EventHandler(this, &GuiCommandesCreate::GuiCommandesCréer_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
@@ -1748,9 +1780,8 @@ private: System::Windows::Forms::Label^ label67;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->textBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1764,7 +1795,7 @@ private: System::Windows::Forms::Label^ label67;
 		}
 #pragma endregion
 private: System::Void GuiCommandesCréer_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvcc = gcnew NS_Comp_Svc::StaffService();
+	this->oSvcc = gcnew NS_Comp_Svc::OrderService();
 
 	if (checkBox2->Checked == true) {
 		MessageBox::Show("Veuillez rentrez un ID", "Erreur ID NULL", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -1811,7 +1842,7 @@ private: System::Void GuiCommandesCréer_Load(System::Object^ sender, System::Eve
 }
 private: System::Void comboBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	comboBox12->Items->Clear();
-	cmd = gcnew SqlCommand("DECLARE @FullName VARCHAR(100) SET @FullName = '" + comboBox1->Text + "' select CONCAT(n_street, ' ', street_name, ' ', zip_code, ' ', city_name) as Adresse from Adress inner join Customer on Adress.FK_adress_customer = Customer.id_customer where customer_name = SUBSTRING(@FullName, 1, CHARINDEX(' ', @FullName) - 1) and customer_first_name = SUBSTRING(@FullName, CHARINDEX(' ', @FullName) + 1, LEN(@FullName))", cn);
+	cmd = gcnew SqlCommand("DECLARE @FullName VARCHAR(100) SET @FullName = '" + comboBox1->Text + "' select CONCAT(id_adress, ') ', n_street, ' ', street_name, ' ', zip_code, ' ', city_name) as Adresse from Adress inner join Customer on Adress.FK_adress_customer = Customer.id_customer where customer_name = SUBSTRING(@FullName, 1, CHARINDEX(' ', @FullName) - 1) and customer_first_name = SUBSTRING(@FullName, CHARINDEX(' ', @FullName) + 1, LEN(@FullName))", cn);
 	dr = cmd->ExecuteReader();
 
 	while (dr->Read())
@@ -1822,7 +1853,7 @@ private: System::Void comboBox1_TextChanged(System::Object^ sender, System::Even
 	dr->Close();
 
 	comboBox13->Items->Clear();
-	cmd = gcnew SqlCommand("DECLARE @FullName VARCHAR(100) SET @FullName = '" + comboBox1->Text + "' select CONCAT(n_street, ' ', street_name, ' ', zip_code, ' ', city_name) as Adresse from Adress inner join Customer on Adress.FK_adress_customer_invoice = Customer.id_customer where customer_name = SUBSTRING(@FullName, 1, CHARINDEX(' ', @FullName) - 1) and customer_first_name = SUBSTRING(@FullName, CHARINDEX(' ', @FullName) + 1, LEN(@FullName))", cn);
+	cmd = gcnew SqlCommand("DECLARE @FullName VARCHAR(100) SET @FullName = '" + comboBox1->Text + "' select CONCAT(id_adress, ') ',n_street, ' ', street_name, ' ', zip_code, ' ', city_name) as Adresse from Adress inner join Customer on Adress.FK_adress_customer_invoice = Customer.id_customer where customer_name = SUBSTRING(@FullName, 1, CHARINDEX(' ', @FullName) - 1) and customer_first_name = SUBSTRING(@FullName, CHARINDEX(' ', @FullName) + 1, LEN(@FullName))", cn);
 	dr = cmd->ExecuteReader();
 	while (dr->Read())
 	{
@@ -2085,6 +2116,69 @@ private: System::Void textBox4_Leave(System::Object^ sender, System::EventArgs^ 
 	}
 	private: System::Void pictureBox2_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { //LORSE QU'ON LACHE LE CLICK
 		this->dragging = false;
+	}
+
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (checkBox2->Checked == true) {
+			if (textBox1->Text->Length == 0 || textBox2->Text->Length == 0 || textBox3->Text->Length == 0 || comboBox2->Text->Length == 0){
+				MessageBox::Show("Veuillez remplir les champs d'adresse de livraison obligatoire svp", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Hand);
+			}
+			else {
+				this->oSvcc->Envoyer("DECLARE @FullName2 VARCHAR(100) SET @FullName2 = '" + comboBox1->Text + "' insert into Adress(n_street, street_name, zip_code, city_name, FK_adress_customer) values ('" + textBox1->Text + "', '" + textBox2->Text + "', '"+ textBox3->Text+"', '"+ comboBox2->Text+"', (select id_customer from customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))))");
+				this->oSvcc->Envoyer("DECLARE @FullName2 VARCHAR(100) SET @FullName2 = '" + comboBox1->Text + "' DECLARE @FullName VARCHAR(100) SET @FullName = '" + comboBox2->Text + "' DECLARE @ref VARCHAR(100) IF EXISTS (select FK_order_customer from orders where FK_order_customer = (select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))))  BEGIN set @ref = (select top 1 concat(upper(SUBSTRING(customer_first_name, 1, 2)), upper(SUBSTRING(customer_name, 1, 2)), year(getDate()), upper(substring(@FullName,1,3)), (SUBSTRING(ref_order, 12, 4) + 1)) as refe from Customer right join orders on Customer.id_customer = Orders.FK_order_customer where Customer.id_customer=(select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))) ORDER BY refe DESC)  END ELSE BEGIN set @ref = (select concat(upper(SUBSTRING(customer_first_name, 1, 2)), upper(SUBSTRING(customer_name, 1, 2)), year(getDate()), upper(substring(@FullName,1,3)), 1) from Customer where Customer.id_customer=(select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))))  End insert into orders(ref_order, price_duty_free, deliver_date,order_date,FK_order_customer) values (@ref,(select replace('" + label44->Text + "', ',', '.')),(select CONVERT (date, GETDATE() + 15)),(select CONVERT (date, GETDATE())),(select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2)))) insert into bill(payment_date, payment_nbr, amount, FK_bill_order) values((select CONVERT(date, GETDATE())), '"+numericUpDown11->Value+"', (select replace('" + label31->Text + "', ',', '.')),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC))");
+			}
+		}
+		else {
+			if (comboBox1->Text->Length == 0 || comboBox12->Text->Length == 0 || label44->Text == "0") {
+				MessageBox::Show("Veuillez remplir les champs obligatoire svp", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Hand);
+			}
+			else {
+				this->oSvcc->Envoyer("DECLARE @FullName2 VARCHAR(100) SET @FullName2 = '" + comboBox1->Text + "' DECLARE @FullName VARCHAR(100) SET @FullName = '" + comboBox12->Text + "' DECLARE @ref VARCHAR(100) IF EXISTS (select FK_order_customer from orders where FK_order_customer = (select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))))  BEGIN  set @ref = (select top 1 concat(upper(SUBSTRING(customer_first_name, 1, 2)), upper(SUBSTRING(customer_name, 1, 2)), year(getDate()), upper(substring((select city_name  from adress where id_adress=SUBSTRING(@FullName, 1, CHARINDEX(') ', @FullName) - 1)),1,3)), (SUBSTRING(ref_order, 12, 4) + 1)) as refe from Customer right join orders on Customer.id_customer = Orders.FK_order_customer where Customer.id_customer=(select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))) ORDER BY refe DESC) END ELSE BEGIN set @ref = (select concat(upper(SUBSTRING(customer_first_name, 1, 2)), upper(SUBSTRING(customer_name, 1, 2)), year(getDate()), upper(substring((select city_name  from adress where id_adress=SUBSTRING(@FullName, 1, CHARINDEX(') ', @FullName) - 1)),1,3)), 1) from Customer where Customer.id_customer=(select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))))  End insert into orders(ref_order, price_duty_free, deliver_date,order_date,FK_order_customer) values (@ref,(select replace('" + label44->Text + "', ',', '.')),(select CONVERT (date, GETDATE() + 15)),(select CONVERT (date, GETDATE())),(select id_customer from Customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2)))) insert into bill(payment_date, payment_nbr, amount, FK_bill_order) values((select CONVERT(date, GETDATE())), '" + numericUpDown11->Value + "', (select replace('" + label31->Text + "', ',', '.')),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC))");
+			}
+		}
+
+		if (checkBox3->Checked == true) {
+			if (textBox4->Text->Length == 0 || textBox5->Text->Length == 0 || textBox6->Text->Length == 0 || comboBox3->Text->Length == 0) {
+				MessageBox::Show("Veuillez remplir les champs d'adresse de facturation obligatoire svp", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Hand);
+			}
+			else {
+				this->oSvcc->Envoyer("DECLARE @FullName2 VARCHAR(100) SET @FullName2 = '" + comboBox1->Text + "' insert into Adress(n_street, street_name, zip_code, city_name, FK_adress_customer_invoice) values ('" + textBox6->Text + "', '" + textBox5->Text + "', '" + textBox4->Text + "', '"+comboBox3->Text+"', (select id_customer from customer where customer_name = SUBSTRING(@FullName2, 1, CHARINDEX(' ', @FullName2) - 1) and customer_first_name = SUBSTRING(@FullName2, CHARINDEX(' ', @FullName2) + 1, LEN(@FullName2))))");
+			}
+		}
+
+
+
+		if (comboBox4->Text->Length > 0 || numericUpDown1->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox4->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown1->Value + " where product_name = '" + comboBox4->Text + "'");
+		}
+		if (comboBox5->Text->Length > 0 || numericUpDown2->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox5->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown2->Value + " where product_name = '" + comboBox5->Text + "'");
+		}
+		if (comboBox6->Text->Length > 0 || numericUpDown3->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox6->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown3->Value + " where product_name = '" + comboBox6->Text + "'");
+		}
+		if (comboBox7->Text->Length > 0 || numericUpDown4->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox7->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown4->Value + " where product_name = '" + comboBox7->Text + "'");
+		}
+		if (comboBox8->Text->Length > 0 || numericUpDown5->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox8->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown5->Value + " where product_name = '" + comboBox8->Text + "'");
+		}
+		if (comboBox9->Text->Length > 0 || numericUpDown6->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox9->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown6->Value + " where product_name = '" + comboBox9->Text + "'");
+		}
+		if (comboBox10->Text->Length > 0 || numericUpDown7->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox10->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown7->Value + " where product_name = '" + comboBox10->Text + "'");
+		}
+		if (comboBox11->Text->Length > 0 || numericUpDown8->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox11->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown8->Value + " where product_name = '" + comboBox11->Text + "'");
+		}
+		if (comboBox14->Text->Length > 0 || numericUpDown9->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox14->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown9->Value + " where product_name = '" + comboBox14->Text + "'");
+		}
+		if (comboBox15->Text->Length > 0 || numericUpDown10->Value != 0) {
+			this->oSvcc->Envoyer("insert into hold(FK_hold_product, FK_hold_order) values((select id_product from Product where product_name = '" + comboBox15->Text + "'),(SELECT TOP 1 id_order FROM orders ORDER BY id_order DESC)) update Product set product_quantity = product_quantity - " + numericUpDown10->Value + " where product_name = '" + comboBox15->Text + "'");
+		}
 	}
 };
 }

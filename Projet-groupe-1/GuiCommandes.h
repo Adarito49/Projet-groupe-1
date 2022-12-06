@@ -1,5 +1,6 @@
 #pragma once
 #include "GuiCommandesCreate.h"
+#include "OrderService.h"
 
 namespace Projetgroupe1 {
 
@@ -9,6 +10,7 @@ namespace Projetgroupe1 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
 	/// Description résumée de MyForm
@@ -40,11 +42,9 @@ namespace Projetgroupe1 {
 
 
 
-
-
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::Label^ label2;
@@ -58,6 +58,13 @@ namespace Projetgroupe1 {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Button^ button2;
+
+	private: SqlConnection^ cn;
+	private: SqlCommand^ cmd;
+	private: SqlDataReader^ dr;
+	private: NS_Comp_Svc::OrderService^ oSvcc;
+	private: System::Data::DataSet^ oDs;
+	private: System::Windows::Forms::DataGridView^ GrillePersonnal;
 
 	protected:
 
@@ -75,10 +82,12 @@ namespace Projetgroupe1 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GuiCommandes::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -92,14 +101,15 @@ namespace Projetgroupe1 {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->GrillePersonnal = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox12
@@ -136,14 +146,6 @@ namespace Projetgroupe1 {
 			this->label1->Size = System::Drawing::Size(270, 49);
 			this->label1->TabIndex = 37;
 			this->label1->Text = L"Gestion des commandes";
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(8, 163);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(1040, 548);
-			this->dataGridView1->TabIndex = 38;
 			// 
 			// tabControl1
 			// 
@@ -193,6 +195,7 @@ namespace Projetgroupe1 {
 			this->nomfiltre->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->nomfiltre->Size = System::Drawing::Size(257, 26);
 			this->nomfiltre->TabIndex = 36;
+			this->nomfiltre->TextChanged += gcnew System::EventHandler(this, &GuiCommandes::nomfiltre_TextChanged);
 			// 
 			// tabPage2
 			// 
@@ -305,22 +308,66 @@ namespace Projetgroupe1 {
 			// button2
 			// 
 			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
-			this->button2->Location = System::Drawing::Point(967, 89);
+			this->button2->Location = System::Drawing::Point(958, 88);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(81, 72);
 			this->button2->TabIndex = 40;
 			this->button2->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &GuiCommandes::button2_Click);
+			// 
+			// GrillePersonnal
+			// 
+			this->GrillePersonnal->AllowUserToAddRows = false;
+			this->GrillePersonnal->AllowUserToDeleteRows = false;
+			this->GrillePersonnal->AllowUserToResizeColumns = false;
+			this->GrillePersonnal->AllowUserToResizeRows = false;
+			this->GrillePersonnal->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->GrillePersonnal->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCells;
+			this->GrillePersonnal->BackgroundColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Underline,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->GrillePersonnal->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->GrillePersonnal->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->GrillePersonnal->DefaultCellStyle = dataGridViewCellStyle2;
+			this->GrillePersonnal->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->GrillePersonnal->GridColor = System::Drawing::SystemColors::ButtonFace;
+			this->GrillePersonnal->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->GrillePersonnal->Location = System::Drawing::Point(8, 167);
+			this->GrillePersonnal->Name = L"GrillePersonnal";
+			this->GrillePersonnal->ReadOnly = true;
+			this->GrillePersonnal->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->GrillePersonnal->RowHeadersVisible = false;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::White;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->GrillePersonnal->RowsDefaultCellStyle = dataGridViewCellStyle3;
+			this->GrillePersonnal->Size = System::Drawing::Size(1028, 457);
+			this->GrillePersonnal->TabIndex = 41;
 			// 
 			// GuiCommandes
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->ClientSize = System::Drawing::Size(1052, 717);
+			this->ClientSize = System::Drawing::Size(1040, 627);
+			this->Controls->Add(this->GrillePersonnal);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->tabControl1);
-			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox12);
 			this->Controls->Add(this->pictureBox2);
@@ -331,9 +378,9 @@ namespace Projetgroupe1 {
 			this->Name = L"GuiCommandes";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Gestion des commandes";
+			this->Load += gcnew System::EventHandler(this, &GuiCommandes::GuiCommandes_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
@@ -341,14 +388,46 @@ namespace Projetgroupe1 {
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GrillePersonnal))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
+
+		public: void refreshData(System::Data::DataSet^ dataSet) { //FONCTION REFRESH AVEC DATASET
+			this->GrillePersonnal->Refresh();
+			this->oDs = dataSet;
+			this->GrillePersonnal->DataSource = this->oDs;
+			this->GrillePersonnal->DataMember = "rsl";
+		}
+
+
 #pragma endregion
 private: System::Void buttoncreer_Click(System::Object^ sender, System::EventArgs^ e) {
 	GuiCommandesCreate^ GuiModifier = gcnew GuiCommandesCreate();
 	GuiModifier->ShowDialog();
+
+}
+private: System::Void GuiCommandes_Load(System::Object^ sender, System::EventArgs^ e) {
+
+
+	this->oSvcc = gcnew NS_Comp_Svc::OrderService();
+
+	refreshData(this->oSvcc->selectOrder("rsl"));
+
+	GrillePersonnal->Columns["id_order"]->HeaderText = "Numéro de commande";
+	GrillePersonnal->Columns["ref_order"]->HeaderText = "Référence";
+	GrillePersonnal->Columns["customer_name"]->HeaderText = "Nom prénom client";
+	GrillePersonnal->Columns["deliver_date"]->HeaderText = "Date de livraison";
+	GrillePersonnal->Columns["price_duty_free"]->HeaderText = "Prix H.T";
+	GrillePersonnal->Columns["order_date"]->HeaderText = "Date de commande";
+}
+private: System::Void nomfiltre_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->FiltrerService("rsl", "select  id_order, ref_order, concat(customer_name, ' ', customer_first_name) as customer_name, price_duty_free, deliver_date, order_date from orders inner join Customer on Orders.FK_order_customer = Customer.id_customer where id_customer is not null AND customer_name LIKE '%" + nomfiltre->Text + "%' ;"));
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	refreshData(this->oSvcc->selectOrder("rsl"));
+	MessageBox::Show("Base de données rafraîchi avec succès !", "OK", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };
 }

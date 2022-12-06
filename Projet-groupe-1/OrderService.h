@@ -12,5 +12,7 @@ namespace NS_Comp_Svc
 	public:
 		OrderService(void);
 		System::Data::DataSet^ selectOrder(System::String^);
+		System::Data::DataSet^ FiltrerService(System::String^, System::String^);
+		void Envoyer(System::String^);
 	};
 }

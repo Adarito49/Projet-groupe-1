@@ -1,7 +1,15 @@
 #include "CLOrders.h"
 
 System::String^ NS_Comp_Mappage::CLOrders::Select(void) {
-	return "";
+	return "select  id_order, ref_order, concat(customer_name, ' ', customer_first_name) as customer_name, price_duty_free, deliver_date, order_date from orders inner join Customer on Orders.FK_order_customer = Customer.id_customer";
+}
+System::String^ NS_Comp_Mappage::CLOrders::Filtrer(System::String^ filtre)
+{
+	return filtre;
+}
+System::String^ NS_Comp_Mappage::CLOrders::Envoyer(System::String^ command)
+{
+	return command;
 }
 
 void NS_Comp_Mappage::CLOrders::setId(int id) {

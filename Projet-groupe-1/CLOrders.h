@@ -13,6 +13,8 @@ namespace NS_Comp_Mappage
 		int FK_order_customer;
 	public:
 		System::String^ Select(void);
+		System::String^ Filtrer(System::String^);
+		System::String^ Envoyer(System::String^);
 
 		void setId(int);
 		void setref_order(System::String^);
